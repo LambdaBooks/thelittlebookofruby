@@ -1,3 +1,3 @@
 # Littlebookrb - Маленька книга про Ruby
 
-[Розділ перший: Рядки](https://sergogovich.gitbooks.io/littlebookrb/content/chapter1.html)
+[Розділ перший: Рядки та Методи](https://sergogovich.gitbooks.io/littlebookrb/content/chapter1.html)
