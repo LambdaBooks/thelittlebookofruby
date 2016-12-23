@@ -1,4 +1,7 @@
-#Маленька книга про Ruby
+#
+Маленька книга про Ruby
+
+Ця книга являє собою маленький покроковий посібник для ознайомлення з мовою програмування Ruby.
 
 ### Зміст:
 
@@ -10,7 +13,11 @@
 
 Автор книги: [Huw Collingbourne](https://twitter.com/huwcol)
 
-Переклав українською: [@sergogovich](https://twitter.com/sergogovich)
+### Переклад і допомога:
+
+Переклав на українську [@sergogovich](https://twitter.com/sergogovich).
+
+Також дякую за допомогу [@wrdsld](https://twitter.com/wrdsld) і [@denysdovhan](https://twitter.com/denysdovhan).
 
 ### Підтримати фінансово:
 
