@@ -2,13 +2,16 @@
 
 Ця книга являє собою маленький покроковий посібник для ознайомлення з мовою програмування Ruby.
 
+[Читати книгу >>](https://sergogovich.gitbooks.io/littlebookrb/content/)
+
 ### Зміст:
 
-* Розділ перший: [Рядки та Методи](https://sergogovich.gitbooks.io/littlebookrb/content/chapter1.html)
+* Розділ перший: [Рядки та Методи]()
+* Розділ другий: [Класи]() 
 
 ### Про книгу:
 
-Мова оригіналу: **English **
+Мова оригіналу: **English**
 
 Автор книги: [Huw Collingbourne](https://twitter.com/huwcol)
 
