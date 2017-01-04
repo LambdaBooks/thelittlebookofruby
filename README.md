@@ -1,8 +1,8 @@
-#Маленька книга про Ruby
+# Маленька книга про Ruby
 
 Ця книга являє собою маленький покроковий посібник для ознайомлення з мовою програмування Ruby.
 
-[Читати книгу >>](https://sergogovich.gitbooks.io/littlebookrb/content/)
+Читати книгу &gt;&gt;
 
 ### Зміст:
 
@@ -21,6 +21,9 @@
 
 Також дякую за допомогу [@wrdsld](https://twitter.com/wrdsld) і [@denysdovhan](https://twitter.com/denysdovhan).
 
+Окрема подяка людям, які приймали участь у редагуванні книги на gitbook: [@sensetivity](https://github.com/Sensetivity)
+
 ### Підтримати фінансово:
 
 5168 7554 0691 4446
+
