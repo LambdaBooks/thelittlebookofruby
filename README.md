@@ -4,7 +4,7 @@
 
 
 
-[Читати книгу &gt;&gt;](https://sergogovich.gitbooks.io/littlebookofruby/content/)
+[Читати книгу &gt;&gt;](https://sergogovich.gitbooks.io/littlebookrb/content/)
 
 ### Зміст:
 
