@@ -2,6 +2,8 @@
 
 Ця книга являє собою маленький покроковий посібник для ознайомлення з мовою програмування Ruby.
 
+
+
 [Читати книгу &gt;&gt;](https://sergogovich.gitbooks.io/littlebookofruby/content/)
 
 ### Зміст:
