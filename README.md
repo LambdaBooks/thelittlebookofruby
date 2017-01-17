@@ -9,7 +9,7 @@
 ### Зміст:
 
 * Розділ перший: **Рядки та Методи**
-* Розділ другий: **Класи**
+* Розділ другий: **Класи** \(Перекладається...\)
 
 ### Про книгу:
 
@@ -19,7 +19,7 @@
 
 ### Переклад і допомога:
 
-Переклав на українську [@sergogovich](https://twitter.com/sergogovich).
+Переклав українською: [@sergogovich](https://twitter.com/sergogovich).
 
 Також дякую за допомогу [@wrdsld](https://twitter.com/wrdsld) і [@denysdovhan](https://twitter.com/denysdovhan).
 
