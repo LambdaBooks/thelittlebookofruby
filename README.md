@@ -9,7 +9,7 @@
 ### Зміст:
 
 * Розділ перший: **Рядки та Методи**
-* Розділ другий: **Класи** \(Перекладається...\)
+* Розділ другий: **Класи**
 
 ### Про книгу:
 
@@ -19,9 +19,9 @@
 
 ### Переклад і допомога:
 
-Переклав українською: [@sergogovich](https://twitter.com/sergogovich).
+Переклав українською: [@sergogovich](https://twitter.com/sergogovich)
 
-Також дякую за допомогу [@wrdsld](https://twitter.com/wrdsld) і [@denysdovhan](https://twitter.com/denysdovhan).
+Також дякую за допомогу [@wrdsld](https://twitter.com/wrdsld) і [@denysdovhan](https://twitter.com/denysdovhan)
 
 Окрема подяка людям, які приймали участь у редагуванні книги на gitbook: [@sensetivity](https://github.com/Sensetivity)
 
