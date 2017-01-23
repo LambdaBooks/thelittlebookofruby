@@ -29,9 +29,9 @@ object = MyClass.new
 
 ```ruby
 class MyClass
-  def saysomething
-    puts("Hello")
-  end
+def saysomething
+puts("Hello")
+end
 end
 ```
 
@@ -48,9 +48,9 @@ ob.saysomething
 
 ```ruby
 class Dog
-  def set_name(aName)
-    @myname = aName
-  end
+def set_name(aName)
+@myname = aName
+end
 end
 ```
 
@@ -76,7 +76,7 @@ yourdog.set_name('Bonzo')
 
 ```ruby
 def get_name
-  return @myname
+return @myname
 end
 
 ```
@@ -89,15 +89,15 @@ end
 
 ```ruby
 class Dog   
-  def set_name( aName )
-    @myname = aName
-  end
-  def get_name
-    return @myname
-  end
-  def talk
-    return 'woof!'
-  end
+def set_name( aName )
+@myname = aName
+end
+def get_name
+return @myname
+end
+def talk
+return 'woof!'
+end
 end
 ```
 
@@ -123,10 +123,134 @@ puts mydog.talk
 
 ```ruby
 def initialize( aName, aDescription )
-  @name = aName
-  @description = aDescription
+@name = aName
+@description = aDescription
 end
 ```
 
+Якщо клас містить initialize метод то він буде автоматично викликаний при створенні нового об'єкта, методом `new`. Використовувати initialize метод для задання значень інстанс змінним - досить хороша ідея, і вона має дві явні переваги у порівнянні з використанням методів накшталт `set_name` для встановлення значення кожній інстанс змінній. Перш за все складний клас може містити велику кількість інстанс змінних і ви можете встановити всім їм значення одним лише методом initialize, а не багатьма `set` методами; По-друге якщо змінним автоматично задається значення в момент створення об'єкта - у вас не буде інстанс змінної, встановити значення якій ви забули.
 
- 
+> **Нотатка:** Не рекомендується реалізовувати свою власну версію методу `new`.
+
+І нарешті, я створив метод `to_s` щоб повернути стврокове представлення об'єкта, класу `Treasure`. Назва `to_s` вибрана не просто так, така сама назва використовується і в стандартній ієрархії класів Ruby. Насправді, to_s метод визначається для самого класу Object, який є кінцевою предком всіх інших класів в Ruby. Перевизначаючи метод to_s, я додав нову поведінку, яка більше підходить до класу `Treasure`, ніж метод за замовчуванням.
+
+###Перевірка об'єктів
+
+До речі, зверніть увагу також, що я заглянув всередину "Скарб" об'єкта, t1, використовуючи метод Оглядати:
+
+```ruby
+t1.inspect
+```
+
+Метод inspect визначений для всіх об'єктів Ruby. Вона повертає рядок, що містить зручний для читання опис об'єкта. В даному випадку, він показує щось на зразок цього:
+
+```ruby
+#<Treasure:0x28962f8 @description="an Elvish weapon forged of gold", @name="Sword">
+```
+
+Перше в цьому рядку - клас, якому належить об'єкт, Treasure. За ним іде число, яке у вас може відрізнятися від написаного вище - це внутрішній ідентифікатор в ruby для даного конкретного об'єкта; і останнім показані змінні нашого екземпляра і їх значення.
+
+> Файл **p.rb**
+
+```ruby
+class Treasure
+def initialize aName, aDescription
+@name = aName
+@description = aDescription
+end
+
+  def to_s # Перевизначення стандартного методу to_s
+  "The #{@name} Treasure is #{@description}\n"
+  end
+  end
+
+
+  a = "hello"
+  b = 123
+  c = Treasure.new "ring", "a glittery gold thing"
+
+  p a
+  p b
+  p c
+  ```
+
+  Ruby надає метод `p` для перевірки і відображення об'єктів.
+
+  ```ruby
+  p anobject
+  ```
+
+  > Файл **to_s.rb**
+
+  ```ruby
+# Show string representaions of various objects
+# using the to_s method
+
+class Treasure
+def initialize( aName, aDescription )
+@name         = aName
+@description  = aDescription
+end
+# This time we won't override to_s so the Treasure object
+# will use the default to_s method...
+end
+
+
+t = Treasure.new "Sword", "A lovely Elvish weapon" 
+print "Class.to_s: "
+puts Class.to_s
+print "Object.to_s: "
+puts Object.to_s
+print "String.to_s: "
+puts String.to_s
+print "100.to_s: "
+puts 100.to_s
+print "Treasure.to_s: "
+puts Treasure.to_s
+print "t.to_s: "
+puts t.to_s
+print "t.inspect: "
+puts t.inspect
+```
+
+Щоб побачити, як метод `to_s` може використовуватися різними об'єктами і перевірити як екземпляр класу `Treasure` буде перетворений в рядок, якщо не перевизначати метод `to_s` - випробуйте програму `to_s.rb` (її зміст зображений вище).
+
+Як ви побачите, коли ми викликаємо метод `to_s` на таких класах, як `Class`, `Object`, `String` і `Treasure` - метод просто поверне їхні імена. А якщо ми його викличемо на об'єкті, як наприклад `t` екземпляр класу `Treasure` то він поверне той же ідентифікатор, що повертає метод `inspect`.
+
+> Файл treasure.rb
+
+```ruby
+class Thing
+  def set_name( aName )
+    @name = aName
+  end
+
+  def get_name
+    return @name
+  end
+end
+
+class Treasure
+  def initialize( aName, aDescription )
+    @name         = aName
+    @description  = aDescription
+  end
+
+  def to_s # override default to_s method
+    "The #{@name} Treasure is #{@description}\n"
+  end
+end
+
+thing1 = Thing.new
+thing1.set_name( "A lovely Thing" )
+puts thing1.get_name
+
+t1 = Treasure.new("Sword", "an Elvish weapon forged of gold")
+t2 = Treasure.new("Ring", "a magic ring of great power")
+puts t1.to_s
+puts t2.to_s
+# The inspect method lets you look inside an object
+puts "Inspecting 1st treasure: #{t1.inspect}"
+```
+
+Дивлячись на мою treasure.rb програму я не можу позбутися думки, що його код трохи повтори. Зрештою, чому маючи клас Thing, який містит ім'я і клас Treasure, який також місить ім'я (ім'я - інстанс змінна @name) чому кожен з них ініціалізуються окремо один від одного? It  would  make  more  sense  to  regard  a Treasure as a ‘type of Thing’.  Якби я мав розвивати цю програму в повній пригодницької гри, інші об'єкти, такі як номери і зброї можуть бути ще інші «типи речей». Думаю, пора почати роботу, над правильною ієрархією класів. Спробуємо це зробити в наступному розділі.
