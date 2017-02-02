@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "name": "thelittlebookofruby",
+  "version": "0.0.0",
+  "description": "Ukrainian translation of “The Little Book Of Ruby",
+  "author": "Serhiy Giba <giba.sergiy@gmail.com> (https://sergogovich.github.io)",
+  "contributors": [
+    {
+      "name": "Mariannna Chupryna",
+      "email": "marianna2398an@gmail.com"
+    },
+    {
+      "name": "Alex Zakrytyi",
+      "email": "nevusdance@gmail.com"
+    }
+  ],
+  "scripts": {
+    "install": "gitbook install",
+    "start": "npm run install && gitbook serve",
+    "build": "npm run install && gitbook build",
+    "deploy": "npm run build && gh-pages -d _book -m \"Updated at $(date +'%a, %d %b %Y, %T, %Z')\" --add"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaBooks/thelittlebookofruby.git"
+  },
+  "keywords": [
+    "book",
+    "documentation",
+    "guide"
+  ],
+  "license": "CC BY-NC-ND 4.0",
+  "bugs": {
+    "url": "https://github.com/LambdaBooks/thelittlebookofruby/issues"
+  },
+  "homepage": "https://github.com/LambdaBooks/thelittlebookofruby#readme",
+  "devDependencies": {
+    "gh-pages": "^0.12.0",
+    "gitbook-cli": "^2.1.3"
+  }
+}
