@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- v6
+branches:
+  only: master
+before_script:
+- git config --global user.email "email@denysdovhan.com"
+- git config --global user.name "Denys Dovhan"
+- git remote rm origin
+- git remote add origin https://denysdovhan:${GH_TOKEN}@github.com/LambdaBooks/thelittlebookofruby.git
+script:
+- npm run deploy
