@@ -2,10 +2,10 @@
     <channel>
         <title><![CDATA[Маленька книга про Ruby]]></title>
         <description><![CDATA[Український переклад книги «The Little Book Of Ruby».]]></description>
-        <link>http://thelittlebookofruby.lambdabooks.github.io/</link>
+        <link>http://lambdabooks.github.io/thelittlebookofruby</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 03 Feb 2017 12:43:34 GMT</lastBuildDate>
-        <atom:link href="http://thelittlebookofruby.lambdabooks.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Fri, 03 Feb 2017 14:20:00 GMT</lastBuildDate>
+        <atom:link href="http://lambdabooks.github.io/thelittlebookofruby/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
         <webMaster><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></webMaster>
@@ -24,22 +24,22 @@ Build Status
 Twitter
 RSS
 Stars]]></description>
-            <link>http://thelittlebookofruby.lambdabooks.github.io/</link>
-            <guid isPermaLink="true">http://thelittlebookofruby.lambdabooks.github.io/</guid>
+            <link>http://lambdabooks.github.io/thelittlebookofruby</link>
+            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofruby</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
             <description><![CDATA[##Розділ перший]]></description>
-            <link>http://thelittlebookofruby.lambdabooks.github.io/chapters/01-Strings-and-Methods.html</link>
-            <guid isPermaLink="true">http://thelittlebookofruby.lambdabooks.github.io/chapters/01-Strings-and-Methods.html</guid>
+            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/01-Strings-and-Methods.html</link>
+            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/01-Strings-and-Methods.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
             <description><![CDATA[##Розділ другий]]></description>
-            <link>http://thelittlebookofruby.lambdabooks.github.io/chapters/02-Classes-and-Objects.html</link>
-            <guid isPermaLink="true">http://thelittlebookofruby.lambdabooks.github.io/chapters/02-Classes-and-Objects.html</guid>
+            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/02-Classes-and-Objects.html</link>
+            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/02-Classes-and-Objects.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
     </channel>
