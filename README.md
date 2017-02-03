@@ -75,7 +75,7 @@ Copyright © 2008 Dark Neon Ltd. All rights reserved.
 
 <!-- Download links -->
 
-[site-url]: http://thelittlebookofruby.lambdabooks.github.io/
+[site-url]: http://lambdabooks.github.io/thelittlebookofruby
 
 [pdf-url]: https://www.gitbook.com/download/pdf/book/LambdaBooks/thelittlebookofruby
 [pdf-image]: https://img.shields.io/badge/get-PDF-EB4E33.svg?style=flat-square

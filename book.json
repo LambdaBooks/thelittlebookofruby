@@ -18,8 +18,8 @@
       "title": "Маленька книга про Ruby",
       "description": "Український переклад книги «The Little Book Of Ruby».",
       "author": "Denys Dovhan",
-      "site_url": "http://thelittlebookofruby.lambdabooks.github.io/",
-      "feed_url": "http://thelittlebookofruby.lambdabooks.github.io/rss.xml",
+      "site_url": "http://lambdabooks.github.io/thelittlebookofruby",
+      "feed_url": "http://lambdabooks.github.io/thelittlebookofruby/rss.xml",
       "managingEditor": "email@denysdovhan.com (Denys Dovhan)",
       "webMaster": "email@denysdovhan.com (Denys Dovhan)",
       "categories": [
