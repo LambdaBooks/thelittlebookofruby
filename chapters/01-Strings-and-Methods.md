@@ -183,7 +183,3 @@ subtotal = 0.0 if subtotal < 0.0
 ```ruby
 subtotal = 0.0 unless (subtotal > 0.0) || (subtotal == 0)
 ```
-
-
-
-
