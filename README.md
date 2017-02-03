@@ -60,6 +60,7 @@
 Цей переклад результат наполегливої та злагодженої роботи нашої команди:
 
 * [_Сергій Гіба_](https://twitter.com/sergogovich) — автор перекладу.
+* Допомога з перекладом — [_@wrdsld_](https://twitter.com/wrdsld)
 * [_Маріанна Чуприна_](https://twitter.com/marianna_ch_a) — коректор.
 * [_Олександр Закритий_](https://twitter.com/nevusnews) — коректор.
 
