@@ -1,0 +1,605 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Глава 2: Класи та об’єкти · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="01-Strings-and-Methods.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"LambdaBooks/thelittlebookofruby","types":["star"],"size":"small"};
+    </script>
+
+    <link href="http://thelittlebookofruby.lambdabooks.github.io/rss.xml" title="Маленька книга про Ruby" rel="alternate" type="application/rss+xml" />
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Маленька книжка про Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Вступ
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html">
+            
+                    
+                    Глава 1: Рядки та методи
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html">
+            
+                    
+                    Глава 2: Класи та об’єкти
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    Глава 3: Класова ієрархія
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    Глава 4: Аксесори, атрибути, змінні класів
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    Глава 5: Масиви
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    Глава 6: Хеші
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    Глава 7: Цикли та ітератори
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    Глава 8: Умовні оператори
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    Глава 9: Модулі та домішки
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    Глава 10: Збереження файлів, продовження…
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Глава 2: Класи та об’єкти</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x440;&#x43E;&#x437;&#x434;&#x456;&#x43B;-&#x434;&#x440;&#x443;&#x433;&#x438;&#x439;">&#x420;&#x43E;&#x437;&#x434;&#x456;&#x43B; &#x434;&#x440;&#x443;&#x433;&#x438;&#x439;</h2>
+<blockquote>
+<p>&#x412;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; &#x442;&#x430; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;</p>
+</blockquote>
+<p>&#x414;&#x43E;&#x441;&#x456; &#x43C;&#x438; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x43B;&#x438; &quot;&#x441;&#x442;&#x440;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x456;&quot; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x438; Ruby, &#x442;&#x430;&#x43A;&#x456; &#x44F;&#x43A; &#x446;&#x438;&#x444;&#x440;&#x438; &#x456; &#x440;&#x44F;&#x434;&#x43A;&#x438;. &#x422;&#x435;&#x43F;&#x435;&#x440; &#x434;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x43F;&#x43E;&#x434;&#x438;&#x432;&#x438;&#x43C;&#x43E;&#x441;&#x44F;, &#x44F;&#x43A; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x44E;&#x432;&#x430;&#x442;&#x438; &#x43D;&#x430;&#x448;&#x456; &#x432;&#x43B;&#x430;&#x441;&#x43D;&#x456;, &#x43D;&#x43E;&#x432;&#x456; &#x442;&#x438;&#x43F;&#x438; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;. &#x42F;&#x43A; &#x456; &#x432; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x43E;&#x441;&#x442;&#x456; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x43D;&#x43E; &#x43E;&#x440;&#x456;&#x454;&#x43D;&#x442;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x445; &#x43C;&#x43E;&#x432; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;, &#x432; Ruby &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x43E;&#x43C;. &#x41A;&#x43B;&#x430;&#x441; &#x43F;&#x43E;&#x434;&#x456;&#x431;&#x43D;&#x438;&#x439; &#x43F;&#x43B;&#x430;&#x43D;&#x443;, &#x437; &#x44F;&#x43A;&#x43E;&#x433;&#x43E; &#x432;&#x441;&#x435; &#x431;&#x443;&#x434;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F;. &#x426;&#x435; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x434;&#x443;&#x436;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443;:</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span></span>
+
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x410; &#x442;&#x443;&#x442; &#x44F; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x44E;&#x44E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x43D;&#x430;&#x448;&#x43E;&#x433;&#x43E; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443;:</p>
+<pre><code class="lang-ruby">object = MyClass.new
+</code></pre>
+<p>&#x42F; &#x43D;&#x435;&#x431;&#x430;&#x433;&#x430;&#x442;&#x43E; &#x43C;&#x43E;&#x436;&#x443; &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x438; &#x437; &#x43D;&#x430;&#x448;&#x438;&#x43C; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x43E;&#x43C; &#x445;&#x43E;&#x447;&#x430; &#x431; &#x442;&#x43E;&#x43C;&#x443;, &#x449;&#x43E; &#x43D;&#x456;&#x447;&#x43E;&#x433;&#x43E; &#x43D;&#x435; &#x437;&#x430;&#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443;&#x432;&#x430;&#x432; &#x432; &#x43A;&#x43B;&#x430;&#x441;&#x456; <strong>MyClass</strong> &#x437; &#x44F;&#x43A;&#x43E;&#x433;&#x43E; &#x432;&#x456;&#x43D; &#x431;&#x443;&#x432; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x438;&#x439;.</p>
+<blockquote>
+<p>&#x424;&#x430;&#x439;&#x43B; <strong>object_class.rb</strong></p>
+<p>&#x41D;&#x430;&#x441;&#x43F;&#x440;&#x430;&#x432;&#x434;&#x456;, &#x44F;&#x43A;&#x449;&#x43E; &#x432;&#x438; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x435; &#x43F;&#x43E;&#x440;&#x43E;&#x436;&#x43D;&#x456;&#x439; &#x43A;&#x43B;&#x430;&#x441; &#x44F;&#x43A; <code>MyClass</code>, &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x438; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x456; &#x432;&#x456;&#x434; &#x43D;&#x44C;&#x43E;&#x433;&#x43E; - &#x43D;&#x435; &#x431;&#x443;&#x434;&#x443;&#x442;&#x44C; &#x437;&#x43E;&#x432;&#x441;&#x456;&#x43C; &#x43C;&#x430;&#x440;&#x43D;&#x438;&#x43C;&#x438;. &#x423;&#x441;&#x456; &#x43A;&#x43B;&#x430;&#x441;&#x438; &#x432;  Ruby &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x43E; &#x443;&#x441;&#x43F;&#x430;&#x434;&#x43A;&#x43E;&#x432;&#x443;&#x44E;&#x442;&#x44C; &#x432;&#x441;&#x43B;&#x430;&#x441;&#x442;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x456; &#x43A;&#x43B;&#x430;&#x441;&#x443; <strong>Object</strong>. &#x422;&#x43E; &#x436; &#x43D;&#x430;&#x448; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x43C;&#x43E;&#x436;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x43A;&#x43B;&#x430;&#x441;&#x443; Object, &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x442;&#x430;&#x43A;&#x456;, &#x44F;&#x43A; <code>.class</code>  (&#x432;&#x438;&#x432;&#x43E;&#x434;&#x438;&#x442;&#x44C; &#x43D;&#x430;&#x437;&#x432;&#x443; &#x43A;&#x43B;&#x430;&#x441;&#x443;, &#x44F;&#x43A;&#x43E;&#x43C;&#x443; &#x43D;&#x430;&#x43B;&#x435;&#x436;&#x438;&#x442;&#x44C; &#x43D;&#x430;&#x448; &#x43A;&#x43B;&#x430;&#x441;):</p>
+<pre><code>puts ob.class #=&gt; &#x41F;&#x43E;&#x43A;&#x430;&#x436;&#x435; &#x43D;&#x430;&#x43C;: &#x201C;MyClass&#x201D;
+</code></pre></blockquote>
+<p>&#x429;&#x43E;&#x431; &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x438; <code>MyClass</code> &#x442;&#x440;&#x43E;&#x445;&#x438; &#x43A;&#x43E;&#x440;&#x438;&#x441;&#x43D;&#x456;&#x448;&#x438;&#x43C; - &#x434;&#x43E;&#x434;&#x430;&#x43C;&#x43E; &#x432; &#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x43E;&#x434;&#x438;&#x43D; &#x430;&#x431;&#x43E; &#x434;&#x435;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x430; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432;. &#x423; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x456;, &#x449;&#x43E; &#x431;&#x443;&#x432; &#x43A;&#x43E;&#x440;&#x43E;&#x442;&#x43A;&#x43E; &#x437;&#x433;&#x430;&#x434;&#x430;&#x43D;&#x438;&#x439; &#x443; &#x43F;&#x43E;&#x43F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x44C;&#x43E;&#x43C;&#x443; &#x440;&#x43E;&#x437;&#x434;&#x456;&#x43B;&#x456;, &#x44F; &#x434;&#x43E;&#x434;&#x430;&#x432; &#x43C;&#x435;&#x442;&#x43E;&#x434;, &#x44F;&#x43A;&#x438;&#x439; &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; <strong>saysomething</strong>:</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">saysomething</span></span>
+    puts(<span class="hljs-string">&quot;Hello&quot;</span>)
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x422;&#x435;&#x43F;&#x435;&#x440;, &#x44F;&#x43A;&#x449;&#x43E; &#x44F; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x44E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>MyClass</code>, &#x44F; &#x437;&#x43C;&#x43E;&#x436;&#x443; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x430;&#x442;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430; <code>saysomething</code> &#x456; &#x432;&#x438;&#x432;&#x435;&#x441;&#x442;&#x438; &#x441;&#x43B;&#x43E;&#x432;&#x43E; &quot;<strong>Hello</strong>&quot;:</p>
+<pre><code class="lang-ruby">ob = MyClass.new
+ob.saysomething
+</code></pre>
+<h3 id="&#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x438;-&#x456;-&#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;-&#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x456;&#x432;-&#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432;">&#x415;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x438; &#x456; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x456;&#x432; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432;</h3>
+<p>&#x421;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x43C;&#x43E; &#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x430; &#x43A;&#x43E;&#x440;&#x438;&#x441;&#x43D;&#x438;&#x445; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;. &#x414;&#x456;&#x43C; &#x43D;&#x435; &#x43F;&#x43E;&#x432;&#x438;&#x43D;&#x435;&#x43D; &#x431;&#x443;&#x442;&#x438; &#x431;&#x435;&#x437; &#x441;&#x43E;&#x431;&#x430;&#x43A;&#x438;, &#x442;&#x43E;&#x436; &#x434;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x43C;&#x43E; &#x441;&#x43A;&#x43B;&#x430;&#x441; Dog:</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_name</span><span class="hljs-params">(aName)</span></span>
+    @myname = aName
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x417;&#x432;&#x435;&#x440;&#x43D;&#x456;&#x442;&#x44C; &#x443;&#x432;&#x430;&#x433;&#x443;, &#x449;&#x43E; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x443; &#x43F;&#x43E;&#x447;&#x438;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x437; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x441;&#x43B;&#x43E;&#x432;&#x430; <strong>class</strong> (&#x432; &#x43D;&#x438;&#x436;&#x43D;&#x44C;&#x43E;&#x43C;&#x443; &#x440;&#x435;&#x433;&#x456;&#x441;&#x442;&#x440;&#x456;), &#x430; &#x43F;&#x456;&#x441;&#x43B;&#x44F; &#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x439;&#x434;&#x435; &#x43D;&#x430;&#x437;&#x432;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x443;, &#x449;&#x43E; &#x43F;&#x43E;&#x432;&#x438;&#x43D;&#x43D;&#x430; &#x43F;&#x43E;&#x447;&#x438;&#x43D;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x437; &#x432;&#x435;&#x43B;&#x438;&#x43A;&#x43E;&#x457; &#x43B;&#x456;&#x442;&#x435;&#x440;&#x438;. &#x41C;&#x456;&#x439; &#x43A;&#x43B;&#x430;&#x441; <strong>Dog</strong> &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x43E;&#x434;&#x438;&#x43D; &#x43C;&#x435;&#x442;&#x43E;&#x434; <strong>set_name</strong>. &#x412;&#x456;&#x43D; &#x43F;&#x440;&#x438;&#x439;&#x43C;&#x430;&#x454; &#x432;&#x445;&#x456;&#x434;&#x43D;&#x438;&#x439; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442; <strong>aName</strong>. &#x417;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; <strong>aName</strong> &#x432; &#x441;&#x432;&#x43E;&#x44E; &#x447;&#x435;&#x440;&#x433;&#x443; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x43E;&#x44E;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x456;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x441; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;&#x439; <strong>@myname</strong> &#x432; &#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <strong>set_name</strong>.</p>
+<blockquote>
+<p>&#x417;&#x43C;&#x456;&#x43D;&#x43D;&#x456;, &#x449;&#x43E; &#x43F;&#x43E;&#x447;&#x438;&#x43D;&#x430;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x437; &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B;&#x443; @ (&#x43A;&#x43E;&#x43C;&#x435;&#x440;&#x446;&#x456;&#x439;&#x43D;&#x435; &quot;at&quot;) &#x454; &quot;&#x456;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x441;&quot; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x43C;&#x438;. &#x426;&#x435; &#x43E;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x454;, &#x449;&#x43E; &#x432;&#x43E;&#x43D;&#x438; &#x43D;&#x430;&#x43B;&#x435;&#x436;&#x430;&#x442;&#x44C; &#x456;&#x43D;&#x434;&#x438;&#x432;&#x456;&#x434;&#x443;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43C; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;&#x43C; &#x43A;&#x43B;&#x430;&#x441;&#x443; &#x430;&#x431;&#x43E; &quot;&#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x430;&#x43C;&quot; &#x43A;&#x43B;&#x430;&#x441;&#x443;.</p>
+</blockquote>
+<p>&#x42F; &#x43C;&#x43E;&#x436;&#x443; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x438; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Dog</code>, &#x442;&#x43E;&#x431;&#x442;&#x43E; &quot;&#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x441;&#x43E;&#x431;&#x430;&#x43A;&#x430;&quot;, &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x430;&#x432;&#x448;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>new</code>. &#x422;&#x443;&#x442; &#x44F; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x44E;&#x44E; &#x434;&#x432;&#x430; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x438; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Dog</code> &#x442;&#x43E;&#x431;&#x442;&#x43E; &quot;&#x434;&#x432;&#x456; &#x441;&#x43E;&#x431;&#x430;&#x43A;&#x438;&quot; (&#x43F;&#x430;&#x43C;&apos;&#x44F;&#x442;&#x430;&#x439;&#x442;&#x435;, &#x449;&#x43E; &#x456;&#x43C;&#x435;&#x43D;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; &#x43F;&#x43E;&#x447;&#x438;&#x43D;&#x430;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x437; &#x432;&#x435;&#x43B;&#x438;&#x43A;&#x43E;&#x457; &#x43B;&#x456;&#x442;&#x435;&#x440;&#x438;; &#x406;&#x43C;&#x435;&#x43D;&#x430; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432; &#x441;&#x43A;&#x43B;&#x430;&#x434;&#x430;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x437; &#x43B;&#x456;&#x442;&#x435;&#x440; &#x43D;&#x438;&#x436;&#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x440;&#x435;&#x433;&#x456;&#x441;&#x442;&#x440;&#x443;):</p>
+<pre><code class="lang-ruby">mydog = Dog.new
+yourdog = Dog.new
+</code></pre>
+<p>&#x417;&#x430;&#x440;&#x430;&#x437; &#x446;&#x456; &#x434;&#x432;&#x456; &#x441;&#x43E;&#x431;&#x430;&#x43A;&#x438; &#x43D;&#x435; &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x456;&#x43C;&#x435;&#x43D;. &#x422;&#x43E;&#x436; &#x43D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x443; &#x440;&#x456;&#x447;, &#x44F;&#x43A;&#x443; &#x44F; &#x43C;&#x430;&#x44E; &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x438; &#x430;&#x431;&#x438; &#x437;&#x430;&#x434;&#x430;&#x442;&#x438; &#x457;&#x43C; &#x456;&#x43C;&#x435;&#x43D;&#x430; - &#x446;&#x435; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x430;&#x442;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>set_name</code>:</p>
+<pre><code class="lang-ruby">mydog.set_name(<span class="hljs-string">&apos;Fido&apos;</span>)
+yourdog.set_name(<span class="hljs-string">&apos;Bonzo&apos;</span>)
+</code></pre>
+<p>&#x417;&#x430;&#x434;&#x430;&#x432;&#x448;&#x438; &#x456;&#x43C;&#x435;&#x43D;&#x430; &#x441;&#x43E;&#x431;&#x430;&#x43A;&#x430;&#x43C;, &#x43C;&#x435;&#x43D;&#x456; &#x43F;&#x43E;&#x442;&#x440;&#x456;&#x431;&#x43D;&#x43E; &#x43C;&#x430;&#x442;&#x438; &#x441;&#x43F;&#x43E;&#x441;&#x456;&#x431; &#x434;&#x456;&#x437;&#x43D;&#x430;&#x442;&#x438; &#x457;&#x445; &#x43F;&#x456;&#x437;&#x43D;&#x456;&#x448;&#x435;. &#x423; &#x43A;&#x43E;&#x436;&#x43D;&#x43E;&#x457; &#x441;&#x43E;&#x431;&#x430;&#x43A;&#x438; &#x43F;&#x43E;&#x432;&#x438;&#x43D;&#x43D;&#x43E; &#x431;&#x443;&#x442;&#x438; &#x432;&#x43B;&#x430;&#x441;&#x43D;&#x435; &#x456;&#x43C;&apos;&#x44F;, &#x442;&#x43E;&#x43C;&#x443; &#x434;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x43C;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>get_name</code>:</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_name</span></span>
+  <span class="hljs-keyword">return</span> @myname
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x421;&#x43B;&#x43E;&#x432;&#x43E; <code>return</code> &#x442;&#x443;&#x442; &#x43D;&#x435; &#x454; &#x43E;&#x431;&#x43E;&#x432;&apos;&#x44F;&#x437;&#x43A;&#x43E;&#x432;&#x438;&#x43C;. &#x412; Ruby &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x437;&#x430;&#x432;&#x436;&#x434;&#x438; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x44E;&#x442;&#x44C; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43E;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&#x447;&#x438;&#x441;&#x43B;&#x435;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x438;&#x440;&#x430;&#x437;&#x443;. &#x410;&#x43B;&#x435; &#x434;&#x43B;&#x44F; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x43E;&#x457; &#x44F;&#x441;&#x43D;&#x43E;&#x441;&#x442;&#x456; (&#x456; &#x443;&#x43D;&#x438;&#x43A;&#x43D;&#x435;&#x43D;&#x43D;&#x44F; &#x43D;&#x435;&#x441;&#x43F;&#x43E;&#x434;&#x456;&#x432;&#x430;&#x43D;&#x438;&#x445; &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;&#x456;&#x432; &#x432;&#x456;&#x434; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432; &#x441;&#x43A;&#x43B;&#x430;&#x434;&#x43D;&#x456;&#x448;&#x438;&#x445; &#x437;&#x430; &#x446;&#x435;&#x439;) - &#x43C;&#x438; &#x432;&#x441;&#x435; &#x436; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438;&#x43C;&#x435;&#x43C;&#x43E; &#x441;&#x43B;&#x43E;&#x432;&#x43E; <code>return</code>.</p>
+<p>&#x414;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x437;&#x430;&#x434;&#x430;&#x43C;&#x43E; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x456;&#x43D;&#x43A;&#x443; &#x43D;&#x430;&#x448;&#x456;&#x439; &#x441;&#x43E;&#x431;&#x430;&#x446;&#x456;, &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x43D;&#x430;&#x432;&#x447;&#x438;&#x43C;&#x43E; &#x457;&#x457; &#x432;&#x456;&#x434;&#x433;&#x443;&#x43A;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44F;. &#x41D;&#x438;&#x436;&#x447;&#x435; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439; &#x437;&#x430;&#x43A;&#x456;&#x43D;&#x447;&#x435;&#x43D;&#x438;&#x439; &#x43A;&#x43B;&#x430;&#x441; <code>Dog</code>:</p>
+<blockquote>
+<p>&#x424;&#x430;&#x439;&#x43B; dogs_and_cats.rb</p>
+</blockquote>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dog</span>   </span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_name</span><span class="hljs-params">( aName )</span></span>
+    @myname = aName
+  <span class="hljs-keyword">end</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_name</span></span>
+    <span class="hljs-keyword">return</span> @myname
+  <span class="hljs-keyword">end</span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">talk</span></span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&apos;woof!&apos;</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x422;&#x435;&#x43F;&#x435;&#x440; &#x43C;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x43C;&#x43E; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x438; &#x441;&#x43E;&#x431;&#x430;&#x43A;&#x443;, &#x437;&#x430;&#x434;&#x430;&#x442;&#x438; &#x457;&#x439; &#x456;&#x43C;&apos;&#x44F;, &#x434;&#x456;&#x437;&#x43D;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x457;&#x457; &#x456;&#x43C;&apos;&#x44F; &#x456; &#x43F;&#x43E;&#x43F;&#x440;&#x43E;&#x441;&#x438;&#x442;&#x438; &#x432;&#x456;&#x434;&#x433;&#x443;&#x43A;&#x43D;&#x443;&#x442;&#x438;&#x441;&#x44F;:</p>
+<pre><code class="lang-ruby">mydog = Dog.new
+mydog.set_name(<span class="hljs-string">&apos;Fido&apos;</span>)
+
+puts mydog.get_name
+puts mydog.talk
+</code></pre>
+<p>&#x414;&#x43B;&#x44F; &#x440;&#x456;&#x437;&#x43D;&#x43E;&#x43C;&#x430;&#x43D;&#x456;&#x442;&#x43D;&#x43E;&#x441;&#x442;&#x456; &#x442;&#x430; &#x43F;&#x440;&#x430;&#x43A;&#x442;&#x438;&#x43A;&#x438; - &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x438; &#x444;&#x430;&#x439;&#x43B; <strong>dogs_and_cats.rb</strong> &#x456; &#x437;&#x430;&#x434;&#x430;&#x442;&#x438; &#x432; &#x43D;&#x44C;&#x43E;&#x43C;&#x443; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x456;&#x43D;&#x43A;&#x443; &#x43D;&#x435; &#x442;&#x456;&#x43B;&#x44C;&#x43A;&#x438; &#x441;&#x43E;&#x431;&#x430;&#x446;&#x456;, &#x430; &#x439; &#x43A;&#x43E;&#x442;&#x443;, &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x432;&#x448;&#x438; &#x432;&#x456;&#x434;&#x43F;&#x43E;&#x432;&#x456;&#x434;&#x43D;&#x43E; &#x43D;&#x43E;&#x432;&#x438;&#x439; &#x43A;&#x43B;&#x430;&#x441; <code>Cat</code>.</p>
+<h3 id="&#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440;---new-&#x456;-initialize">&#x41A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x442;&#x43E;&#x440; - new &#x456; initialize</h3>
+<blockquote>
+<p>&#x424;&#x430;&#x439;&#x43B; <strong>treasure.rb</strong></p>
+</blockquote>
+<p>&#x417;&#x430;&#x440;&#x430;&#x437; &#x440;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x43D;&#x435;&#x43C;&#x43E; &#x449;&#x435; &#x43E;&#x434;&#x438;&#x43D; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x43A;&#x43B;&#x430;&#x441;&#x443;. &#x41C;&#x438; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x43C;&#x43E; &#x43F;&#x440;&#x438;&#x433;&#x43E;&#x434;&#x43D;&#x438;&#x446;&#x44C;&#x43A;&#x443; &#x433;&#x440;&#x443; &#x437; &#x434;&#x432;&#x43E;&#x43C;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x430;&#x43C;&#x438;: <code>Thing</code> &#x456; <code>Treasure</code>. &#x41A;&#x43B;&#x430;&#x441; <code>Thing</code> &#x434;&#x443;&#x436;&#x435; &#x441;&#x445;&#x43E;&#x436;&#x438;&#x439; &#x43D;&#x430; &#x43A;&#x43B;&#x430;&#x441; <code>Dog</code> &#x437; &#x43D;&#x430;&#x448;&#x43E;&#x457; &#x43F;&#x43E;&#x43F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x44C;&#x43E;&#x457; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x438; (&#x43A;&#x440;&#x456;&#x43C; &#x442;&#x43E;&#x433;&#x43E;, &#x449;&#x43E; &#x432;&#x456;&#x43D; &#x43D;&#x435; &#x432;&#x43C;&#x456;&#x454; &#x433;&#x430;&#x432;&#x43A;&#x430;&#x442;&#x438;).</p>
+<p>&#x41F;&#x440;&#x43E;&#x442;&#x435; &#x432; &#x43A;&#x43B;&#x430;&#x441;&#x430; <code>Treasure</code> &#x442;&#x435;&#x436; &#x454; &#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x430; &#x446;&#x456;&#x43A;&#x430;&#x432;&#x438;&#x445; &#x43E;&#x441;&#x43E;&#x431;&#x43B;&#x438;&#x432;&#x43E;&#x441;&#x442;&#x435;&#x439;. &#x41F;&#x43E;-&#x43F;&#x435;&#x440;&#x448;&#x435; &#x432; &#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x43D;&#x435;&#x43C;&#x430;&#x454; &#x442;&#x430;&#x43A;&#x438;&#x445; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432; &#x44F;&#x43A; <code>get_name</code> &#x456; <code>set_name</code>. &#x417;&#x430;&#x43C;&#x456;&#x441;&#x442;&#x44C; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x432; &#x43D;&#x44C;&#x43E;&#x43C;&#x443; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>initiaize</code>, &#x44F;&#x43A;&#x438;&#x439; &#x43F;&#x440;&#x438;&#x439;&#x43C;&#x430;&#x454; &#x434;&#x432;&#x430; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x438;, &#x430; &#x457;&#x445; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43F;&#x440;&#x438;&#x441;&#x432;&#x43E;&#x44E;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x456;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x441; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x43C; <code>@name</code> &#x456; <code>@description</code>:</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">( aName, aDescription )</span></span>
+  @name = aName
+  @description = aDescription
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x42F;&#x43A;&#x449;&#x43E; &#x43A;&#x43B;&#x430;&#x441; &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; <code>initialize</code> &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x442;&#x43E; &#x432;&#x456;&#x43D; &#x431;&#x443;&#x434;&#x435; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x43E; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x430;&#x43D;&#x438;&#x439; &#x43F;&#x440;&#x438; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x456; &#x43D;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;, &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x43C; <code>new</code>. &#x412;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>initialize</code> &#x434;&#x43B;&#x44F; &#x437;&#x430;&#x434;&#x430;&#x43D;&#x43D;&#x44F; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x44C; &#x456;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x441; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x43C; - &#x434;&#x43E;&#x441;&#x438;&#x442;&#x44C; &#x445;&#x43E;&#x440;&#x43E;&#x448;&#x430; &#x456;&#x434;&#x435;&#x44F;, &#x456; &#x432;&#x43E;&#x43D;&#x430; &#x43C;&#x430;&#x454; &#x434;&#x432;&#x456; &#x44F;&#x432;&#x43D;&#x456; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x430;&#x433;&#x438; &#x443; &#x43F;&#x43E;&#x440;&#x456;&#x432;&#x43D;&#x44F;&#x43D;&#x43D;&#x456; &#x437; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432; &#x43D;&#x430;&#x43A;&#x448;&#x442;&#x430;&#x43B;&#x442; <code>set_name</code> &#x434;&#x43B;&#x44F; &#x432;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x43B;&#x435;&#x43D;&#x43D;&#x44F; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43E;&#x436;&#x43D;&#x456;&#x439; &#x456;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x441; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;&#x439;.</p>
+<p>&#x41F;&#x435;&#x440;&#x448; &#x437;&#x430; &#x432;&#x441;&#x435; &#x441;&#x43A;&#x43B;&#x430;&#x434;&#x43D;&#x438;&#x439; &#x43A;&#x43B;&#x430;&#x441; &#x43C;&#x43E;&#x436;&#x435; &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x438; &#x432;&#x435;&#x43B;&#x438;&#x43A;&#x443; &#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x456;&#x441;&#x442;&#x44C; &#x456;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x441; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x445; &#x456; &#x432;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x432;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;&#x438; &#x432;&#x441;&#x456;&#x43C; &#x457;&#x43C; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43E;&#x434;&#x43D;&#x438;&#x43C; &#x43B;&#x438;&#x448;&#x435; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x43C; <code>initialize</code>, &#x430; &#x43D;&#x435; &#x431;&#x430;&#x433;&#x430;&#x442;&#x44C;&#x43C;&#x430; <code>set</code> &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430;&#x43C;&#x438;; &#x41F;&#x43E;-&#x434;&#x440;&#x443;&#x433;&#x435; &#x44F;&#x43A;&#x449;&#x43E; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x438;&#x43C; &#x430;&#x432;&#x442;&#x43E;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x43E; &#x437;&#x430;&#x434;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x432; &#x43C;&#x43E;&#x43C;&#x435;&#x43D;&#x442; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430; - &#x443; &#x432;&#x430;&#x441; &#x43D;&#x435; &#x431;&#x443;&#x434;&#x435; &#x456;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x441; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457;, &#x432;&#x441;&#x442;&#x430;&#x43D;&#x43E;&#x432;&#x438;&#x442;&#x438; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x44F;&#x43A;&#x456;&#x439; &#x432;&#x438; &#x437;&#x430;&#x431;&#x443;&#x43B;&#x438;.</p>
+<blockquote>
+<p><strong>&#x41D;&#x43E;&#x442;&#x430;&#x442;&#x43A;&#x430;:</strong> &#x41D;&#x435; &#x440;&#x435;&#x43A;&#x43E;&#x43C;&#x435;&#x43D;&#x434;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x440;&#x435;&#x430;&#x43B;&#x456;&#x437;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; &#x441;&#x432;&#x43E;&#x44E; &#x432;&#x43B;&#x430;&#x441;&#x43D;&#x443; &#x432;&#x435;&#x440;&#x441;&#x456;&#x44E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <code>new</code>.</p>
+</blockquote>
+<p>&#x406; &#x43D;&#x430;&#x440;&#x435;&#x448;&#x442;&#x456;, &#x44F; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x432; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>to_s</code> &#x449;&#x43E;&#x431; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x438; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Treasure</code> &#x443; &#x432;&#x438;&#x433;&#x43B;&#x44F;&#x434;&#x456; &#x440;&#x44F;&#x434;&#x43A;&#x430;. &#x41D;&#x430;&#x437;&#x432;&#x430; <code>to_s</code> &#x432;&#x438;&#x431;&#x440;&#x430;&#x43D;&#x430; &#x43D;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x442;&#x430;&#x43A;, &#x442;&#x430;&#x43A;&#x430; &#x441;&#x430;&#x43C;&#x430; &#x43D;&#x430;&#x437;&#x432;&#x430; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x456; &#x432; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x456;&#x439; &#x456;&#x454;&#x440;&#x430;&#x440;&#x445;&#x456;&#x457; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; Ruby. &#x41D;&#x430;&#x441;&#x43F;&#x440;&#x430;&#x432;&#x434;&#x456;, <code>to_s</code> &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x434;&#x43B;&#x44F; &#x441;&#x430;&#x43C;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443; <strong>Object</strong>, &#x44F;&#x43A;&#x438;&#x439; &#x454; &#x43A;&#x456;&#x43D;&#x446;&#x435;&#x432;&#x438;&#x43C; &#x43F;&#x440;&#x435;&#x434;&#x43A;&#x43E;&#x43C; &#x432;&#x441;&#x456;&#x445; &#x456;&#x43D;&#x448;&#x438;&#x445; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; &#x432; Ruby. &#x41F;&#x435;&#x440;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x44E;&#x447;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>to_s</code>, &#x44F; &#x434;&#x43E;&#x434;&#x430;&#x432; &#x43D;&#x43E;&#x432;&#x443; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x456;&#x43D;&#x43A;&#x443;, &#x44F;&#x43A;&#x430; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435; &#x43F;&#x456;&#x434;&#x445;&#x43E;&#x434;&#x438;&#x442;&#x44C; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Treasure</code>, &#x43D;&#x456;&#x436; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x437;&#x430; &#x437;&#x430;&#x43C;&#x43E;&#x432;&#x447;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C;.</p>
+<h3 id="&#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x43A;&#x430;-&#x43E;&#x431;&#x454;&#x43A;&#x442;&#x456;&#x432;">&#x41F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x43A;&#x430; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;</h3>
+<p>&#x414;&#x43E; &#x440;&#x435;&#x447;&#x456;, &#x437;&#x432;&#x435;&#x440;&#x43D;&#x456;&#x442;&#x44C; &#x443;&#x432;&#x430;&#x433;&#x443; &#x442;&#x430;&#x43A;&#x43E;&#x436;, &#x449;&#x43E; &#x44F; &quot;&#x437;&#x430;&#x433;&#x43B;&#x44F;&#x43D;&#x443;&#x432; &#x432; &#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x443;&quot; <strong>Treasure</strong> &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;, t1, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>inspect</code>:</p>
+<pre><code class="lang-ruby">t1.inspect
+</code></pre>
+<p>&#x41C;&#x435;&#x442;&#x43E;&#x434; <code>inspect</code> &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x439; &#x434;&#x43B;&#x44F; &#x432;&#x441;&#x456;&#x445; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432; Ruby. &#x412;&#x456;&#x43D; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x454; &#x440;&#x44F;&#x434;&#x43E;&#x43A;, &#x449;&#x43E; &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x437;&#x440;&#x443;&#x447;&#x43D;&#x438;&#x439; &#x434;&#x43B;&#x44F; &#x447;&#x438;&#x442;&#x430;&#x43D;&#x43D;&#x44F; &#x43E;&#x43F;&#x438;&#x441; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;. &#x412; &#x434;&#x430;&#x43D;&#x43E;&#x43C;&#x443; &#x432;&#x438;&#x43F;&#x430;&#x434;&#x43A;&#x443;, &#x432;&#x456;&#x43D; &#x43F;&#x43E;&#x43A;&#x430;&#x437;&#x443;&#x454; &#x449;&#x43E;&#x441;&#x44C; &#x43D;&#x430; &#x437;&#x440;&#x430;&#x437;&#x43E;&#x43A; &#x446;&#x44C;&#x43E;&#x433;&#x43E;:</p>
+<pre><code class="lang-ruby"><span class="hljs-comment">#&lt;Treasure:0x28962f8 <span class="hljs-doctag">@description</span>=&quot;an Elvish weapon forged of gold&quot;, <span class="hljs-doctag">@name</span>=&quot;Sword&quot;&gt;</span>
+</code></pre>
+<p>&#x41F;&#x435;&#x440;&#x448;&#x435; &#x432; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x440;&#x44F;&#x434;&#x43A;&#x443; &#x446;&#x435; &#x43A;&#x43B;&#x430;&#x441;, &#x44F;&#x43A;&#x43E;&#x43C;&#x443; &#x43D;&#x430;&#x43B;&#x435;&#x436;&#x438;&#x442;&#x44C; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Treasure</code>. &#x417;&#x430; &#x43D;&#x438;&#x43C; &#x439;&#x434;&#x435; &#x447;&#x438;&#x441;&#x43B;&#x43E;, &#x44F;&#x43A;&#x435; &#x443; &#x432;&#x430;&#x441; &#x43C;&#x43E;&#x436;&#x435; &#x432;&#x456;&#x434;&#x440;&#x456;&#x437;&#x43D;&#x44F;&#x442;&#x438;&#x441;&#x44F; &#x432;&#x456;&#x434; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x438;&#x449;&#x435; - &#x446;&#x435; &#x432;&#x43D;&#x443;&#x442;&#x440;&#x456;&#x448;&#x43D;&#x456;&#x439; &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440; &#x432; Ruby &#x434;&#x43B;&#x44F; &#x434;&#x430;&#x43D;&#x43E;&#x433;&#x43E; &#x43A;&#x43E;&#x43D;&#x43A;&#x440;&#x435;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;; &#x456; &#x43E;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x456;&#x43C;&#x438; &#x43F;&#x43E;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x456; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456; &#x43D;&#x430;&#x448;&#x43E;&#x433;&#x43E; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x430; &#x442;&#x430; &#x457;&#x445; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;.</p>
+<blockquote>
+<p>&#x424;&#x430;&#x439;&#x43B; <strong>p.rb</strong></p>
+</blockquote>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Treasure</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span> <span class="hljs-title">aName</span>, <span class="hljs-title">aDescription</span></span>
+    @name = aName
+    @description = aDescription
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">to_s</span> <span class="hljs-comment"># &#x41F;&#x435;&#x440;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; to_s</span></span>
+    <span class="hljs-string">&quot;The <span class="hljs-subst">#{@name}</span> Treasure is <span class="hljs-subst">#{@description}</span>\n&quot;</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+
+a = <span class="hljs-string">&quot;hello&quot;</span>
+b = <span class="hljs-number">123</span>
+c = Treasure.new <span class="hljs-string">&quot;ring&quot;</span>, <span class="hljs-string">&quot;a glittery gold thing&quot;</span>
+
+p a
+p b
+p c
+</code></pre>
+<p>Ruby &#x43D;&#x430;&#x434;&#x430;&#x454; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>p</code> &#x434;&#x43B;&#x44F; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x43A;&#x438; &#x456; &#x432;&#x456;&#x434;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x43D;&#x44F; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;&#x432;.</p>
+<pre><code class="lang-ruby">  p anobject
+</code></pre>
+<blockquote>
+<p>&#x424;&#x430;&#x439;&#x43B; <strong>to_s.rb</strong></p>
+</blockquote>
+<pre><code class="lang-ruby"><span class="hljs-comment"># &#x41F;&#x43E;&#x43A;&#x430;&#x437;&#x443;&#x454;&#x43C;&#x43E; &#x440;&#x456;&#x437;&#x43D;&#x456; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x438; &#x443; &#x432;&#x438;&#x433;&#x43B;&#x44F;&#x434;&#x456; &#x440;&#x44F;&#x434;&#x43A;&#x430;</span>
+<span class="hljs-comment">#&#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; `to_s`</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Treasure</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">( aName, aDescription )</span></span>
+    @name         = aName
+    @description  = aDescription
+  <span class="hljs-keyword">end</span>
+  <span class="hljs-comment"># &#x422;&#x443;&#x442; &#x43C;&#x438; &#x43D;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x442;&#x438;&#x43C;&#x435;&#x43C;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434; `to_s`</span>
+  <span class="hljs-comment"># &#x442;&#x43E;&#x43C;&#x443; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x438; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438;&#x43C;&#x443;&#x442;&#x44C; &#x441;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x438;&#x439; &#x43C;&#x435;&#x442;&#x43E;&#x434; `to_s`</span>
+<span class="hljs-keyword">end</span>
+
+
+t = Treasure.new <span class="hljs-string">&quot;Sword&quot;</span>, <span class="hljs-string">&quot;A lovely Elvish weapon&quot;</span>
+print <span class="hljs-string">&quot;Class.to_s: &quot;</span>
+puts Class.to_s
+print <span class="hljs-string">&quot;Object.to_s: &quot;</span>
+puts Object.to_s
+print <span class="hljs-string">&quot;String.to_s: &quot;</span>
+puts String.to_s
+print <span class="hljs-string">&quot;100.to_s: &quot;</span>
+puts <span class="hljs-number">100</span>.to_s
+print <span class="hljs-string">&quot;Treasure.to_s: &quot;</span>
+puts Treasure.to_s
+print <span class="hljs-string">&quot;t.to_s: &quot;</span>
+puts t.to_s
+print <span class="hljs-string">&quot;t.inspect: &quot;</span>
+puts t.inspect
+</code></pre>
+<p>&#x429;&#x43E;&#x431; &#x43F;&#x43E;&#x431;&#x430;&#x447;&#x438;&#x442;&#x438;, &#x44F;&#x43A; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>to_s</code> &#x43C;&#x43E;&#x436;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x440;&#x456;&#x437;&#x43D;&#x438;&#x43C;&#x438; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;&#x43C;&#x438; &#x456; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x438;&#x442;&#x438; &#x44F;&#x43A; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Treasure</code> &#x431;&#x443;&#x434;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x438;&#x439; &#x432; &#x440;&#x44F;&#x434;&#x43E;&#x43A;, &#x44F;&#x43A;&#x449;&#x43E; &#x43D;&#x435; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x442;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>to_s</code> - &#x432;&#x438;&#x43F;&#x440;&#x43E;&#x431;&#x443;&#x439;&#x442;&#x435; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443; <code>to_s.rb</code> (&#x457;&#x457; &#x437;&#x43C;&#x456;&#x441;&#x442; &#x437;&#x43E;&#x431;&#x440;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x439; &#x432;&#x438;&#x449;&#x435;).</p>
+<p>&#x432;&#x438; &#x43F;&#x43E;&#x431;&#x430;&#x447;&#x438;&#x442;&#x435;, &#x449;&#x43E;, &#x43F;&#x440;&#x438; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x443; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <code>to_s</code> &#x43D;&#x430; &#x442;&#x430;&#x43A;&#x438;&#x445; &#x43A;&#x43B;&#x430;&#x441;&#x430;&#x445;, &#x44F;&#x43A; <code>Class</code>, <code>Object</code>, <code>String</code> &#x456; <code>Treasure</code> - &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x43D;&#x435; &#x457;&#x445;&#x43D;&#x456; &#x456;&#x43C;&#x435;&#x43D;&#x430;. &#x410; &#x44F;&#x43A;&#x449;&#x43E; &#x43C;&#x438; &#x439;&#x43E;&#x433;&#x43E; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x447;&#x435;&#x43C;&#x43E; &#x43D;&#x430; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x456;, &#x44F;&#x43A; &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; <code>t</code> &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Treasure</code> &#x442;&#x43E; &#x432;&#x456;&#x43D; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x43D;&#x435; &#x442;&#x43E;&#x439; &#x436;&#x435; &#x456;&#x434;&#x435;&#x43D;&#x442;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;, &#x449;&#x43E; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x454; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>inspect</code>.</p>
+<blockquote>
+<p>&#x424;&#x430;&#x439;&#x43B; treasure.rb</p>
+</blockquote>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Thing</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">set_name</span><span class="hljs-params">( aName )</span></span>
+    @name = aName
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">get_name</span></span>
+    <span class="hljs-keyword">return</span> @name
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Treasure</span></span>
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">initialize</span><span class="hljs-params">( aName, aDescription )</span></span>
+    @name = aName
+    @description = aDescription
+  <span class="hljs-keyword">end</span>
+
+  <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">to_s</span> <span class="hljs-comment"># &#x41F;&#x435;&#x440;&#x435;&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x43E;&#x433;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; to_s</span></span>
+    <span class="hljs-string">&quot;The <span class="hljs-subst">#{@name}</span> Treasure is <span class="hljs-subst">#{@description}</span>\n&quot;</span>
+  <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+thing1 = Thing.new
+thing1.set_name( <span class="hljs-string">&quot;A lovely Thing&quot;</span> )
+puts thing1.get_name
+
+t1 = Treasure.new(<span class="hljs-string">&quot;Sword&quot;</span>, <span class="hljs-string">&quot;an Elvish weapon forged of gold&quot;</span>)
+t2 = Treasure.new(<span class="hljs-string">&quot;Ring&quot;</span>, <span class="hljs-string">&quot;a magic ring of great power&quot;</span>)
+puts t1.to_s
+puts t2.to_s
+<span class="hljs-comment"># &#x41C;&#x435;&#x442;&#x43E;&#x434; `inspect` &#x434;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x454; &#x437;&#x430;&#x433;&#x43B;&#x44F;&#x43D;&#x443;&#x442;&#x438; &#x432; &#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x443; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x430;</span>
+puts <span class="hljs-string">&quot;Inspecting 1st treasure: <span class="hljs-subst">#{t1.inspect}</span>&quot;</span>
+</code></pre>
+<p>&#x414;&#x438;&#x432;&#x43B;&#x44F;&#x447;&#x438;&#x441;&#x44C; &#x43D;&#x430; &#x446;&#x435;&#x439; &#x43A;&#x43E;&#x434;, &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43F;&#x43E;&#x431;&#x430;&#x447;&#x438;&#x442;&#x438;, &#x449;&#x43E; &#x43C;&#x456;&#x441;&#x446;&#x44F;&#x43C;&#x438; &#x432;&#x456;&#x43D; &#x43F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x44E;&#x454;&#x442;&#x44C;&#x441;&#x44F;. &#x417;&#x440;&#x435;&#x448;&#x442;&#x43E;&#x44E;, &#x447;&#x43E;&#x43C;&#x443; &#x43C;&#x430;&#x44E;&#x447;&#x438; &#x43A;&#x43B;&#x430;&#x441; <strong>Thing</strong>, &#x44F;&#x43A;&#x438;&#x439; &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x443; <code>@name</code> &#x456; &#x43A;&#x43B;&#x430;&#x441; <strong>Treasure</strong>, &#x44F;&#x43A;&#x438;&#x439; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x446;&#x44E; &#x441;&#x430;&#x43C;&#x443; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x443;, &#x43A;&#x43E;&#x436;&#x43D;&#x430; &#x437; &#x43D;&#x438;&#x445; &#x456;&#x43D;&#x456;&#x446;&#x456;&#x430;&#x43B;&#x456;&#x437;&#x443;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x43E;&#x43A;&#x440;&#x435;&#x43C;&#x43E; &#x43E;&#x434;&#x438;&#x43D; &#x432;&#x456;&#x434; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E;? &#x426;&#x435; &#x437;&#x434;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43B;&#x43E;&#x433;&#x456;&#x447;&#x43D;&#x438;&#x43C;, &#x44F;&#x43A;&#x449;&#x43E; &#x440;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x434;&#x430;&#x442;&#x438; &#x43A;&#x43B;&#x430;&#x441; <strong>Treasure</strong> &#x44F;&#x43A; &#x442;&#x438;&#x43F; <strong>Thing</strong>. &#x42F;&#x43A;&#x431;&#x438; &#x44F; &#x445;&#x43E;&#x442;&#x456;&#x432; &#x440;&#x43E;&#x437;&#x432;&#x438;&#x43D;&#x443;&#x442;&#x438; &#x446;&#x44E; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443; &#x434;&#x43E; &#x441;&#x43F;&#x440;&#x430;&#x432;&#x436;&#x43D;&#x44C;&#x43E;&#x457; &#x43F;&#x440;&#x438;&#x433;&#x43E;&#x434;&#x43D;&#x438;&#x446;&#x44C;&#x43A;&#x43E;&#x457; &#x433;&#x440;&#x438;, &#x456;&#x43D;&#x448;&#x456; &#x43E;&#x431;&apos;&#x454;&#x43A;&#x442;&#x438;, &#x442;&#x430;&#x43A;&#x456; &#x44F;&#x43A; &quot;&#x43A;&#x456;&#x43C;&#x43D;&#x430;&#x442;&#x438;&quot; &#x456; &quot;&#x437;&#x431;&#x440;&#x43E;&#x44F;&quot; &#x431;&#x443;&#x43B;&#x438; &#x431; &#x456;&#x43D;&#x448;&#x438;&#x43C; &#x442;&#x438;&#x43F;&#x43E;&#x43C; &#x43A;&#x43B;&#x430;&#x441;&#x443; &quot;Think&quot;. &#x414;&#x443;&#x43C;&#x430;&#x44E;, &#x43F;&#x43E;&#x440;&#x430; &#x43F;&#x43E;&#x447;&#x430;&#x442;&#x438; &#x440;&#x43E;&#x431;&#x43E;&#x442;&#x443;, &#x43D;&#x430;&#x434; &#x43F;&#x440;&#x430;&#x432;&#x438;&#x43B;&#x44C;&#x43D;&#x43E;&#x44E; &#x43F;&#x43E;&#x431;&#x434;&#x43E;&#x432;&#x43E;&#x44E; &#x456;&#x454;&#x440;&#x430;&#x440;&#x445;&#x456;&#x457; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432;. &#x421;&#x43F;&#x440;&#x43E;&#x431;&#x443;&#x454;&#x43C;&#x43E; &#x446;&#x435; &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x438; &#x432; &#x43D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x43E;&#x43C;&#x443; &#x440;&#x43E;&#x437;&#x434;&#x456;&#x43B;&#x456;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="01-Strings-and-Methods.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Глава 1: Рядки та методи">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Глава 2: Класи та об’єкти","level":"1.4","depth":1,"next":{"title":"Глава 3: Класова ієрархія","level":"1.5","depth":1,"ref":"","articles":[]},"previous":{"title":"Глава 1: Рядки та методи","level":"1.3","depth":1,"path":"chapters/01-Strings-and-Methods.md","ref":"chapters/01-Strings-and-Methods.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.x.x","theme":"default","variables":{},"plugins":["edit-link","github","yametrika","ga","rss","github-buttons"],"pluginsConfig":{"yametrika":{},"github":{"url":"https://github.com/LambdaBooks/thelittlebookofruby"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["frontend","js","javascript","es6","es2015","ecmascript"],"title":"Маленька книга про Ruby","description":"Український переклад книги «The Little Book Of Ruby».","author":"Denys Dovhan","site_url":"http://thelittlebookofruby.lambdabooks.github.io/","feed_url":"http://thelittlebookofruby.lambdabooks.github.io/rss.xml","managingEditor":"email@denysdovhan.com (Denys Dovhan)","webMaster":"email@denysdovhan.com (Denys Dovhan)"},"highlight":{},"github-buttons":{"repo":"LambdaBooks/thelittlebookofruby","types":["star"],"size":"small"},"ga":{"configuration":"auto","token":"UA-40496885-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Редагувати","base":"https://github.com/LambdaBooks/thelittlebookofruby/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapters/02-Classes-and-Objects.md","mtime":"2017-02-03T12:37:34.811Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-02-03T12:39:17.318Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-yametrika/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

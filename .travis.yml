@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- v6
+branches:
+  only: master
+before_script:
+- git config --global user.email "email@denysdovhan.com"
+- git config --global user.name "Denys Dovhan"
+- git remote rm origin
+- git remote add origin https://denysdovhan:${GH_TOKEN}@github.com/LambdaBooks/thelittlebookofruby.git
+script:
+- npm run deploy
+env:
+  global:
+    secure: t6Yb0danR8Y1knX8oXZZNg1r/I73QsM7DzRa/eZcftrI9lIlf4qSQPBCKApytOixT/wFn/UjSuu6s3WPvE6mJxF7kYQiEnYlo6kH6ImgpUKFFbs3I67iSNg3b6WgYSKiuAESI1itotDLrZ9C6qDBsb1MDv1FhaMr9X1yigT/26hH7fXoPTC828N5kGugPsUabhDONx+H7hUs1HTGNAKbb5YfNOKqgOfQPqmP/MhC8IlQ9UNiCh4WgdmzzZ89oJPuUsZkKQ2R5UQE0qYAeOyRJIYVE7Bn8nECnH6hsDhpgVpNm0ITsl9pspB12ICDQtNJIg/WfBuc95YQRbXUfVkTFTLr+/lmbTn18w2K0TpSD/X2XY9tMWTlMc0pzOwT5aqi5rSQFIR1T3cO7uJ8mey0HXFTPrshpclb61PxWFMtHE3cKiRbOgdATtgtiHapnE1Nr8A2+3pLgV9mcJ9uefiZdBC8IFufZzxWP/QHW8kiEW3VjMYXdkaOJg++p/6KUx2RaVjneKUPDlaM9yy1NbHurJj2mfjIzr7iGpbMueKVW3PBkhPp9mE256Dshqyq7DgXlzUexHbtH+Vo4V0vODaogOuwQELiZPunNfW6t6QDzCC2fjmSg2xuU06b4RHfZ1fFTrc+bkEBSmEaT/+ZM4so76gZOkvH9QZdtXU7NhMyRjs=
