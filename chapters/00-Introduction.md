@@ -1,55 +1,55 @@
-# WELCOME TO THE LITTLE BOOK OF RUBY
+# Ласкаво просимо у «Маленьку книгу про Ruby»
 
-## Learn Ruby In Ten Chapters...
+## Вивчіть Ruby за десять глав…
 
-* Chapter One: Strings and Methods
-* Chapter Two: Classes and Objects
-* Chapter Three: Class Hierarchies
-* Chapter Four: Accessors, Attributes, Class Variables Arrays
-* Chapter Five: Arrays
-* Chapter Six: Hashes
-* Chapter Seven: Loops and Iterators
-* Chapter Eight: Conditional Statements
-* Chapter Nine: Modules and Mixinss
-* Chapter Ten: Saving Files, Moving On…
+* Глава 1: Рядки та методи
+* Глава 2: Класи та об’єкти
+* Глава 3: Класова ієрархія
+* Глава 4: Аксесори, атрибути, змінні класів
+* Глава 5: Масиви
+* Глава 6: Хеші
+* Глава 7: Цикли та ітератори
+* Глава 8: Умовні оператори
+* Глава 9: Модулі та домішки
+* Глава 10: Збереження файлів, продовження…
 
-## What Is Ruby?
+## Що таке Ruby?
 
-Ruby is a cross-platform interpreted language which has many features in common with other ‘scripting’ languages such as Perl and Python. However, its version of object orientation is more thorough than those languages and, in many respects, it has more in common with the great-granddaddy of ‘pure’ OOP languages, Smalltalk. The Ruby language was created by Yukihiro Matsumoto (commonly known as ‘Matz’) and it was first released in 1995.
+Ruby — це крос–платформна інтерпретована мова, яка має багато спільного з іншими “скриптовими” мовами, як от Perl чи Python. Однак, її версія об’єктної орієнтованості є більш ретельною і, у багатьох відношення, має багато спільного з великим прародичем “чистих” ООП мов, мовою Smalltalk. Ruby була створена Юкіхіро Мацумото (Yukihiro Matsumoto) (загально знаного під псевдонімом “Matz”) і вперше опублікована у 1995–у.
 
-## What Is Rails?
+## Що таке Rails?
 
-Currently much of the excitement surrounding Ruby can be attributed to a web development framework called Rails – popularly known as ‘Ruby On Rails’. While Rails is an impressive framework, it is not the be-all and end-all of Ruby. Indeed, if you decide to leap right into Rails development without first mastering Ruby, you may find that you end up with an application that you don’t even understand. While the Little Book of Ruby won’t cover the special features of Rails, it will give you the grounding you need to understand Rails code and write your own Rails applications.
+На сьогодні більшість розмов про Ruby стосуються, здебільшого, фреймворку під назвою Rails, більш відомого як «Ruby On Rails». Rails є фреймворком із широкими можливостями, проте Ruby не закінчується лише на ньому. Без сумніву, якщо ви вирішите відразу заглибитись у розробку на Rails без достатнього володіння Ruby, ви можете зрештою опинитись у ситуації, коли не розумієте свого власного додатку. «Маленька книга по Ruby» не охоплює спеціальні можливості Rails, проте вона дасть вам необхідне підґрунтя для розуміння та коду на Rails та написання ваших власних Rails–додатків.
 
-## Installing And Using Ruby With Ruby In Steel
+## Встановлення та використання Ruby разом з Ruby In Steel
 
-Ruby In Steel is a Windows-based IDE which comes with an all-in-one installer to install Ruby, Visual Studio, Ruby In Steel and various other optional packages including Rails. Be sure to read the installation guide provided with the software: http://www.sapphiresteel.com.
+Ruby In Steel — це IDE для платформи Windows, яка постачається з єдиним інсталятором, який встановлює Ruby, Visual Studio, Ruby In Steel та інші додаткові пакети, включаючи Rails. Переконайтесь, що ви прочитали керівництво з встановлення цього програмного забезпечення: http://www.sapphiresteel.com.
 
-## Installing Ruby Yourself
+## Встановлюємо Ruby самостійно
 
-If you are using some other IDE or editor, you will need to download the latest version of Ruby from www.ruby-lang.org. Be sure to download the binaries (not merely the source code).
+Якщо ви використовуєте якесь інше IDE або текстовий редактор, вам потрібно завантажити найсвіжішу версію Ruby з сайту [www.ruby-lang.org](http://www.ruby-lang.org/). Переконайтесь, що ви завантажуєте виконувані файли (а не лише вихідний код).
 
-## Get The Source Code Of The Sample Programs
+## Отримати вихідний код програм–прикладів
 
-All the programs in every chapter in this book are available for download as a Zip archive from http://www.sapphiresteel.com/The-Little-Book-Of-Ruby. When you unzip the programs you will find that they are grouped into a set of directories – one for each chapter. If you are using Ruby In Steel, you will be able to load all the programs as a single solution, with the programs for each chapter arranged on the branches of a tree in the Project Manager.
+Всі програми з кожній глави цієї книги доступні для завантаження у вигляді zip–архіву з: http://www.sapphiresteel.com/ruby-programming/The-Little-Book-Of-Ruby.html. Після розархівування ви побачите, що всі програми згруповано по директоріях: по одній для кожної з глав. Якщо ви користуєтесь Ruby In Steel, ви можете завантажити усі програми як одне рішення, з програмами для кожної з глав на гілках дерева у вікні «Project Manager».
 
-## Running Ruby Programs
+## Запуск програм на Ruby
 
-It is often useful to keep a Command window open in the source directory containing your Ruby program files. Assuming that the Ruby interpreter is correctly pathed on your system, you will then be able to run programs by entering _ruby <program name>_ like this:
+Зазвичай корисно мати відкрите вікно командного рядка у директорії, що містить вихідні файли програм на Ruby. Якщо інтерпретатор Ruby було правильно встановлено у вашій системі, ви зможете запускати програми запустивши команду `ruby <program name>` ось так:
 
 ```roby
 ruby 1helloworld.rb
 ```
 
-If you are using Ruby In Steel you can run the programs in the interactive console by pressing CTRL+F5 or (in some editions) you may run them in the debugger by pressing F5.
+Якщо ви користуєтесь Ruby In Steel, ви зможете запустити програми у інтерактивній консолі натиснувши <kbd>CTRL+F5</kbd> або (у деяких версіях) ви можете запустити їх у налагоджувачі (debugger) натиснувши <kbd>F5</kbd>.
 
-## How To Use This Book
+## Як користуватись цією книгою
 
-This book is a step-by-step tutorial to programming in Ruby and you can follow it chapter by chapter, reading the text and running the sample programs. On the other hand, if you prefer to ‘dip in’, you may want to try out some of the programs in whichever order takes your fancy; then refer back to the text for explanations. There are no monolithic applications in this book – just small, self-contained sample programs – so it’s easy to skip from chapter to chapter if you wish…
+Ця книга є покроковим посібником з програмування на Ruby, за яким ви можете слідувати від глави до глави, читаючи текст та запускаючи приклади програм. З іншого боку, якщо ви надаєте перевагу “пірнанню” в матеріал, то ви можете спробувати розібратись з програмами самостійно, а потім повернутись до пояснень у тексті. У цій книзі немає монолітних додатків — лише маленькі, самодоповнені приклади програм – це означає, що ви легко зможете пропустити главу, якщо захочете…
 
-## Making Sense Of The Text
+## Умовні позначення
 
-In The Little Book Of Ruby, any Ruby source code is written like this:
+У «Маленькій книжці про Ruby», всі приклади вихідного коду на Ruby написані ось так:
 
 ```ruby
 def saysomething
@@ -57,11 +57,10 @@ def saysomething
 end
 ```
 
-When there is a sample program to accompany the code, the program name is
-shown in a little box like this:
+Якщо для цього коду є відповідна програма–приклад, ім’я програми буде написано поруч та виділено **`жирним моноширним текстом`** ось так:
 
-**helloname.rb**
+**`helloname.rb`**
 
-Explanatory notes (which generally provide some hints or give a more in- depth explanation of some point mentioned in the text) are shown in a shaded box like this:
+Роз’яснення та коментарі (які зазвичай надають поради або більш глибоке пояснення деяких нюансів, згаданих у тексті) виділені ось так:
 
-> This is an explanatory note. You can skip it if you like – but if you do so, you may miss something of interest<!
+> Це додаткове роз’яснення. Ви можете пропустити його, якщо хочете, проте ви можете пропустити щось цікаве…!
