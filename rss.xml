@@ -4,7 +4,7 @@
         <description><![CDATA[Український переклад книги «The Little Book Of Ruby».]]></description>
         <link>http://lambdabooks.github.io/thelittlebookofruby</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sun, 12 Feb 2017 14:40:01 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 12 Feb 2017 14:42:47 GMT</lastBuildDate>
         <atom:link href="http://lambdabooks.github.io/thelittlebookofruby/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -26,6 +26,13 @@ RSS
 Stars]]></description>
             <link>http://lambdabooks.github.io/thelittlebookofruby</link>
             <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofruby</guid>
+            <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
+        </item>
+        <item>
+            <title><![CDATA[Ласкаво просимо у «Маленьку книгу про Ruby»]]></title>
+            <description><![CDATA[Ruby — це крос–платформна інтерпретована мова, яка має багато спільного з іншими “скриптовими” мовами, як от Perl чи Python. Однак, її версія об’єктної орієнтованості є більш ретельною і, у багатьох відношення, має багато спільного з великим прародичем “чистих” ООП мов, зокрема, мовою Smalltalk. Ruby була створена Юкіхіро Мацумото (Yukihiro Matsumoto) (відомого під псевдонімом Метц (Matz)) і вперше опублікована у 1995–у.]]></description>
+            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/00-Introduction.html</link>
+            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/00-Introduction.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
