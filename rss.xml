@@ -4,7 +4,7 @@
         <description><![CDATA[Український переклад книги «The Little Book Of Ruby».]]></description>
         <link>http://lambdabooks.github.io/thelittlebookofruby</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 27 Feb 2017 21:08:14 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 28 Feb 2017 21:05:16 GMT</lastBuildDate>
         <atom:link href="http://lambdabooks.github.io/thelittlebookofruby/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
@@ -36,15 +36,15 @@ Stars]]></description>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[No title]]></title>
-            <description><![CDATA[##Розділ перший]]></description>
+            <title><![CDATA[Рядки та методи]]></title>
+            <description><![CDATA[Якщо ви читаєте цю книгу, то, мабуть, маєте бажання програмувати мовою Ruby, і якщо ви схожі на мене — вам вже хочеться прочитати її. Що ж, не будемо витрачати час дарма. Я припускаю, що у вас вже є встановлена мова Ruby, якщо ж ні - встановіть її і поверніться сюди.]]></description>
             <link>http://lambdabooks.github.io/thelittlebookofrubychapters/01-Strings-and-Methods.html</link>
             <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/01-Strings-and-Methods.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
-            <title><![CDATA[No title]]></title>
-            <description><![CDATA[##Розділ другий]]></description>
+            <title><![CDATA[Класи та об’єкти]]></title>
+            <description><![CDATA[Досі ми використовували “стандартні” об'єкти Ruby, такі як цифри і рядки. Тепер розглянемо створення власних нових типів об'єктів. Як і в більшості об’єктно орієнтованих мов програмування, в Ruby об'єкт визначається класом. Клас подібний до креслення, з якого все будується. Це приклад дуже простого класу:]]></description>
             <link>http://lambdabooks.github.io/thelittlebookofrubychapters/02-Classes-and-Objects.html</link>
             <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/02-Classes-and-Objects.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
