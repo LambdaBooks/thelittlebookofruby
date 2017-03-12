@@ -1,39 +1,37 @@
-# Chapter five
+# Масиви
 
-> Arrays
-
-Up to now, we've generally been using objects one at a time. In this chapter we'll find out how to create a list of objects. We'll start by looking at the most common type of list structure - an array.
+До цього часу, ми в цілому використовували об'єкти поодинці. В цьому розділі ми дізнаємось як створити список об'єктів. Ми розпочнемо із розгляду найбільш поширеного типу структури списку - масиву.
 
 **`array0.rb`**:
 
-> ### Using Arrays
+> ### Використання масивів
 >
-> What is an Array?
+> Що таке масив?
 >
-> An Array is a sequential collection of items in which each item can be indexed.
+> Масив є еквівалентом колекції елементів в якій кожний елемент може бути пронумерованим.
 >
-> In Ruby, (unlike many other languages) a single Array can hold items of mixed data types such as strings, integers and floats or even a method-call which returns some value:
+> В Ruby, (на відміну від інших мов) один Масив може містити елементи з різними типами даних таких як рядки, цілі числа і числа з плаваючою точкою чи навіть метод-виклику, який повертає деяке значення:
 >
 > ```ruby
 > a1 = [1,'two', 3.0, array_length( a0 ) ]
 > ```
 >
-> The first item in an array has the index 0, which means that the final item has an index equal to the total number of items in the array minus 1. Given the array, a1, shown above, this is how to obtain the values of the first and last items:
+> Перший елемент масиву має індекс 0, що означає, що кінцевий елемент має індекс, що дорівнює загальній кількості елементів в масиві мінус 1. З огляду на масив, a1, показаного вище, ось як отримати значення першого і останнього елементу:
 >
 > ```ruby
-> a1[0] # returns 1st item (at index 0)
-> a1[3] # returns 4th item (at index 3)
+> a1[0] # поверне 1ий елемент (з індексом 0)
+> a1[3] # поверне 4ий елемент (з індексом 3)
 > ```
 
-We’ve already used arrays a few times – for example, in **adventure2.rb** in chapter 4 we used an array to store a map of Rooms:
+Ми вже використовували масиви кілька разів - наприклад, в **adventure2.rb** в розділі 4 ми використовували масив для зберігання карти номерів:
 
 ```ruby
 mymap = Map.new([room1,room2,room3])
 ```
 
-## Creating Arrays
+## Створення масивів
 
-In common with many other programming languages, Ruby uses square brackets to delimit an array. You can easily create an array, fill it with some comma-delimited values and assign it to a variable:
+Як і багато інших мов програмування, Ruby використовує квадратні дужки для об'явлення масиву. Ви можете легко створити масив, заповнити його деякими значеннями розділених комами та привласнити його змінній:
 
 **`array1.rb`**:
 
@@ -41,23 +39,23 @@ In common with many other programming languages, Ruby uses square brackets to de
 arr = ['one','two','three','four']
 ```
 
-As with most other things in Ruby, arrays are objects. They are defined, as you might guess, by the Array class and, just like strings, they are indexed from 0.
+Як і більшість інших речей в Ruby, масиви є об'єктами. Вони визначені, як неважко здогадатися, класом Array, і, так само, як рядки, вони індексуються від 0.
 
-You can reference an item in an array by placing its index between square brackets. If the index is invalid, **nil** is returned:
+Ви можете посилатися на елемент в масиві шляхом розміщення його індексу в квадратних дужках. Якщо індекс недійсний, повертається **nil**:
 
 **`array2.rb`**:
 
 ```ruby
 arr = ['a', 'b', 'c']
 
-puts(arr[0]) # shows 'a'
-puts(arr[1]) # shows 'b'
-puts(arr[2]) # shows 'c'
+puts(arr[0]) # поверне 'a'
+puts(arr[1]) # поверне 'b'
+puts(arr[2]) # поверне 'c'
 
 puts(arr[3]) # nil
 ```
 
-It is permissible to mix data types in an array and even to include expressions which yield some value. Let’s assume that you have already created this method:
+Допустимо змішувати типи даних в масиві і навіть включати вирази, які дають певне значення. Припустім, що ви вже створили цей метод:
 
 ```ruby
 def hello
@@ -65,41 +63,41 @@ def hello
 end
 ```
 
-You can now declare this array:
+Тепер ви можете оголосити цей масив:
 
 ```ruby
 x = [1+2, hello, `dir`]
 ```
 
-Here, the first element is the integer, 3 and the second is the string "hello world" (returned by the method **hello**). If you run this on Windows, the third array element will be a string containing a directory listing. This is due to the fact that **\`dir\`** is a back-quoted string which is executed by the operating system. The final ‘slot’ in the array is, therefore, filled with the value returned by the **dir** command which happens to be a string of file names. If you are running on a different operating system, you may need to substitute an appropriate command at this point.
+Тут, перший елемент це ціле число 3 і другий це рядок "hello world" (повернутий з методу **hello**). Якщо ви запустили код у Windows, третій елемент масиву буде рядком який містить список директорій. Це пов'язано з тим, що **\`dir\`** це рядок в обернених лапках, який виконується в операційній системі. Фінальний ‘слот’ в масиві, заповнений значеннями які повернула команда **dir**, є рядком з іменами файлів. Якщо Ви запустите це на іншій операційній системі, можливо в такому випадку вам потрібно буде замінити цю команду.
 
 **`div_array.rb`**:
 
-> ### Creating an Array of File Names:
+> ### Створення масиву із імен файлів:
 >
-> A number of Ruby classes have methods which return arrays of values. For example, the Dir class, which is used to perform operations on disk directories, has the **entries** method. Pass a directory name to the method and it returns a list of files in an array:
+> Ряд класів в Ruby мають методи які повертають масиви значень. Для прикладу, клас Dir, який використовується для операцій над дисковими каталогами, має метод **entries**. Передаючи ім'я директорії в метод і повертаючи список файлів в масиві:
 >
 > ```ruby
-> Dir.entries( 'C:\\' ) # returns an array of files in C:\
+> Dir.entries( 'C:\\' ) # поверне масив файлів розміщених в каталозі C:\
 > ```
 
-If you want to create an array of strings but can’t be bothered typing all the quotation marks, a shortcut is to put unquoted text separated by spaces between round brackets preceded by **%w** like this:
+Якщо ви хочете створити масив рядків але не хочете турбуватись  друкуванням всіх лапок, дане скорочення візьме текст без лапок, розділений лише відступами в круглих дужках поруч з **%w** ось так:
 
 ```ruby
 y = %w( this is an array of strings )
 ```
 
-You can also create arrays using the usual object construction method, **new**. Optionally, you can pass an integer to **new** to create an empty array of a specific size (with each element set to nil), or you can pass two arguments – the first to set the size of the > array and the second to specify the element to place at each index of the array, like this:
+Звичайно ви можете створити масив використовуючи звичайний метод побудови об'єкта, **new**. При бажанні, ви можете передати ціле число до **new**, щоб створити порожній масив специфічного розміру (в якому кожен елемент буде мати значення nil), або ви можете передати два аргументи – перший щоб встановити розмір масиву і другий щоб визначити елемент який буде розміщено в кожному елементі, наприклад:
 
 ```ruby
-a = Array.new                   # an empty array
+a = Array.new                   # порожній масив
 a = Array.new(2)                # [nil,nil]
 a = Array.new(2,"hello world")  # ["hello world","hello world"]
 ```
 
-## Multi-Dimensional Arrays
+## Багатовимірні масиви
 
-To create a multi-dimensional array, you can create one array and then add other arrays to each of its ‘slots’. For example, this creates an array containing two elements, each of which is itself an array of two elements:
+Щоб створити багатомірний масив, ви можете створити один масив, а потім додати інші масиви до кожного зі своїх «слотів». Наприклад, цей приклад створить масив, що містить два елементи, кожен з яких сам є масивом з двох елементів:
 
 ```ruby
 a = Array.new(2)
@@ -107,7 +105,7 @@ a[0]= Array.new(2,'hello')
 a[1]= Array.new(2,'world')
 ```
 
-Or you could nest arrays inside one another using square brackets. This creates an array of four arrays, each of which contains four integers:
+Або ви могли б вкласти масиви всередині один одного, використовуючи квадратні дужки. Цей приклад створить масив з чотирьох масивів, кожен з яких містить чотири цілих числа:
 
 ```ruby
 a = [ [1,2,3,4],
@@ -116,56 +114,56 @@ a = [ [1,2,3,4],
       [13,14,15,16] ]
 ```
 
-In the code shown above, I have placed the four ‘sub-arrays’ on separate lines. This is not obligatory but it does help to clarify the structure of the multidimensional array by displaying each sub-array as though it were a row, similar to the rows in a spreadsheet. When talking about arrays within arrays, it is convenient to refer to each nested array as a ‘row’ of the ‘outer’ array.
+В коді показаному вище, я розмістив чотири ‘підмасиви’ в різних рядках. Це не обов'язково, але це допомагає прояснити структуру багатовимірного масиву шляхом відображення кожного підмасиву так як би це був рядок, подібно рядкам в таблиці. Коли мова йде про масиви в межах масивів, зручно посилатися на кожен вкладений масив як "ряд" з "зовнішнього" масиву.
 
 **`array_new.rb`**:
 
-> You can also create an Array object by passing an array as an argument to the **new** method. Be careful, though. It is a quirk of Ruby that, while it is legitimate to pass an array argument either with or without enclosing round brackets, Ruby considers it a syntax error if you fail to leave a space between the **new** method and the opening square bracket – another good reason for making a firm habit of using brackets when passing arguments!
+>  Можливо також створити об'єкт Array, передавши масив як аргумент методу **new** . Будьте обережні. Це примха Ruby, хоч й дозволено передавати в масив аргумент без закриття круглих дужок, Ruby буде вважати за помилку якщо ви пропустите відступ між методом **new** і відкриттям квадратних дужок – це ще одна причина для створення міцної звички використовувати дужки при передачі аргументів!
 
 **`multi_array.rb`**:
 
-For some examples of using multi-dimensional arrays, load up the **multi_array.rb** program. This starts by creating an array, **multiarr**, containing two other arrays. The first of these arrays is at index 0 of **multiarr** and the second is at index 1:
+Для деяких прикладів використання багатовимірних масивів, завантажте програму **multi_array.rb**. Вона починається зі створення масиву, **multiarr**, який містить два інших масиви. Перший із цих масивів має інденкс 0 відносно **multiarr** і інший має індекс 1:
 
 ```ruby
 multiarr = [['one','two','three','four'],[1,2,3,4]]
 ```
 
-## Iterating Over Arrays
+## Перебір масивів
 
-You can access the elements of an array by iterating over them using a **for** loop. The loop will iterate over two elements here: namely, the two sub-arrays at index 0 and 1:
+Ви можете отримати доступ до елементів масиву перебираючи їх за використовуючи цикл **for**. Цикл обійде два елементи: а саме, два підмасиви з індексами 0 і 1:
 
 ```ruby
 for i in multiarr
-puts(i.inspect)
+  puts(i.inspect)
 end
 ```
 
-This displays:
+Це відобразить:
 
 ```ruby
 ["one", "two", "three", "four"]
 [1, 2, 3, 4]
 ```
 
-> **Iterators and for loops**: The code inside a **for** loop is executed for each > element in an expression. The syntax is summarized like this:
+> **Ітератори і цикли for**: Код всередині циклу **for** виконується для кожного елементу. Загальний синтаксис виглядає таким чином:
 >
 > ```ruby
-> for <one or more variables> in <expression> do
-> <code to run>
+> for <одна або більше змінних> in <вираз> do
+>   <код для запуску>
 > end
 > ```
 >
-> When more than one variable is supplied, these are passed to the code inside the > **for..end** block just as you would pass arguments to a method. Here, for example, > you can think of **(a,b,c,d)** as four arguments which are initialised, at each > turn through the **for** loop, by the four values from a row of **multiarr**:
+  > Коли в наявності більше однієї змінної, вони передаються в код в середині блоку **for..end** так само якби ви б передавали аргументи в метод. Ось, наприклад, ви можете думати про **(a,b,c,d)** як про чотири аргументи які вже об'явлені, при кожному проході циклу **for**, чотирма значеннями з рядка **multiarr**:
 >
 > ```ruby
 > for (a,b,c,d) in multiarr
->  print("a=#{a}, b=#{b}, c=#{c}, d=#{d}\n" )
+>   print("a=#{a}, b=#{b}, c=#{c}, d=#{d}\n")
 > end
 > ```
 
-## Indexing Into Arrays
+## Індексація всередині масивів
 
-You can index from the end of an array using minus figures, where -1 is the index of the last element; and you can also use ranges (values between a start index and an end index separated by two dots):
+Ви можете рахувати з кінця масиву використовуючи знак мінусу, де -1 це індекс останнього елементу; і ви також маєте можливість використовувати діапазони (значення між початковим індексом і кінцевим, розділеними двома крапками):
 
 **`array_index.rb`**:
 
@@ -178,13 +176,13 @@ print( arr[0..4] )    #=> „hello‟
 print( arr[-5..-1] )  #=> „world‟
 ```
 
-Notice that, as with strings, when provided with two integers in order to return a number of contiguous items from an array, the first integer is the start index while the second is a count of the number of items (not an index):
+Зауважте що, так я і з рядками, коли надано два цілих числа, щоб повернути багато суміжних пунктів з безлічі, перше число це початковий індекс в той час як друге є кількістю елементів (не індексом):
 
 ```ruby
-arr[0,5] # returns 5 chars - ["h", "e", "l", "l", "o"]
+arr[0,5] # поверне 5 знаків - ["h", "e", "l", "l", "o"]
 ```
 
-You can also make assignments by indexing into an array. Here, for example, I first create an empty array then put items into indexes 0, 1 and 3. The ‘empty’ slot at number 2 will be filled with a **nil** value:
+Ви також маєте можливість зробити призначення значень конкретному індексу в масиві. Ось, наприклад, я спочатку створив порожній масив і заповнив елементи з індексами 0, 1 та 3. "Порожній" індекс під номером 2 буде заповнений значенням **nil**:
 
 **`array_assign.rb`**:
 
@@ -194,11 +192,12 @@ arr = []
 arr[0] = [0]
 arr[1] = ["one"]
 arr[3] = ["a", "b", "c"]
-# arr now contains:
+# масив тепер містить:
 # [[0], ["one"], nil, ["a", "b", "c"]]
 ```
 
-Once again, you can use start-end indexes, ranges and negative index values:
+Повторимо ще раз, ви можете використовувати як індекси початку, кінця, діапазони і негативні значення індексів:
+
 ```ruby
 arr2 = ['h','e','l','l','o',' ','w','o','r','l','d']
 
@@ -207,6 +206,6 @@ arr2[2,2] = 'L', 'L'
 arr2[4..6] = 'O','-','W'
 arr2[-4,4] = 'a','l','d','o'
 
-# arr2 now contains:
+# arr2 тепер містить:
 # ["H", "e", "L", "L", "O", "-", "W", "a", "l", "d", "o"]
 ```
