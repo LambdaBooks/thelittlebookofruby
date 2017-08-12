@@ -1,33 +1,30 @@
-# Chapter Three
+# Глава третя
 
-> CLASS HIERARCHIES…
+> Ієрархія класів…
 
-We ended the last lesson by creating two new classes: a Thing and a Treasure. In spite of the fact that these two classes shared some features (notably both had a ‘name’), there was no connection between them. Now, these two classes are so trivial that this tiny bit of repetition doesn’t really matter much. However, when you start writing real programs of some complexity, your classes will frequently contain numerous variables and methods; and you really don’t want to keep recoding the same old stuff over and over again.
+Ми закінчили попередній урок на тому, що створили два нових класи: `Thing` та `Treasure`. Якщо не брати до уваги те, що обидва класи мають схожий функціонал (обидва мають властивість `name`), між ними немає ніякого зв’язку. Наразі ці два лкаси надто прості, тому таке маленьке повторення не грає великої ролі. Проте, коли ви почнете писати реальні програми більшої складності, ваші класи міститимуть численні змінні та методи: ви точно не захочете перезаписувати одні й ті ж речі знову і знову.
 
-It makes sense to create a class hierarchy in which a class which is a ‘special type’ of some other class simply ‘inherits’ the features of that other class. In our simple adventure game, for instance, a Treasure is a special type of Thing so the Treasure class should inherit the features of the Thing class.
+Створити клас _спеціального типу_, щоб інший клас просто _наслідував_ його функціональність — цілком твереза ідея. У нашій простій пригодницькій грі, наприклад, `Treasure` є спеціальним типом, що належить до `Thing`, тому клас `Treasure` повинен наслідувати функціональність з класу `Thing`.
 
-> **Class Hierarchies – Ancestors and Descendants:** In this book, I often talk about ‘descendant’ classes ‘inheriting’ features from their ‘ancestor’ classes. These terms deliberately suggest a kind a family relationship between ‘related’ classes. In Ruby, each class only has one parent. A class may, however, descend from a long and distinguished family tree with
-many generations of grandparents, great-grandparents and so on...
+> **Ієрархія класів – предки та нащадки:** У цій книзі ми часто говоримо про _нащадків_ класів, які _наслідують_ функціональність від своїх класів–_предків_. Ці поняття навмисне наштовхують на своєрідні сімейні зв’язки між _спорідненими_ класами. В Ruby кожен клас має лише одного батька. Однак, класи  можуть бути спадкоємцями великих та багатих сімейних родів з багатьма поколіннями дідів, прадідів і так далі…
 
-The behaviour of Things in general will be coded in the Thing class itself. The Treasure class will automatically ‘inherit’ all the features of the Thing class, so we won’t need to code them all over again. It will then add some additional features, specific to Treasures.
+Поведінка `Things` загалом може бути описана у самому ж класі `Thing`. Клас `Treasure` автоматично _унаслідує_ всі можливості класу `Thing`, тому нам не потрібно перезаписувати все заново. Він же зможе згодом розшириити свої можливості, які стосуються лише `Treasures`.
 
-As a general rule, when creating a class hierarchy, the classes with the most generalised behaviour are higher up the hierarchy than classes with more specialist behaviour. So a Thing class with just a name and a description, would be the ancestor of a Treasure class which has a name, a description and, additionally, a value; the Thing class might also be the ancestor of some other specialist class such as a Room which has a name, a description and also exits — and so on...
+У якості узагальненого правила, при створенні класової ієрархії, класи з найбільш узагальненою поведінкою є вище у ієрархії, ніж класи з більш специфічною поведінкою. Таким чином, клас `Thing`, який має лише ім’я (`name`) та опис (`description`), мав би бути предком класу `Treasure`, який має ім’я (`name`), опис (`description`), а ще, додатково, значення (`value`); клас `Thing` також може бути предком для іншого спеціалізованого класу, як от `Room`, який має ім’я (`name`), опис (`description`), а також може існувати (`exits`) — і так далі…
 
-### **INSERT IMAGE**
+![Один батько, багато дітей](./images/03-1.png)
 
-**One Parent, Many Children...**
+**Один батько, багато дітей…**
 
-The diagram above shows a Thing class which has a *name* and a *description* (in a Ruby program, these might be internal variables
-such as `@name` and `@description` plus some methods to access
-them). The Treasure and Room classes both descend from the Thing class so they automatically ‘inherit’ a *name* and a *description*. The Treasure class adds one new item: *value* – so it now has *name*, *description* and *value*; The Room class adds exits – so it has *name*, *description* and *exits*.
+Діаграма зображена вище демонструє клас `Thing`, який має _ім’я_ та _опис_ (у програмі написаній на Ruby, це може бути представлено у вигляді внутрішніх змінних, як от `@name` та `@description`, а також деякими методами, для доступу до них). Обидва класи `Treasure` та `Room` є нащадками `Thing`, тож вони автоматично _унаслідують_ ім’я (`name`) та опис (`description`). Клас `Treasure` додає новий елемент: значення (`value`) – тож тепер він має **ім’я**, **опис** and **значення**; клас `Room` додає можливість існування (`exits`) – тож тепер має so it has **ім’я**, **опис** and **існує**.
 
-**`adventure1.rb`**
+**`adventure1.rb`**:
 
-Let’s see how to create a descendant class in Ruby. Load up the **`adventure1.rb`** program. This starts simply enough with the definition of a Thing class which has two instance variables, `@name` and `@description`. These variables are assigned values in the initialize method when a new Thing object is created. Instance variables generally cannot (and should not) be directly accessed from the world outside the class itself due the principle of encapsulation.
+Давайте подивимось як створити унаслідуваний клас у Ruby. Відкрийте програму **`adventure1.rb`**. Вона починається з простого визначення класу `Thing`, який має дві змінні екзамплярів: `@name` та `@description`. Цим змінним, при створенні нового об’єкту `Thing`, присвоюється значення у методі `initialize`. До змінні екземплярів зазвичай не можна (і не слід) звернутись напряму із зовнішнього світу поза цим класом, у відповідності до принципу інкапсуляції
 
-> **«Encapsulation»** is a term that refers to the ‘modularity’ of an object. Put simply, it means that only the object itself can mess around with its own internal state. The outside world cannot. The benefit of this is that the programmer is able to change the implementation of methods without having to worry that some external code elsewhere in the program relies upon some specific detail of the previous implementation.
+> **«Інкапсуляція»** — це термін, який пов’язаний з _модульністю_ об’єкта. Простими словами, він означає, що лише сам об’єкт може займатись справами, які пов’язані з його внутрішнім станом. Все що поза цим об’єктом — не може. Перевагою цього підходу є те, що програміст може змінювати імплементацію методів не хвилюючись про те, що якийсь зовнішній код може покладатись на специфіку попередньої імплементації.
 
-In order to obtain the value of each variable in a Thing object we need a *get* accessor method such as `get_name`; in order to assign a new value we need a *set* accessor method such as `set_name`:
+Для того щоб отримувати значення кожної змінної у об’єкті `Thing` нам потрібно створити _get_–аксесор, як от `get_name`; щоб присвоювати нові значення нам знадобиться _set_–аксесор, як от`set_name`:
 
 ```ruby
 def get_name
@@ -39,31 +36,30 @@ def set_name(aName)
 end
 ```
 
-## Superclasses and Subclasses
+## Батьківські (супер–) та дочірні (суб–) класи
 
-Now look at the Treasure class. Notice how this is declared:
+Тепер подивіться на клас `Treasure`. Зверніть увагу на те, як він оголошений:
 
 ```ruby
 class Treasure < Thing
 ```
 
-The angle bracket, `<`, indicates that Treasure is a ‘subclass’, or descendant, of Thing and therefore it inherits the data (variables) and behaviour (methods) from the Thing class. Since the `get_name`, `set_name`, `get_description` and `set_description` methods already exist in the ancestor class (Thing) these don’t need to be re-coded in the descendant class (Treasure).
+Трикутна дужка, `<`, вказує на те, що `Treasure` є _субкласом_, або спадкоємцем, класу `Thing` і тому наслідує його дані (змінні) та поведінку (методи). Оскільки методи `get_name`, `set_name`, `get_description` та `set_description` вже існують класі–предку (`Thing`) їх не потрібно переоголошувати у класі–нащадку (`Treasure`).
 
-The Treasure class has one additional piece of data, its value (`@value`) and I have written `get` and `set` accessors for this. When a new Treasure object is created, its `initialize` method is automatically called. A Treasure object has three variables to initialize (`@name`, `@description` and `@value`), so its initialize method takes three arguments:
+Клас `Treasure` має додаткову частинку даних — його значення (`@value`), тому я маю написати відповідні `get` та `set` аксесори для нього. Коли створюється новий об’єкт `Treasure`, автоматично викликається його метод `initialize`. Об’єкт `Treasure` має ініціалізувати три змінні (`@name`, `@description` та `@value`), тому метод `initialize` приймає три аргументи:
 
 ```ruby
 def initialize(aName, aDescription, aValue)
 ```
 
-The first two arguments are passed, using the `super` keyword, to the `initialize`method of the superclass (Thing) so that the Thing class’s `initialize` method can deal with them:
+Перші два аргументи передаються у метод `initialize` батьківського класу (`Thing`) з допомогою ключового слова `super`, тож метод `initialize` класу `Thing` може працювати з ними:
 
 ```ruby
 super(aName, aDescription)
 ```
 
-When used inside a method, the `super` keyword calls a method with the same name in the ancestor or ‘super’ class.
+При використанні всередині методу, ключове слово `super` викликає метод з таким самим іменем у _батькіського (супер–)_ класу.
 
-The current method in the Treasure class is called `initialize` so when code inside this method passes the two arguments (`aName`, `aDescription`) to `super` it is actually passing them to the `initialize` method of its superclass, Thing.
+Поточний метод у класі `Treasure` викликає `initialize`, тому коли код всередині цього методу передає ці два аргументи (`aName`, `aDescription`) до `super`, це насправді передає їх до методу `initialize` батьківського класу `Thing`.
 
-If the `super` keyword is used on its own, without any arguments being
-specified, all the arguments sent to the current method are passed to the ancestor method.
+Якщо ключове слово `super` використовується саме по собі, без жодного вказаного аргументу, всі аргументи, які були передані до поточного методу, передаються до успадкованого метода.
