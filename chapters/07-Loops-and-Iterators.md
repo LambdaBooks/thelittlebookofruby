@@ -1,94 +1,91 @@
-# Chapter Seven
+# Глава сьома
 
-> LOOPS AND ITERATORS...
+> Цикли та ітератори…
 
-Much of programming is concerned with repetition. You may want a program to beep 10 times, read lines from a file just so long as there are more lines to read or display a warning until the user presses a key. Ruby provides a number of ways of performing this kind of repetition.
+Багато чого у програмуванні пов’язане з повторюваними діями. Можливо вам знадобиться програма яка подаватиме звуковий сигнал 10 разів, читатиме рядки з файлу поки у ньому є що читати або показуватиме повідомлення поки користувач не натисне клавішу. Ruby надає вам кілька способів виконати такі повторення.
 
-## For Loops
+## Цикл `for`
 
-In many programming languages, when you want to run a bit of code a certain number of times you can just put it inside a `for` loop. In most languages, you have to give a `for` loop a variable initialized with a starting value which is incremented by 1 on each turn through the loop until it meets some specific ending value. When the ending value is met, the `for` loop stops running. Here’s a version of this traditional type of `for` loop written in Pascal:
+У багатьох мовах програмування, коли ви хочете запустити код певну кількість разів ви можете просто вставити цей код всередину циклу `for`. У більшості мов ви маєте дати циклу `for` змінну ініціалізовану з початковим значенням, яка буде збільшуватись на 1 на кожній ітерації, поки вона не досягне певного кінцевого значення. Коли кінцеве значення досягнуто, цикл `for` припиняє виконання. Ось традиційна версія циклу `for` написана мовою Pascal:
 
 ```pascal
-(* This is Pascal code, not Ruby! *)
+(* Це код на Pascal, а не на Ruby! *)
 for i := 1 to 3 do
-    writeln(i);
+  writeln(i);
 ```
 
 **`for_loop.rb`**:
 
-You may recall from Chapter Five (arrays) that Ruby’s `for` loop doesn’t work like this at all! Instead of giving it a starting and ending value, we give the `for` loop a list of items and it iterates over them, one by one, assigning each value in turn to a loop variable until it gets to the end of the list.
+З Глави 5 (про масиви) ви можете пам’ятати, що цикл `for` у Ruby працює зовсім іншим чином! Замість того, щоб передавати початкове та кінцеве значення, ми передаємо циклу `for` список елементів і він ітерується по ньому, від одного до іншого, присвоюючи значення на кожній ітерації певні змінній циклу. Це триває аж поки він не досягне кінця списку.
 
-For example, here is a `for` loop that iterates over the items in an array,
-displaying each in turn:
+Наприклад, ось цикл `for`, що ітерується по елементах масиву виводячи їх на екран:
 
 ```ruby
-# This is Ruby code...
-for i in [1,2,3] do
-    puts(i)
+# А ось це вже код на Ruby…
+for i in [1, 2, 3] do
+  puts(i)
 end
 ```
 
-The `for` loop is more like the _for each_ iterator provided by some other programming languages. Indeed, the author of Ruby describes for as _syntax sugar_ for the each method which is implemented by Ruby's collection types such as `Arrays`, `Sets`, `Hashes` and `Strings` (a `String` being, in effect, a collection of characters).
+Цикл `for` більше схожий на ітератор `for each`, який пропонують деякі інші мови програмування. Так і є, автор Ruby описує `for` як _синтаксичний цукор_ для методу `each`, який імплементують типи колекцій у Ruby, такі як `Array` (масиви), `Set` (множини), `Hash` (хеші) та `String` (рядки) (самі рядки є колекціями символів).
 
-For the sake of comparison, this is the `for` loop shown above rewritten using the `each` method:
+Для порівняння, ось як виглядатиме цикл `for` з прикладу вище, якщо переписати його з допомогою методу `each`:
 
 **`each_loop.rb`**:
 
 ```ruby
-[1,2,3].each do |i|
-    puts( i )
+[1, 2, 3].each do |i|
+  puts(i)
 end
 ```
 
-As you can see, there isn’t really all that much difference.
+Як бачите, між ними справді немає суттєвої відмінності.
 
-To convert the `for` loop to an `each` iterator, all I’ve had to do is delete `for` and in and append `.each` to the array. Then I’ve put the iterator variable, `i`, between a pair of upright bars after do.
+Щоб перетворити цикл `for` на ітератор `each`, все що мені потрібно зробити — це видалити `for` та додати після масиву `.each`. Потім я передаю змінну ітератора `i`, яка стоїть між двома символами вертикальних рисок.
 
-Compare these other examples to see just how similar for loops are to each
- iterators:
+Порівняйте ці приклади щоб побачити наскільки цикл `for` nf ітератор `each` схожі між собою:
 
 **`for_each.rb`**:
 
 ```ruby
-# --- Example 1 ---
+# --- Приклад 1 ---
 
 # i) for
-for s in ['one','two','three'] do
-    puts(s)
+for s in ['один', 'два', 'три'] do
+  puts(s)
 end
 
 # ii) each
-['one','two','three'].each do |s|
-    puts(s)
+['один', 'два', 'три'].each do |s|
+  puts(s)
 end
 
-# --- Example 2 ---
+# --- Приклад 2 ---
 
 # i) for
-for x in [1, "two", [3,4,5] ] do puts(x) end
+for x in [1, "два", [3, 4, 5]] do puts(x) end
 
 # ii) each
-[1, "two", [3,4,5] ].each do |x| puts(x) end
+[1, "два", [3, 4, 5]].each do |x| puts(x) end
 ```
 
-Note, incidentally, that the `do` keyword is optional in a for loop that spans
- multiple lines but it is obligatory when it is written on a single line:
+Зверніть увагу, що ключове слово `do` є необов’язковим для циклу `for`, який займає декілька рядків, проте воно необхідне коли цикл записаний у одному рядку:
 
 ```ruby
-# Here the "do" keyword can be omitted
-for s in ['one','two','three']
-    puts(s)
+# Тут ключове слово "do" можна упустити
+for s in ['один', 'два', 'три']
+  puts(s)
 end
 
-# But here it is required
-for s in ['one','two','three'] do puts(s) end
+# Проте тут воно є обов’язковим
+for s in ['один', 'два', 'три'] do puts(s) end
 ```
 
 **`for_to.rb`**:
 
-> ### How to write a _normal_ `for` loop...
+> ### Як написати _звичайний_ цикл `for`…
 > 
-> If you miss the traditional type of `for` loop, you can always ‘fake’ it in Ruby by using a `for` loop to iterate over the values in a range. For example, this is how to use a `for` loop variable to count up from 1 to 10, displaying its value at each turn through the loop:
+> Якщо вам знадобиться більш традиційний цикл `for`, ви завжди можете _зімітувати_ його в Ruby, якщо цикл `for` ітеруватиме по значеннях проміжку. Наприклад, ось як можна використати змінну циклу `for`, щоб порахувати від 1 до 10, виводячи її значення на кожній ітерації циклу:
 > 
 > ```ruby
 > for i in (1..10) do
@@ -96,7 +93,7 @@ for s in ['one','two','three'] do puts(s) end
 > end
 > ```
 > 
-> Which can be rewritten using `each`:
+> Це може бути перезаписане з використанням `each`:
 > 
 > ```ruby
 > (1..10).each do |i|
@@ -104,69 +101,68 @@ for s in ['one','two','three'] do puts(s) end
 > end
 > ```
 
+Тим не менше, зверніть увагу на те, що вираз проміжку, як от `1..3`, повинен бути записаний між двома круглими дужками, при використанні методу `each`, в іншому випадку Ruby подумає, що ви намагаєтесь використати `each`, як метод останнього з чисел (`FixNum`), замість цілого виразу (`Range`). Проте дужки є необов’язковими, якщо використовувати проміжок з циклом `for`.
 
-Note, incidentally, that a range expression such as `1..3` must be enclosed between round brackets when used with the `each` method, otherwise Ruby assumes that you are attempting to use `each` as a method of the final integer (a FixNum) rather than of the entire expression (a Range). The brackets are optional when a range is used in a `for` loop.
+При ітерації по значення з допомогою `each` блок коду між `do` та `end` називається (очевидно, чи не так?) _блоком ітератора_.
 
-When iterating over items using `each` the block of code between `do` and `end` is called (predictably, perhaps?) an _iterator block_.
+> **Параметри блоку:** У Ruby будь–які змінні, які оголошені між вертикальними рисками на початку блоку називаються _параметрами блоку_. Крім цього, блоком працює як функція, а параметри блоку працюють як список аргументів функції. Метод `each` запускає код всередині блоку і передає в нього аргументи, які отримуються з колекції (наприклад, з масиву).
 
-> **Block Parameters:** In Ruby any variables declared between upright bars at the top of a block are called _block parameters_. In a way, a block works like a function and the block parameters work like a function’s argument list. The each method runs the code inside the block and passes to it the arguments supplied by a collection (for example, an array).
+## Блоки
 
-## Blocks
-
-Ruby has an alternative syntax for delimiting blocks. You may use `do..end`, like this…
+Ruby має альтернативний синтаксис для виокремлення блоків. Ви можете використовувати `do..end` так…
 
 **`block_syntax.rb`**:
 
 ```ruby
 # do..end
 [[1,2,3],[3,4,5],[6,7,8]].each do |a,b,c|
-    puts("#{a}, #{b}, #{c}")
+  puts("#{a}, #{b}, #{c}")
 end
 ```
 
-Or you can use curly braces `{..}` like this:
+Або користуватись фігурними дужками `{..}` ось так:
 
 ```ruby
 # curly braces {..}
 [[1,2,3],[3,4,5],[6,7,8]].each { |a,b,c|
-    puts("#{a}, #{b}, #{c}")
+  puts("#{a}, #{b}, #{c}")
 }
 ```
 
-No matter which block delimiters you use, you must ensure that the opening delimiter, `{` or `do`, is placed on the same line as the `each` method. Inserting a line break between `each` and the opening block delimiter is a syntax error.
+Не важливо які позначення ви використовуєте, ви маєте бути певні лише в тому, що відкриваюче позначення, `{` або `do`, розміщене на тому ж рядку, що і метод `each`. Перенесення на новий рядок між `each` та відкриваючим позначенням спричинить синтаксичну помилку.
 
-## While Loops
+## Цикл `while`
 
-Ruby has a few other loop constructs too. This is how to do a `while` loop:
-
-```ruby
-while tired
-    sleep
-end
-```
-
-Or, to put it another way:
+Ruby також має декілька інших конструкцій для циклів. Ось як можна працювати з циклом `while` (поки):
 
 ```ruby
-sleep while tired
+while tired     # поки втомлений
+  sleep         #   спати
+end             #
 ```
 
-Even though the syntax of these two examples is different they perform the same function. In the first example, the code between `while` and `end` (here a call to a method named `sleep`) executes just as long as the Boolean condition (which, in this case, is the value returned by a method called `tired`) evaluates to true.
-
-As in `for` loops the keyword do may optionally be placed between the test condition and the code to be executed when these appear on separate lines; the `do` keyword is obligatory when the test condition and the code to be executed appear on the same line.
-
-## While Modifiers
-
-In the second version of the loop (`sleep while tired`), the code to be executed (`sleep`) precedes the test condition (`while tired`). This syntax is called a _while modifier_. When you want to execute several expressions using this syntax, you can put them between the `begin` and `end` keywords:
+Або, записуючи по іншому:
 
 ```ruby
-begin
-    sleep
-    snore
-end while tired
+sleep while tired   # спати поки втомлений
 ```
 
-This is an example showing the various alternative syntaxes:
+Ці два приклади виконують одні і ті ж дії, не дивлячись на те, що їх синтаксис відрізняється. У першому прикладі код між `while` та `end` (тут це виклик методу `sleep`) виконується поки тестова булева умова (яка, у цьому випадку, є значенням, яке повертається методом `tired`) залишається істинною.
+
+Як і в циклах `for`, ключове слово `do` між тестовою умовою та кодом, який має виконуватись, якщо вони не стоять на одному рядку, є необов’язковим; ключове слово `do`, відповідно, обов’язкове, якщо тестова умова і код знаходяться на одному рядку.
+
+## Модифікатори `while`
+
+У іншій версії циклу (`sleep while tired`), код, який має виконуватись (`sleep`) стоїть перед тестовою умовою (`while tired`). Такий синтаксис називається _модифікатором while_. Якщо ви хочете виконати кілька виразів використовуючи такий запис, ви можете огорнути їх ключовими словами `begin` та `end`:
+
+```ruby
+begin               #
+    sleep           #   спати
+    snore           #   хропіти
+end while tired     # поки втомлений 
+```
+
+Ось приклад, який показує різні альтернативні записи:
 
 **`while.rb`**:
 
@@ -184,79 +180,78 @@ def tired
 end
 
 def snore
-    puts('snore....')
+    puts('храп....')
 end
 
 def sleep
     puts("z" * $hours_asleep)
 end
 
-while tired do sleep end    # a single-line while loop
+while tired do sleep end    # однорядковий цикл while
 
-while tired                 # a multi-line while loop
+while tired                 # багаторядковий цикл while
     sleep
 end
 
-sleep while tired           # single-line while modifier
+sleep while tired           # однорядковий модифікатор while
 
-begin                       # multi-line while modifier
+begin                       # багаторядковий модифікатор while
     sleep
     snore
 end while tired
 ```
 
-The last example above (the multi-line `while` modifier) needs close consideration as it introduces some important new behaviour. When a block of code delimited by `begin` and `end` precedes the `while` test, that code always executes at least once. In the other types of `while` loop, the code may never execute at all if the Boolean condition initially evaluates to true.
+Останній приклад (багаторядковий модифікатор `while` modifier) потребує детальнішого розгляду, оскільки він відкриває для нас нову важливу поведінку. Якщо блок коду, що визначається через `begin` та `end`, передує перевірці `while`, цей код виконається принаймні один раз. У інших циклах `while`, код ніколи не виконається, якщо булева умова відразу є істинною.
 
 **`while2.rb`**:
 
-> ### Ensuring a Loop Executes At Least Once
+> ### Коли цикл виконується принаймні один раз
 > 
-> Usually a `while` loops executes 0 or more times since the Boolean test is evaluated _before_ the loop executes; if the test returns false at the outset, the code inside the loop never runs.
+> Зазвичай цикл `while` виконується 0 або більше разів, оскільки булева перевірка виконується _до_ того як виконається сам цикл; якщо перевірка повертає `false`, код всередині циклу не виконається ніколи.
 > 
-> However, when the `while` test follows a block of code enclosed between `begin` and `end`, the loop executes 1 or more times as the Boolean expression is evaluated after the code inside the loop executes.
+> Однак, якщо перевірка `while` слідує після коду, який огорнутий в `begin` та `end`, цикл виконується 1 або більше разів, тому що булевий вираз виконується _after_ коду всередині циклу.
 > 
-> To appreciate the differences in behaviour of these two types of `while` loop, run **`while2.rb`**. These examples should help to clarify:
+> Щоб відчути різницю між поведінкою цих двох типів циклу `while`, запустіть **`while2.rb`**. Ці приклади допоможуть зрозуміти краще:
 > 
 > ```ruby
 > x = 100
 > 
-> # The code in this loop never runs
+> # Код у цьому циклі ніколи не виконається
 > while (x < 100) do puts('x < 100') end
 > 
-> # The code in this loop never runs
+> # Код у цьому циклі ніколи не виконається
 > puts('x < 100') while (x < 100)
 > 
-> # But the code in loop runs once
+> # Код у цьому циклі виконається один раз
 > begin puts('x < 100') end while (x < 100)
 > ```
 
-## Until Loops
+## Цикл `until`
 
-
-Ruby also has an `until` loop which can be thought of as a _while not_ loop. Its syntax and options are the same as those applying to while – that is, the test condition and the code to be executed can be placed on a single line (in which case the `do` keyword is obligatory) or they can be placed on separate lines (in which case `do` is optional). There is also an `until` modifier which lets you put the code before the test condition; and there is the option of enclosing the code between `begin` and `end` in order to ensure that the code block is run at least once.
+Ruby також має цикл `until`, який можна трактувати як цикл _поки не_. Його синтаксис та параметри такі ж як і у `while` – тобто тестова перевірка та код можуть розташовуватись на одному рядку (звісно, якщо між ними є ключове слово `do`) або на декількох рядках (тоді `do` необов’язкове). Також є модифікатор `until`, який дає вам можливість розмістити код до тестової перевірки. Якщо ж ви огортаєте код між `begin` та `end`, пам’ятайте, що він виконається щонайменше один раз.
 
 **`until.rb`**:
 
-Here are some simple examples of `until` loops:
+Ось прості приклади з циклом `until`:
 
 ```ruby
 i = 10
 
-until i == 10 do puts(i) end    # never executes
+until i == 10 do puts(i) end    # ніколи не виконається
 
-until i == 10                   # never executes
+until i == 10                   # ніколи не виконається
     puts(i)
     i += 1
 end
 
-puts(i) until i == 10           # never executes
+puts(i) until i == 10           # ніколи не виконається
 
-begin                           # executes once
+begin                           # виконається один раз
     puts(i)
 end until i == 10
 ```
 
-Both `while` and `until` loops can, just like a `for` loop, be used to iterate over arrays and other collections. For example, this is how to iterate over all the elements in an array:
+Обидва цикли `while` та `until`, так само як і цикл `for`, можна використовувати для ітерування по масивах та інших колекціях. Наприклад, ось як можна ітеруватись по всіх елементах масиву:
 
 ```ruby
 while i < arr.length
