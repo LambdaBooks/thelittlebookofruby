@@ -1,27 +1,27 @@
-# Chapter Ten
+# Глава десята
 
-> GOING FURTHER...
+> Рух далі...
 
-We’ve covered a lot of ground over the past ten chapters but, even so, we’ve only just begun to explore all the possibilities of programming with Ruby.
+Ми розглянули багато основ протягом попередніх десяти глав, проте, ми лише почали відкривати всі можливості програмування на Ruby.
 
-One of the areas we haven’t even touched upon is the development of web applications using the Rails framework (popularly known as ‘Ruby On Rails’). The good news is that, developing with Rails will be much easier now that you have a fundamental understanding of programming in Ruby. While Rails has all kinds of tools to get a simple application up and running, trying to program in Rails without understanding Ruby would be like trying to write a novel without being able to speak the language!
+Одна з областей, яку ми навіть не зачіпали, стосується розробки веб–застосунків з використанням фреймворку Rails (загальновідомого як _Ruby On Rails_). Хороша новина полягає в тому, що розробка з Rails тепер буде набагато простішою, адже ви маєте фундаментальне розуміння програмування на Ruby. Rails має всі інструменти, які необхідні для того, щоб побудувати та запустити простий застосунок, однак спроба написати програму на Rails без розуміння Ruby була б чимось на зразок спроби написати роман не знаючи мови!
 
-## IronRuby and JRuby
+## IronRuby та JRuby
 
-We haven’t looked at the features that Ruby brings to specific operating systems either. For example, Sun Microsystems has a Java version of Ruby (JRuby), while Microsoft has a .NET version of Ruby (IronRuby) under development. The commercial ‘Developer’ edition of the Ruby In Steel IDE supports all three major versions of Ruby - standard Ruby, JRuby and IronRuby. There is also a free IronRuby version of Ruby In Steel which includes a visual form design environment similar to those provided with Microsoft’s C# and VB languages. For information on other editions of Ruby In Steel or to download a free IronRuby IDE, visit the SapphireSteel Software web site:
+Також ми не розглядали функціонал, яки Ruby вносить до певних операційних систем. Наприклад, Sun Microsystems має версію Ruby на Java (JRuby), а Microsoft розробляє версію Ruby на .NET (IronRuby). Комерційна _розробницька_ версія Ruby In Steel IDE підтримує всі три основні версії Ruby - звичайний Ruby, JRuby та IronRuby. Також Ruby In Steel містить безкоштовну версію IronRuby, яка включає оточення для візуальної побудови форм, схоже до тих, які надаються Microsoft для мов C# та VB. Для додаткової інформації стосовно інших версій Ruby In Steel або щоб завантажити безкоштовне IronRuby IDE, перейдіть на вебсайт SapphireSteel Software:
 
 http://www.sapphiresteel.com
 
-## Saving Data
+## Збереження даних
 
-The time has now come to wrap up this Little Book Of Ruby. Let’s do that by looking at one more sample project – a little CD database which lets you create new objects (one for each disc in your CD collection), add them to an array and store them on disk.
+Тепер настав час підсумувати цю Маленьку книгу про Ruby. Давайте розглянемо ще один простий проект – маленьку базу даних CD, яка дає вам можливість створювати нові об’єкти (один для кожного диску у вашій колекції CD), додавати їх до масиву та зберегти їх на ваш диск.
 
-In order to save the data to disk I have used Ruby’s YAML library:
+Для того щоб зберігати данні на диск я використовую бібліотеку YAML:
 
 ```ruby
-# saves data to disk in YAML format
+# збереження даних на диск у форматі YAML
 def saveDB
-    File.open( $fn, 'w' ) { |f|
+    File.open($fn, 'w') { |f|
         f.write($cd_arr.to_yaml)
     }
 end
@@ -29,7 +29,7 @@ end
 
 ## YAML
 
-YAML describes a format for saving data as human-readable text. The data can be subsequently reloaded from disk in order to reconstruct the array of CD objects in memory:
+YAML описує формат збереження даних у вигляді зрозумілого для людини тексту. Дані можна згодом завантажувати з диску, щоб відновлювати масив об’єктів CD у пам’яті:
 
 ```ruby
 def loadDB
@@ -38,22 +38,22 @@ def loadDB
 end
 ```
 
-Much of the coding in this little program should be familiar from our previous projects. A couple of things need to be highlighted, however.
+Багато коду з цієї маленької програми мають бути схожими на наші попередні проекти. Однак, деякі речі слід підкреслити.
 
-First, variables beginning with a dollar `$` are ‘global’ so are usable by all the code throughout the program (recall that instance variables, starting with `@`, are only usable within the confines of a specific object; while local variables, starting with a lowercase letter, are only usable within a well-defined ‘scope’ such as within a specific method).
+По перше, змінні, які починаються зі знаку долара `$` є _глобальними_, тому вони доступні для всього коду у програмі (пригадайте змінні екземплярів, які починаються з `@` — доступ до них обмежується певним об’єктом; локальні змінні, які починаються з маленької літери, доступні для використання лише всередині чітко визначеної _області видимості_, як от всередині певного методу).
 
-## Files
+## Файли
 
-Also notice that we use the File class to check if a File exists:
+Також, зверніть увагу на те, що ми використовуємо клас `File`, щоб перевірити чи файл існує:
 
 ```ruby
 if File.exist?($fn)
 ```
 
-Here, `exist?` is a ‘class method’ – that is, it ‘belongs to’ the File class rather than to an instance of the File class. That explains how we can invoke the method from File itself rather than having to invoke it from a new File object. This may remind you of the module methods discussed in Chapter Nine – another example of the similarities between modules and classes.
+Тут, `exist?` є _методом класу_ – він _належить_ класу `File`, а не екземпляру класу `File`. Це пояснює те, як ми можемо виконувати метод з самого `File`, замість того, щоб виконувати його від нового об’єкту `File`. Це може нагадати вам методи модулів про які йшла мова у дев’ятій главі – ще один приклад схожості між модулями та класами.
 
-## Moving On...
+## Рух далі…
 
-The Ruby community is currently a very active one and new projects are constantly emerging. To keep up to date, we suggest that you visit the Sapphire In Steel site (www.sapphiresteel.com) to find links to some of the most useful resources for Ruby programmers. We shall also be adding more tutorials and sample projects to the site to continue our exploration of Ruby programming.
+Спільнота Ruby зараз дуже активна і постійно поповнюється новими проектами. Щоб триматись в курсі, ми радимо вам відвідати сайт Sapphire In Steel (www.sapphiresteel.com), щоб знайти посилання на найкорисніші ресурси для Ruby–програмістів. Ми також додаватимемо більше керівництв та прикладів проектів на наш сайт, щоб продовжити ваше заглиблення у програмування на Ruby.
 
-In conclusion, I hope you’ve enjoyed this little introduction to the Ruby language and that it may be just the start of many years of enjoyable and productive Ruby development.
+На завершення, я сподіваюсь вам сподобалось цей маленький вступ у мову Ruby і він буде лише початком для багатьох років приємної та продуктивної роботи з Ruby.
