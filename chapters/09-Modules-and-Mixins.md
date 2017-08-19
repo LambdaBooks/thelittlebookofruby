@@ -1,118 +1,117 @@
-# Chapter Nine
+# Глава дев’ята
 
-> MODULES AND MIXINS...
+> Модулі та домішки…
 
-As mentioned in an earlier chapter, each Ruby class can only have one immediate ‘parent’, though each parent class may have many ‘children’.
+Як згадано у попередніх главах, кожен клав в Ruby має одного найближчого _батька_, хоча кожен батько може мати багато _дітей_.
 
-By restricting class hierarchies to single line of descent, Ruby avoids some of the problems that may occur in those programming languages (such as C++) which permit multiple-lines of descent.
+Обмежуючи ієрархію класів однією лінією наслідування Ruby уникає дакількох проблем, які можуть виникати у таких мовах програмування (як от C++), які  which дозволяють кілька множинне успадкування.
 
-When classes have many parents as well as many children and their parents, and children, also have many other parents and children, you risk ending up with an impenetrable network (or ‘knotwork’?) rather than the neat, well- ordered hierarchy which you may have intended.
+Коли клас має так багато батьків як і дітей та їхніх батьків, а діти мають багато інших батьків та дітей, ви ризикуєте потрапити в заплутану мережу (чи може навіть _павутину_?) замість того, щоб мати чітку, добре організовану ієрархію, яка вам і потрібна.
 
-Nevertheless, there are occasions when it is useful for a class to be able to implement features which it has in common with more than one other pre- existing class.
+Тим не менше, часом виникають ситуації, коли корисно, щоб клас міг імплементувати функціональність, яка є спільною з більш ніж одним попередньо визначеним класом.
 
-For example, a Sword might be a type of Weapon but also a type of Treasure; a House might be a type of Building but also a type of Investment and so on.
+Наприклад, `Sword` меч може належати до типу `Weapon` (зброя), але крім того належати й до типу `Treasure` (знахідка); `House` (будинок) може належати не лише до типу `Building` (будівля), але й до `Investment` (інвестиція) і так далі.
 
-## A Module Is Like A Class...
+## Модуль — це як клас…
 
-Ruby’s solution to this problem is provided by Modules. At first sight, a module looks very similar to a class. Just like a class it can contain constants, methods and classes.
+Ruby вирішує цю проблему надаючи нам модулі. На перший погляд, модуль виглядає схожим на клас. Так само як і клас він містить константи, методи та класи.
 
-Here’s a simple module:
+Ось простий модуль:
 
 ```ruby
 module MyModule
-    GOODMOOD = "happy"
-    BADMOOD = "grumpy"
+    GOODMOOD = "веселий"
+    BADMOOD = "сварливий"
     
     def greet
-        return "I'm #{GOODMOOD}. How are you?"
+        return "Я #{GOODMOOD}. А ти як?"
     end
 end
 ```
 
-As you can see, this contains a constant, `GOODMOOD` and an ‘instance method’, `greet`. To turn this into a class you would only need to replace the word `module` in its definition with the word `class`.
+Як бачите, він містить константу `GOODMOOD` та _метод екземпляру_ `greet`. Щоб перетворити цей модуль на клас вам потрібно лише замінити слово `module`, у цьому оголошенні, на слово `class`.
 
-## Module Methods
+## Методи модулів
 
-In addition to instance methods a module may also have module methods which are preceded by the name of the module:
+На додачу до методів екземпляру модуль може мати і методи модуля, в яких перед іменем стоїть назва модуля:
 
 ```ruby
 def MyModule.greet
-    return "I'm #{BADMOOD}. How are you?"
+    return "Я #{BADMOOD}. А ти як?"
 end
 ```
 
-In spite of their similarities, there are two major features which classes possess but which modules do not: **instances** and **inheritance**. Classes can have instances (objects), superclasses (parents) and subclasses (children); modules can have none of these.
+Незважаючи на схожість, класи мають дві суттєві переваги, яких не мають модулі: **екземпляри (instances)** та **успадкування (inheritance)**. Класи мають екземпляри (об’єкти), батьківські класи (суперкласи) та дочірні класи (субкласи); модулі не мають нічого подібного.
 
-Which leads us to the next question: if you can’t create an object from a
-module, what are modules for?
+Це змушує нас поставити собі запитання:  якщо ми не можемо створити об’єкт з модуля, для чого тоді вони?
 
-This is another question that can be answered in two words: **namespaces** and **mixins**. Ruby’s ‘mixins’ provide a way of dealing with the little problem of multiple inheritance which I mentioned earlier. We’ll come to mixins shortly. First though, let’s look at namespaces.
+Це ще одне питання на яке ми можемо відповісти двома словами: **простори (namespaces)** та **домішки (mixins)**. _Домішки_ в Ruby дають нам можливість працювати з маленькою проблемою множинного успадкування, про яку я згадував раніше. Ми повернемось до домішок згодом, а поки що давайте подивимось на простори імен.
 
-## Modules as Namespaces
+## Модулі як простори імен
 
-You can think of a module as a sort of named ‘wrapper’ around a set of methods, constants and classes. The various bits of code inside the module share the same ‘namespace’ - which means that they are all visible to each other but are not visible to code outside the module.
+Ви можете думати про модуль як про свого роду іменовану _обгортку_ довкола множини методів, констант та класів. Різні частини коду всередині цього модуля поділяють спільний _простір імен_ - це означає, що вони всі видимі для один одного, але невидимі для коду, що поза цим модулем.
 
-The Ruby class library defines a number of modules such as Math and Kernel. The Math module contains mathematical methods such as `sqrt` to return a square route and constants such as `PI`. The Kernel module contains many of the methods we’ve been using from the outset such as `print`, `puts` and `gets`.
+Бібліотека класів Ruby ряд модулів, як от `Math` та `Kernel`. Модуль `Math` містить математичні методи, як от `sqrt`, щоб повертати квадратний корінь або константи, такі як `PI`. Модуль `Kernel` містить різні методи, які ми вже раніше використовували: `print`, `puts` та `gets`.
 
-> ### Constants
+> ### Константи
 > 
-> Constants are like variables except their values do not (or should not!) change. In fact, it is (bizarrely!) possible to change the value of a constant in Ruby but this is certainly not encouraged and Ruby will warn you if you do so. Note that constants begin with a capital letter.
+> Константи — це як змінні, за винятком того, що їх значення не можна (і не слід!) змінювати. Фактично, змінити значення константи в Ruby можливо (незрозуміло!), проте це точно не заохочується, а Ruby зробить вам попередження, якщо ви спробуєте таке зробити. Зауважте, що константи починаються з великої літери.
 
 **`modules1.rb`**:
 
-Let’s assume we have this module:
+Припустимо ми маємо такий модуль:
 
 ```ruby
 module MyModule
-    GOODMOOD = "happy"
-    BADMOOD = "grumpy"
+    GOODMOOD = "веселий"
+    BADMOOD = "сварливий"
 
     def greet
-        return "I'm #{GOODMOOD}. How are you?"
+        return "Я #{GOODMOOD}. А ти як?"
     end
 
     def MyModule.greet
-        return "I'm #{BADMOOD}. How are you?"
+        return "Я #{BADMOOD}. А ти як?"
     end
 end
 ```
 
-We can access the constants using `::` like this:
+Ми можемо звернутись до константи використовуючи `::`, ось так:
 
 ```ruby
 puts(MyModule::GOODMOOD)
 ```
 
-We can similarly access module methods using dot notation – that is, specifying the module name followed by a full stop and the method name. The following would print out ‚I'm grumpy. How are you?‛:
+Схожим чином ми можемо звернутись до методів модуля з допомогою крапкового запису – це визначено ім’ям модуля та методу розділених крапкою. Наступний приклад виведе: `Я сварливий. А ти як?`:
 
 ```ruby
 puts(MyModule.greet)
 ```
 
-## Module ‘Instance Methods’
+## _Методи екземпляру_ модуля
 
-This just leaves us with the problem of how to access the instance method, `greet`. As the module defines a closed namespace, code outside the module won’t be able to ‘see’ the `greet` method so this won’t work:
+Це ставить нас перед проблемою: як отримати доступ до метода екземпляру, `greet`. Оскільки модуль визначає закритий простір імен, код поза цим модулем  не може _побачити_ метод `greet`, тому таке не спрацює:
 
 ```ruby
 puts(greet)
 ```
 
-If this were a class rather than a module we would, of course, create objects from the class using the `new` method – and each separate object (each ‘instance’ of the class), would have access to the instance methods. But, as I said earlier, you cannot create instances of modules. So how the heck can we use their instance methods? This is where those mysterious mixins enter the picture…
+Якщо б це був клас, а не модуль, ми б, напевно, створили об’єкти цього класу з допомогою методу `new` – і кожен окремий об’єкт (кожен _екземпляр_ цього класу), мав би доступ до методів екземпляру. Проте, як я вже раніше казав, ви не можете створити екземплярів модулів. То яким же боком ми маємо дістати наші методи екземпляру? Ось де таємничі домішки з’являються приходять на допомогу…
 
-## Included Modules or ‘Mixins’
+## Включені модулі та _домішки_
 
 **`modules2.rb`**:
 
-An object can access the instance methods of a module just by including that module using the `include` method. If you were to include MyModule into your program, everything inside that module would suddenly pop into existence within the current scope. So the `greet` method of MyModule will now be accessible:
+Об’єкт може мати доступ до методів екземпляра модуля якщо просто включити модуль з допомогою методу `include`. Якщо ви включите `MyModule` у вашу програму, все всередині цього модуля почне існувати у поточній області видимості. Таким чином метод `greet` модуля `MyModule` тепер стане доступним:
 
 ```ruby
 include MyModule
 puts(greet)
 ```
 
-The process of including a module in a class is also called ‘mixing in’ the module – which explains why included modules are often called ‘mixins’.
+Процес включення модулів у клас також називають _змішуванням (mixing in)_ модуля – це пояснює чому включені модулі часто називають _домішками (mixins)_.
 
-When you include objects into a class definition, any objects created from that class will be able to use the instance methods of the included module just as though they were defined in the class itself.
+Коли ви включаєте об’єкти в оголошення класу, будь–який об’єкт, який створений від цього класу матиме можливість використовувати методи екземпляру включеного модуля так, ніби вони були визначені в самому класі.
 
 **`modules3.rb`**:
 
@@ -130,7 +129,7 @@ class MyClass
 end
 ```
 
-Not only can the methods of this class access the `greet` method from MyModule, but so too can any objects created from the class, like this:
+Не лише методи цього класу мають доступ до метода `greet` з `MyModule`, але й усі об’єкти, які створені від цього класу, ось так:
 
 ```ruby
 ob = MyClass.new
@@ -139,45 +138,44 @@ ob.sayHiAgain
 puts(ob.greet)
 ```
 
-In short, then, modules can be used as a means of grouping together related methods, constants and classes within a named scope. In this respect, modules can be thought of as discreet code units which can simplify the creation of reusable code libraries.
+Якщо коротко, то модулі можуть використовуватись для групування пов’язаних методів, констант та класів під іменованою областю видимості. У цьому розуміння, про модулі можна думати як про закриті одиниці коду, які можуть спростити створення бібліотек для повторного використання коду.
 
 **`modules4.rb`**:
 
-On the other hand, you might be more interested in using modules as an alternative to multiple inheritance. Returning to an example which I mentioned at the start of this chapter, let’s assume that you have a Sword class which is not only a type of Weapon but also of Treasure. Maybe Sword is a descendant of the Weapon class (so inherits methods such as `deadliness` and `power`), but it also needs to have the methods of a Treasure (such as `value` and `insurance_cost`). If you define these methods inside a Treasure `module` rather than a Treasure `class`, the Sword class would be able to include the Treasure module in order to add (‘mix in’) the Treasure methods to the Sword class’s own methods.
+З іншого боку, ви можете бути більш зацікавленні у використанні модулів в якості альтернативи множинному успадкуванню. Повертаючись до прикладу, про який я згадував на початку цієї глави, давайте припустимо, що клас `Sword`, який має тип, як `Weapon` так і `Treasure`. Можливо `Sword` є нащадком класу` Weapon` (тому успадковує такі методи як `deadliness` (смертоносність) та `power` (сила)), проте він також повинен мати методи з `Treasure` (такі як `value` (значення) та `insurance_cost` (вартість страхування)). Якщо ви визначете ці методи всередині модуля `Treasure`, замість класу `Treasure`, клас `Sword` міг би включати модуль `Treasure` для того, щоб додати (_змішати_) методи `Treasure` та власні методи класу `Sword`.
 
 **`mod_vars.rb`**:
 
-Note, incidentally, that any variables which are local to a module cannot be accessed from outside the module. This is the case even if a method inside the module tries to access a local variable and that method is invoked by code from outside the module – for example, when the module is mixed in through inclusion. The **`mod_vars.rb`** program illustrates this.
+Зауважте, між іншим, що до будь–якої змінної, яка є локальною для модуля, не можна звернутись ззовні. Це справджується навіть якщо метод всередині модуля пробує звернутись до локальної змінної і цей метод викликається кодом поза модулем – наприклад, коли модуль домішаний через включення. Програма **`mod_vars.rb`** ілюструє це.
 
-## Including Modules From Files
+## Включення модулів з файлів
 
 **`requiremodule.rb`**:
 
-So far, we’ve mixed in modules which have all been defined within a single source file. Often it is more useful to define modules in separate files and include them as needed. The first thing you have to do in order to use code from another file is to load that file using the `require` method, like this:
+До цього ми змішували модулі, які були оголошені всередині одного вихідного файлу. Часто корисніше оголошувати модулі у окремих файлах та включати їх за потреби. Найперше, що ви маєте зробити, щоб використовувати код з іншого файлу — завантажити цей файл використовуючи метод `require`, ось так:
 
 ```ruby
 require("testmod.rb")
 ```
 
-The required file must be in the current directory, on the search path or in a folder listed in the predefined array variable `$:`. You can add a directory to this array variable using the usual array-append method, `<<` in this way:
+Завантажуваний файл має розташовувати у поточній директорії, у місцях для пошуку модулів або у наперед визначеному масиві `$:`. Ви можете додати папку до цього масиву з допомогою звичного методу для додавання в кінець масиву `<<`, таким чином:
 
 ```ruby
 $: << "C:/mydir"
 ```
 
-The require method returns a `true` value if the specified file is successfully loaded; otherwise it returns `false`. If in doubt, you can simply display the result:
+Метод `require` повертає значення `true`, якщо вказаний файл завантажений успішно, інакше він повертає `false`. Якщо ви сумніваєтесь, можете просто вивести результат:
 
 ```ruby
 puts(require("testmod.rb"))
 ```
 
-## Pre-Defined Modules
+## Наперед визначені модулі
 
-The following modules are built into the Ruby interpreter:
+Наступні модулі є вбудованими в інтерпретатор Ruby:
 
 ```
 Comparable, Enumerable, FileTest, GC, Kernel, Math, ObjectSpace, Precision, Process, Signal
 ```
 
-
-The most important of the pre-defined modules is Kernel which, as mentioned earlier, provides many of the ‘standard’ Ruby methods such as `gets`, `puts`, `print` and `require`. In common with much of the Ruby class library, Kernel is written in the C language. While Kernel is, in fact, ‘built into’ the Ruby interpreter, conceptually it can be regarded as a mixed-in module which, just like a normal Ruby mixin, makes its methods directly available to any class that requires it; since it is mixed in to the Object class, from which all other Ruby classes descend, the methods of Kernel are universally accessible.
+Найважливішим попередньо визначеним модулем є `Kernel`, який, як сказано раніше, надає багато _стандартних_ методів Ruby, таких як `gets`, `puts`, `print` та `require`. Загалом, як і більшість з бібліотеки класів Ruby, `Kernel` написаний мовою C. Тоді як `Kernel`, фактично, _вбудований_ в інтерпретатор Ruby, концептуально його можна розглядати як змішаний модуль, так само як і звичайна домішка в Ruby, він робить свої методи безпосередньо доступними для класів, які завантажують його. Оскільки він є змішаним з класом Object, від якого походять всі класи в Ruby, методи з `Kernel` є загальнодоступними.
