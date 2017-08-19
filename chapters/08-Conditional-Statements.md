@@ -1,294 +1,296 @@
-## Chapter Eight
+## Глава восьма
 
-> CONDITIONAL STATEMENTS...
+> Умовні оператори…
 
-Computer programs, like Life Itself, are full of difficult decisions waiting to be made. Things like: If I stay in bed I will get more sleep, else I will have to go to work; if I go to work I will earn some money, else I will lose my job - and so on…
+Комп’ютерні програми, як і саме життя, сповнені складних рішень, які потрібно приймати. Такі речі як: _якщо_ я лежатиму у ліжку довше я довше спатиму, _інакше_ мені потрібно буде йти на роботу; _якщо_ я піду на роботу я зароблю гроші, _інакше_ я втрачу свою роботу - і так далі…
 
-We’ve already performed a number of if tests in previous programs. To take a simple example, this is from the Tax calculator in chapter one:
+Ми вже виконували декілька `if`–перевірок у попередніх програмах. Ось простий приклад з обчислювача податку з першої глави:
 
 ```ruby
 if (subtotal < 0.0) then
-    subtotal = 0.0
+  subtotal = 0.0
 end
 ```
 
-In this program, the user was prompted to enter a value, `subtotal`, which was then used in order to calculate the tax due on it. The little test above ensures that `subtotal` is never a minus figure. If the user, in a fit of madness, enters a value less than `0`, the if test spots this since the condition (`subtotal < 0.0`) evaluates to true, which causes the body of the code between the if test and the end keyword to be executed; here, this sets the value of `subtotal` to `0`.
+Ця програма просила користувача ввести значення `subtotal`, яке використовувалось для обчислення податку. Маленька перевірка вище страхує нас від того, що `subtotal` буде від’ємним. Якщо користувач, в божевільному пориві введе значення, яке менше за `0`, перевірка `if` це помітить, оскільки (`subtotal < 0.0`) буде істинним, а це спричинить до того, що код між перевіркою `if` та ключовим словом `end` виконається. У нашому випадку він встановить значення `subtotal` рівне `0`.
 
-> ### Equals once = or equals twice == ?
+> ### Одне дорівнює `=` чи два `==`?
 > 
-> In common with many other programming languages, Ruby uses one equals sign to assign a value `=` and two to test a value `==`.
+> Як і у більшості мовах програмування, Ruby використовує один знак рівності для присвоєння значення `=`, а два для порівняння значень `==`.
 
-## If..Then..Else
+## `if..then..else`
 
 **`if_else.rb`**:
 
-A simple if test has only one of two possible results. Either a bit of code is run or it isn’t, depending on whether the test evaluates to true or not.
+Проста перевірка `if` має лише два можливих результати. Код або виконується або ні, в залежності від істиності або хибності перевірки.
 
-Often, you will need to have more than two possible outcomes. Let’s suppose, for example, that your program needs to follow one course of action if the day is a weekday and a different course of action if it is a weekend. You can test these conditions by adding an `else` section after the if section, like this:
+Часто вам потрібно мати більше ніж два можливих результати. Давайте припустимо, наприклад, що програма повинна виконуватись одним способом, якщо день тижня будній та іншим способом, якщо день є вихідним. Ви можете перевірити це додавши сецію `else` після секції `if`, ось так:
 
 ```ruby
-if aDay == 'Saturday' or aDay == 'Sunday'
-    daytype = 'weekend'
+if aDay == 'Субота' or aDay == 'Неділя'
+    daytype = 'вихідний'
 else
-    daytype = 'weekday'
+    daytype = 'будень'
 end
 ```
 
-The `if` condition here is straightforward. It tests two possible conditions:
+Тут умова `if` є простою. Вона перевіряє дві можливі умови:
 
-1. if the value of the variable, `aDay` is equal to the string `'Saturday'` or…
-2. if the value of `aDay` is equal to the string `'Sunday'`.
+1. значення змінної `aDay` рівне рядку `'Субота'` або…
+2. значення змінної `aDay` рівне рядку `'неділя'`.
 
-If either of those conditions is true then the next line of code executes:
+Якщо якась з цих умов є істинною, тоді виконується наступний рядок:
 
 ```ruby
-daytype = 'weekend'
+daytype = 'вихідний'
 ```
 
-In all other cases, the code after `else` executes:
+У всіх інших випадках виконується код після `else`:
 
 ```ruby
-daytype = 'weekday'
+daytype = 'будень'
 ```
 
 **`if_then.rb`**:
 
-> When an `if` test and the code to be executed are placed on separate lines, the `then` keyword is optional. When the test and the code are placed on a single line, the `then` keyword (or, if you prefer really terse code, a colon character) is obligatory:
+> Коли перевірка `if` та код, який треба виконати, знаходяться на різних рядках, ключове слово `then` є необов’язковим. Коли перевірка і код розміщені на одному рядку, між ними обов’язково має стояти ключове слово `then` (або, якщо ви надаєте перевагу лаконічному коду, двокрапка):
 > 
 > ```ruby
-> if x == 1 then puts('ok') end    # with 'then' 
-> if x == 1 : puts('ok') end       # with colon
-> if x == 1 puts('ok') end         # syntax error!
+> if x == 1 then puts('ok') end    # з 'then' 
+> if x == 1 : puts('ok') end       # з двокрапкою
+> if x == 1 puts('ok') end         # синтаксична помилка!
 > ```
 
-An `if` test isn’t restricted to evaluating just two conditions. Let’s suppose, for example, that your code needs to work out whether a certain day is a working day or a holiday. All weekdays are working days; all Saturdays are holidays but Sundays are only holidays when you are not working overtime.
+Перевірка `if` не обмежена виконанням лише двох умов. Припустимо, наприклад, що ваш код має розуміти чи певний день є робочим днем чи святковим. Всі будні є робочими днями; всі суботи є святковими днями, але неділі є лише святами, коли ви не працюєте понаднормово.
 
-This is my first attempt to write a test to evaluate all these conditions:
+> **Примітка перекладача:**
+> 
+> У прикладі вище наведений переклад оригінального тексту. Автор книги — американець, а в Сполучених Штатах Америки неділя вважається першим днем тижня.
+
+Це моя перша спроба написати перевірку яка задовольнятиме цим умовам:
 
 ```ruby
 working_overtime = true
 
-if aDay == 'Saturday' or aDay == 'Sunday' and not working_overtime
-    daytype = 'holiday'
-    puts( "Hurrah!" )
+if aDay == 'Субота' or aDay == 'Наділя' and not working_overtime
+    daytype = 'свято'
+    puts( "Уурраа!" )
 else
-    daytype = 'working day'
+    daytype = 'робочий день'
 end
 ```
 
 **`and_or.rb`**:
 
-Unfortunately, this doesn’t have quite the effect intended. Remember that Saturday is always a holiday. But this code insists that ‘Saturday’ is a working day. This is because Ruby takes the test to mean: _“If the day is Saturday and I am not working overtime, or if the day is Sunday and I am not working overtime”_ whereas what I really meant was _“If the day is Saturday; or if the day is Sunday and I am not working overtime”_.
+На жаль, це не працює достатньо добре. Пам’ятайте, що субота є завжди святом. Проте цей код наполягає, що `'субота'` — робочий день. Це стається тому, що Ruby сприймає перевірку так: _“Якщо цей день — субота і я не працюю понаднормово або якщо цей день — неділя і я не працюю понаднормово”_ — проте насправді я мав на увазі: _“Якщо це день — субота або якщо цей день — неділя і я не працюю понаднормово”_.
 
-The easiest way to resolve this ambiguity is to put brackets around any code to be evaluated as a single unit, like this:
+Найпростіший спосіб вирішити цю неточність — огорнути перевірки, які мають трактуватись як одне ціле в круглі дужки, ось так:
 
 ```ruby
-if aDay == 'Saturday' or (aDay == 'Sunday' and not working_overtime)
+if aDay == 'Субота' or (aDay == 'Неділя' and not working_overtime)
 ```
 
-## And..Or..Not
+## `and`, `or`, `not`
 
-Incidentally, Ruby has two different syntaxes for testing Boolean (true/false) conditions.
+Між іншим, Ruby має два різні записи для булевих умов.
 
-In the above example, I’ve used the English-language style operators: `and`, `or` and `not`. If you prefer you could use alternative operators similar to those used in many other programming languages, namely: `&&` (and), `||` (or) and `!` (not).
+У прикладі наведеному вище я використав оператори у вигляді англійських слів: `and` (і/та), `or` (або) та `not` (ні). Якщо хочете, ви можете використовувати альтернативні оператори, подібні до тих, які є у інших мовах програмування, а саме: `&&` (і/та), `||` (або) та `!` (ні).
 
-Be careful, though, the two sets of operators aren’t completely interchangeable. For one thing, they have different precedence which means that when multiple operators are used in a single test, the parts of the test may be evaluated in different orders depending on which operators you use.
+Тим не менше, будьте обережні, ці дві групи операторів не повністю взаємозамінні. Зокрема, вони мають різну пріоритетність, а це означає, що при використанні різних операторів у перевірці, її частини можуть виконуватись по різному в залежності від того, який оператор ви використовуєте.
 
-## If..Elsif
+## `if..elsif`
 
-There will no doubt be occasions when you will need to take multiple different actions based on several alternative conditions. One way of doing this is by evaluating one `if` condition followed by a series of other test conditions placed after the keyword `elsif`. The whole lot must then be terminated using the `end` keyword.
+Без сумнівно бувають ситуації, коли вам необхідно виконати різні дії для різних альтернативних умов. Один зі способів зробити це — виконання умови `if`, після якої слідуватиме серія інших перевірок з ключовими словами `elsif`. Після всіх перевірок мусить стояти ключове слово `end`.
 
 **`if_elsif.rb`**:
 
-For example, here I am repeatedly taking input from a user inside a `while` loop; an if condition tests if the user enters `'q'` (I’ve used the `chomp()` method to remove the carriage return from the input); if `'q'` is not entered the first `elsif` condition tests if the integer value of the input (`input.to_i`) is greater than 800; if this test fails the next `elsif` condition tests if it is less than or equal to 800:
+Наприклад, тут я почергово, в циклі `while`, прошу користувача ввести дані. Умова `if` перевіряє чи користувач ввів `'q'` (я використовую метод `chomp()`, щоб видалити небажані символи з вводу). Якщо `'q'` не введено, перша умова `elsif` перевіряє чи цілочисельне значення введених даних (`input.to_i`) більше за 800. Якщо результат перевірки є хибним наступна умова `elsif` перевіряє чи цілочисельне значення є меншим або більшим за 800:
 
 ```ruby
 while input != 'q' do
-    puts("Enter a number between 1 and 1000 (or 'q' to quit)")
+    puts("Введіть число від 1 до 1000 (або 'q' для виходу)")
     print("?- ")
     input = gets().chomp()
     if input == 'q'
-        puts("Bye")
+        puts("Бувай")
     elsif input.to_i > 800
-        puts("That's a high rate of pay!")
+        puts("Це зависокий рівень оплати!")
     elsif input.to_i <= 800
-        puts("We can afford that")
+        puts("Це ми потягнемо")
     end
 end
 ```
 
-> This code has a bug. It asks for a number between 1 and 1000 but it accepts other numbers. See if you can rewrite the tests to fix this!
+> Цей код має баг. Він просить ввести число від 1 до 1000, проте приймає й інші числа. Давайте спробуємо переписати цю перевірку без помилок!
 
 **`if_else_alt.rb`**:
 
-> Ruby also has a short-form notation for `if..then..else` in which a question mark `?` replaces the `if..then` part and a colon `:` acts as `else`…
+> Ruby також має скорочену форму запису `if..then..else` в якій знак питання `?` заміняє `if..then`, а двокрапка поводиться як `else`…
 > 
 > ```
-> <Test Condition> ? <if true do this> : <else do this>
+> <умова> ? <якщо істина> : <якщо хиба>
 > ```
 > 
-> For example:
+> Наприклад:
 > 
 > ```ruby
-> x == 10 ? puts("it's 10") : puts("it's some other number")
+> x == 10 ? puts("це 10") : puts("це якесь інше число")
 > ```
 > 
-> When the test condition is complex (if it uses `and`s and `or`s) you should enclose it in brackets.
+> Коли перевірка умови є комплексною (якщо вона використовує `and` та `or`) вам слід огорнути її у дужки.
 > 
-> If the tests and code span several lines the `?` must be placed on the same line as the preceding condition and the `:` must be placed on the same line as the code immediately following the `?`.
+> Якщо перевірка та код займають декілька рядків, `?` має стояти на тому ж рядку, що й умова, що передує йому, а `:` повинна бути на тому ж рядку, що і код, який йде після `?`.
 > 
-> In other words, if you put a newline before the `?` or the `:` you will generate a syntax error. This is an example of a valid multi-line code block:
+> Іншими словами, якщо ви розмістити перехід на новий рядок перед `?` або `:` ви отримаєте синтаксичну помилку. Ось приклад правильного багаторядкового блоку коду:
 > 
 > ```ruby
-> (aDay == 'Saturday' or aDay == 'Sunday') ?
->   daytype = 'weekend' :
->   daytype = 'weekday'
+> (aDay == 'Субота' or aDay == 'Неділя') ?
+>   daytype = 'вихідний' :
+>   daytype = 'будень'
 > ```
 
-## Unless
+## `unless`
 
 **`unless.rb`**:
 
-Ruby also can also perform `unless` tests, which are the opposite of `if` tests:
+Ruby також може виконувати перевірку `unless`, яка є протилежною до перевірки `if`:
 
 ```ruby
-unless aDay == 'Saturday' or aDay == 'Sunday'
-    daytype = 'weekday'
+unless aDay == 'Субота' or aDay == 'Неділя'
+    daytype = 'вихідний'
 else
-    daytype = 'weekend'
+    daytype = 'будень'
 end
 ```
 
-Think of `unless` as being an alternative way of expressing _if not_. The
-following is equivalent to the code above:
+Думайте про `unless` як про альтернативний спосіб перевірити _якщо не_. Ось відповідний еквівалент коду наведеного вище:
 
 ```ruby
-if !(aDay == 'Saturday' or aDay == 'Sunday')
-    daytype = 'weekday'
+if !(aDay == 'Субота' or aDay == 'Неділя')
+    daytype = 'вихідний'
 else
-    daytype = 'weekend'
+    daytype = 'будень'
 end
 ```
 
-## If and Unless Modifiers
+## Модифікатори `if` та `unless`
 
-You may recall the alternative syntax for `while` loops in Chapter 7. Instead of writing this…
-
-```ruby
-while tired do sleep end
-```
-
-…we can write this:
+Ви напевно пригадуєте альтернативний запис для циклу `while` з Глави 7. Замість того, щоб писати так…
 
 ```ruby
-sleep while tired
+while tired do sleep end    # поки втомлений спати 
 ```
 
-This alternative syntax, in which the `while` keyword is placed between the code to execute and the test condition is called a _while modifier_. It turns out that Ruby has `if` and `unless` modifiers too. Here are a few examples:
+…ми можемо переписати це ось так:
+
+```ruby
+sleep while tired   # спати поки втомлений
+```
+
+Альтернативний запис, при якому ключове слово `while` розташоване між кодом, який треба виконати та тестовою умовою, називається _модифікатор `while`_. Так от Ruby також має модифікатори `if` та `unless`. Ось кілька прикладів:
 
 **`if_unless_mod.rb`**:
 
 ```ruby
-sleep if tired
+sleep if tired   # спати якщо втомлений
 
-begin
-    sleep
-    snore
-end if tired
+begin            #
+  sleep          #   спати
+  snore          #   хропіти
+end if tired     # якщо втомлений
 
-sleep unless not tired
+sleep unless not tired    # не спати якщо не втомлений 
 
-begin
-    sleep
-    snore
-end unless not tired
+begin                     # 
+  sleep                   #   спати
+  snore                   #   хропіти
+end unless not tired      # якщо не не втомлений
 ```
 
-The terseness of this syntax is useful when, for example, you repeatedly need to take some well-defined action if some condition is true.
+Стислість такого запису корисна коли, приміром, вам потрібно швидко виконати добре визначену дію, якщо умова є істинною.
 
-This is how you might pepper your code with debugging output if a constant called `DEBUG` is true:
+Ось як ви можете додати у ваш код зневаджувальний вивід, якщо константа `DEBUG` має істинне значення:
 
 ```ruby
 puts("somevar = #{somevar}") if DEBUG
 ```
 
-## Case Statements
+## Оператор `case`
 
-When you need to take a variety of different actions based on the value of a single variable, multiple `if..elsif` tests are verbose and repetitive. A neater alternative is provided by a `case` statement. This begins with the word `case` followed by the variable name to test. Then comes a series of `when` sections, each of which specifies a ‘trigger’ value followed by some code. This code executes only `when` the test variable equals the trigger value:
+Коли вам потрібно виконати ряд різних дій, в залежності від значення однієї змінної, декілька перевірок `if..elsif` є занадто багатослівними і містять багато повторень. Елегантне альтернативне рішення пропонує оператор `case`. Він починається зі слова `case`, після якого йде назва змінної для перевірки. Після цього йде ряд секцій `when`, кожна з яких визначає _пускове_ значення для коду, який йде після неї. Цей код виконується лише коли значення змінної, яка перевіряється, дорівнює пусковому значенню:
 
 **`case.rb`**:
 
 ```ruby
 case(i)
-    when 1 : puts("It's Monday")
-    when 2 : puts("It's Tuesday")
-    when 3 : puts("It's Wednesday")
-    when 4 : puts("It's Thursday")
-    when 5 : puts("It's Friday")
-    when (6..7) : puts("Yippee! It's the weekend! ")
-    else puts("That's not a real day!")
+    when 1 : puts("Понеділок")
+    when 2 : puts("Вівторок")
+    when 3 : puts("Середа")
+    when 4 : puts("Четвер")
+    when 5 : puts("П’ятниця")
+    when (6..7) : puts("Юху! Вихідні!")
+    else puts("Такого дня не існує!")
 end
 ```
 
-In the example above, I’ve used colons to separate each `when` test from the
-code to execute. Alternatively, you could use the `then` keyword:
+У цьому прикладі я використовую двокрапку, щоб відділити перевірку `when` від коду, який має виконуватись. Ви також можете використовувати ключове слово `then`:
 
 ```ruby
-when 1 then puts("It's Monday")
+when 1 then puts("Понеділок")
 ```
 
-The colon or `then` can be omitted if the test and the code to be executed are on separate lines. Unlike `case` statements in C-like languages, there is no need to enter a `break` keyword when a match is made in order to prevent execution trickling down through the remainder of the sections.
+Двокрапка або `then` можна упустити, якщо перевірка та код, який виконається, розміщені на різних рядках. На відміну від оператора `case` у C-подібних мовах, немає потреби вставляти ключове слово `break` для того, що перервати перехід виконання до секцій, які знаходяться нижче.
 
-In Ruby, once a match is made the `case` statement exits:
+В Ruby, як тільки знайдене співпадіння, оператор `case` завершує роботу:
 
 ```ruby
 case(i)
-    when 5 : puts("It's Friday")
-        puts("...nearly the weekend!")
-    when 6 : puts("It's Saturday!")
+    when 5 : puts("П’ятниця")
+        puts("...майже вихідні!")
+    when 6 : puts("Субота!")
         # the following never executes
-    when 5 : puts("It's Friday all over again!")
+    when 5 : puts("А тепер знову п’ятниця!")
 end
 ```
 
-You can include several lines of code between each `when` condition and you can include multiple values separated by commas to trigger a single `when` block, like this:
+Ви можете декілька рядків коду між кожною умовою `when` і ви можете перелічити декілька значень розділених комами, щоб запустити певний блок `when`, ось так:
 
 ```ruby
-when 6, 7 : puts( "Yippee! It's the weekend! " )
+when 6, 7 : puts("Юху! Вихідні!")
 ```
 
-The condition in a `case` statement is not obliged to be a simple variable; it can be an expression like this:
+Умова в операторі `case` не обов’язково має бути простою змінною, це може бути і вираз, як от:
 
 ```ruby
 case(i + 1)
 ```
 
-You can also use non-integer types such as string.
+Ви також можете використовувати нецілочисельні типи, як от рядки.
 
-If multiple trigger values are specified in a `when` section, they may be of varying types – for example, both string and integers:
+Декілька пускових значень визначених у секції `when` можуть мати різні типи – наприклад, і рядки, і цілі числа:
 
 ```ruby
-when 1, 'Monday', 'Mon' : puts("Yup, '#{i}' is Monday")
+when 1, 'Monday', 'Mon' : puts("Так, '#{i}' це понеділок")
 ```
 
 **`case2.rb`**:
 
-Here is a longer example, illustrating some of the syntactical elements mentioned earlier:
+Ось розгорнутіший приклад, який ілюструє синтаксичні елементи, про які йшлось раніше:
 
 ```ruby
 case(i)
-    when 1 : puts("It's Monday")
-    when 2 : puts("It's Tuesday")
-    when 3 : puts("It's Wednesday")
-    when 4 : puts("It's Thursday")
-    when 5 then puts("It's Friday")
-        puts("...nearly the weekend!")
+    when 1 : puts("Понеділок")
+    when 2 : puts("Вівторок")
+    when 3 : puts("Середа")
+    when 4 : puts("Четвер")
+    when 5 then puts("П’ятниця")
+        puts("...майже вихідні!")
     when 6, 7
-        puts("It's Saturday!") if i == 6
-        puts("It's Sunday!") if i == 7
-        puts("Yippee! It's the weekend!")
-            # the following never executes
-    when 5 : puts("It's Friday all over again!")
-    else puts("That's not a real day!")
+        puts("Субота!") if i == 6
+        puts("Неділя!") if i == 7
+        puts("Юху! Вихідні!")
+            # все, що нижче ніколи не виконається
+    when 5 : puts("А тепер знову п’ятниця!")
+    else puts("Такого дня не існує!")
 end
 ```
