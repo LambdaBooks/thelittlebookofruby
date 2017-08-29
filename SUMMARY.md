@@ -7,7 +7,7 @@
 * [Глава 3: Класова ієрархія](/chapters/03-Class-Hierarchies.md)
 * [Глава 4: Аксесори, атрибути, змінні класів](/chapters/04-Accessors-Attributes-Class-Variables.md)
 * [Глава 5: Масиви](/chapters/05-Arrays.m)
-* Глава 6: Хеші
+* [Глава 6: Хеші](/chapters/06-Hashes.md)
 * Глава 7: Цикли та ітератори
 * Глава 8: Умовні оператори
 * Глава 9: Модулі та домішки
