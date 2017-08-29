@@ -11,4 +11,4 @@
 * [Глава 7: Цикли та ітератори](/chapters/07-Loops-and-Iterators.md)
 * [Глава 8: Умовні оператори](/chapters/08-Conditional-Statements.md)
 * [Глава 9: Модулі та домішки](/chapters/09-Modules-and-Mixins.md)
-* Глава 10: Збереження файлів, продовження…
+* [Глава 10: Збереження файлів, продовження…](/chapters/10-Saving-Files-Moving-On.md)
