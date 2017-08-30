@@ -1,0 +1,1325 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Глава 9: Модулі та домішки · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="09-Modules-and-Mixins.html" />
+    
+    
+    <link rel="prev" href="08-Conditional-Statements.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"LambdaBooks/thelittlebookofruby","types":["star"],"size":"small"};
+    </script>
+
+    <link href="http://lambdabooks.github.io/thelittlebookofruby/rss.xml" title="Маленька книга про Ruby" rel="alternate" type="application/rss+xml" />
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Маленька книжка про Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html">
+            
+                    
+                    Вступ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#ознайомтесь-з-ruby-за-десять-глав">
+            
+                    
+                    Ознайомтесь з Ruby за десять глав
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#що-таке-ruby">
+            
+                    
+                    Що таке Ruby?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#що-таке-rails">
+            
+                    
+                    Що таке Rails?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#встановлення-та-використання-ruby-разом-з-ruby-in-steel">
+            
+                    
+                    Встановлення та використання Ruby разом з Ruby In Steel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#встановлюємо-ruby-самостійно">
+            
+                    
+                    Встановлюємо Ruby самостійно
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#отримати-вихідний-код-програм–прикладів">
+            
+                    
+                    Отримати вихідний код програм–прикладів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#запуск-програм-на-ruby">
+            
+                    
+                    Запуск програм на Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#як-користуватись-цією-книгою">
+            
+                    
+                    Як користуватись цією книгою
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#умовні-позначення">
+            
+                    
+                    Умовні позначення
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html">
+            
+                    
+                    Глава 1: Рядки та методи
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#обєкти-і-методи">
+            
+                    
+                    Об'єкти і методи
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#рядки-та-інтерполяція">
+            
+                    
+                    Рядки та інтерполяція
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#коментарі">
+            
+                    
+                    Коментарі
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#методи">
+            
+                    
+                    Методи
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#числа">
+            
+                    
+                    Числа
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#перевірка-умови-if--then">
+            
+                    
+                    Перевірка умови: if ... then
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html">
+            
+                    
+                    Глава 2: Класи та об’єкти
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html#екземпляри-і-змінні-екземплярів-класів">
+            
+                    
+                    Екземпляри і змінні екземплярів класів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html#конструктор---new-і-initialize">
+            
+                    
+                    Конструктор - new і initialize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html#інспектування-обєктів">
+            
+                    
+                    Інспектування об'єктів
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="03-Class-Hierarchies.html">
+            
+                <a href="03-Class-Hierarchies.html">
+            
+                    
+                    Глава 3: Класова ієрархія
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="03-Class-Hierarchies.html">
+            
+                <a href="03-Class-Hierarchies.html#батьківські-супер–-та-дочірні-суб–-класи">
+            
+                    
+                    Батьківські (супер–) та дочірні (суб–) класи
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html">
+            
+                    
+                    Глава 4: Аксесори, атрибути, змінні класів
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#методи–аксесори">
+            
+                    
+                    Методи–аксесори
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#читачі-та-записувачі-атрибутів">
+            
+                    
+                    Читачі та записувачі атрибутів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#атрибути-створюють-змінні">
+            
+                    
+                    Атрибути створюють змінні
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#виклик-методів-батьківського-класу">
+            
+                    
+                    Виклик методів батьківського класу
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#змінні-класів">
+            
+                    
+                    Змінні класів
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html">
+            
+                    
+                    Глава 5: Масиви
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html#створення-масивів">
+            
+                    
+                    Створення масивів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html#багатовимірні-масиви">
+            
+                    
+                    Багатовимірні масиви
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html#перебір-масивів">
+            
+                    
+                    Перебір масивів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html#індексація-всередині-масивів">
+            
+                    
+                    Індексація всередині масивів
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="06-Hashes.html">
+            
+                <a href="06-Hashes.html">
+            
+                    
+                    Глава 6: Хеші
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="06-Hashes.html">
+            
+                <a href="06-Hashes.html#створення-хешів">
+            
+                    
+                    Створення хешів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="06-Hashes.html">
+            
+                <a href="06-Hashes.html#індексування-в-хеші">
+            
+                    
+                    Індексування в хеші
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="06-Hashes.html">
+            
+                <a href="06-Hashes.html#операції-над-хешами">
+            
+                    
+                    Операції над хешами
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html">
+            
+                    
+                    Глава 7: Цикли та ітератори
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#цикл-for">
+            
+                    
+                    Цикл for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#блоки">
+            
+                    
+                    Блоки
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#цикл-while">
+            
+                    
+                    Цикл while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#модифікатори-while">
+            
+                    
+                    Модифікатори while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#цикл-until">
+            
+                    
+                    Цикл until
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html">
+            
+                    
+                    Глава 8: Умовні оператори
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#глава-восьма">
+            
+                    
+                    Глава восьма
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#ifthenelse">
+            
+                    
+                    if..then..else
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#and-or-not">
+            
+                    
+                    and, or, not
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#ifelsif">
+            
+                    
+                    if..elsif
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#unless">
+            
+                    
+                    unless
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#модифікатори-if-та-unless">
+            
+                    
+                    Модифікатори if та unless
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#оператор-case">
+            
+                    
+                    Оператор case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html">
+            
+                    
+                    Глава 9: Модулі та домішки
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#модуль-—-це-як-клас">
+            
+                    
+                    Модуль — це як клас…
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#методи-модулів">
+            
+                    
+                    Методи модулів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#модулі-як-простори-імен">
+            
+                    
+                    Модулі як простори імен
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#методи-екземпляру-модуля">
+            
+                    
+                    Методи екземпляру модуля
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#включені-модулі-та-домішки">
+            
+                    
+                    Включені модулі та домішки
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#включення-модулів-з-файлів">
+            
+                    
+                    Включення модулів з файлів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#наперед-визначені-модулі">
+            
+                    
+                    Наперед визначені модулі
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="10-Saving-Files-Moving-On.html">
+            
+                <a href="10-Saving-Files-Moving-On.html">
+            
+                    
+                    Глава 10: Збереження файлів, продовження…
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#модуль-—-це-як-клас">
+            
+                    
+                    Модуль — це як клас…
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#методи-модулів">
+            
+                    
+                    Методи модулів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#модулі-як-простори-імен">
+            
+                    
+                    Модулі як простори імен
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#методи-екземпляру-модуля">
+            
+                    
+                    Методи екземпляру модуля
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#включені-модулі-та-домішки">
+            
+                    
+                    Включені модулі та домішки
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#включення-модулів-з-файлів">
+            
+                    
+                    Включення модулів з файлів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#наперед-визначені-модулі">
+            
+                    
+                    Наперед визначені модулі
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Глава 9: Модулі та домішки</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x433;&#x43B;&#x430;&#x432;&#x430;-&#x434;&#x435;&#x432;&#x44F;&#x442;&#x430;">&#x413;&#x43B;&#x430;&#x432;&#x430; &#x434;&#x435;&#x432;&#x2019;&#x44F;&#x442;&#x430;</h1>
+<blockquote>
+<p>&#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x442;&#x430; &#x434;&#x43E;&#x43C;&#x456;&#x448;&#x43A;&#x438;&#x2026;</p>
+</blockquote>
+<p>&#x42F;&#x43A; &#x437;&#x433;&#x430;&#x434;&#x430;&#x43D;&#x43E; &#x443; &#x43F;&#x43E;&#x43F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x456;&#x445; &#x433;&#x43B;&#x430;&#x432;&#x430;&#x445;, &#x43A;&#x43E;&#x436;&#x435;&#x43D; &#x43A;&#x43B;&#x430;&#x441; &#x443; Ruby &#x43C;&#x430;&#x454; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x43D;&#x430;&#x439;&#x431;&#x43B;&#x438;&#x436;&#x447;&#x43E;&#x433;&#x43E; <em>&#x431;&#x430;&#x442;&#x44C;&#x43A;&#x430;</em>, &#x445;&#x43E;&#x447;&#x430; &#x43A;&#x43E;&#x436;&#x435;&#x43D; &#x431;&#x430;&#x442;&#x44C;&#x43A;&#x43E; &#x43C;&#x43E;&#x436;&#x435; &#x43C;&#x430;&#x442;&#x438; &#x431;&#x430;&#x433;&#x430;&#x442;&#x43E; <em>&#x434;&#x456;&#x442;&#x435;&#x439;</em>.</p>
+<p>&#x41E;&#x431;&#x43C;&#x435;&#x436;&#x443;&#x44E;&#x447;&#x438; &#x456;&#x454;&#x440;&#x430;&#x440;&#x445;&#x456;&#x44E; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; &#x43E;&#x434;&#x43D;&#x456;&#x454;&#x44E; &#x43B;&#x456;&#x43D;&#x456;&#x454;&#x44E; &#x43D;&#x430;&#x441;&#x43B;&#x456;&#x434;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;, Ruby &#x443;&#x43D;&#x438;&#x43A;&#x430;&#x454; &#x434;&#x430;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x43E;&#x445; &#x43F;&#x440;&#x43E;&#x431;&#x43B;&#x435;&#x43C;, &#x44F;&#x43A;&#x456; &#x43C;&#x43E;&#x436;&#x443;&#x442;&#x44C; &#x432;&#x438;&#x43D;&#x438;&#x43A;&#x430;&#x442;&#x438; &#x443; &#x442;&#x430;&#x43A;&#x438;&#x445; &#x43C;&#x43E;&#x432;&#x430;&#x445; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; (&#x44F;&#x43A; &#x43E;&#x442; C++), &#x44F;&#x43A;&#x456;  which &#x434;&#x43E;&#x437;&#x432;&#x43E;&#x43B;&#x44F;&#x44E;&#x442;&#x44C; &#x43C;&#x43D;&#x43E;&#x436;&#x438;&#x43D;&#x43D;&#x435; &#x443;&#x441;&#x43F;&#x430;&#x434;&#x43A;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;.</p>
+<p>&#x41A;&#x43E;&#x43B;&#x438; &#x43A;&#x43B;&#x430;&#x441; &#x43C;&#x430;&#x454; &#x442;&#x430;&#x43A; &#x431;&#x430;&#x433;&#x430;&#x442;&#x43E; &#x431;&#x430;&#x442;&#x44C;&#x43A;&#x456;&#x432;, &#x44F;&#x43A; &#x456; &#x434;&#x456;&#x442;&#x435;&#x439; &#x442;&#x430; &#x457;&#x445;&#x43D;&#x456;&#x445; &#x431;&#x430;&#x442;&#x44C;&#x43A;&#x456;&#x432;, &#x430; &#x434;&#x456;&#x442;&#x438; &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x431;&#x430;&#x433;&#x430;&#x442;&#x43E; &#x456;&#x43D;&#x448;&#x438;&#x445; &#x431;&#x430;&#x442;&#x44C;&#x43A;&#x456;&#x432; &#x442;&#x430; &#x434;&#x456;&#x442;&#x435;&#x439;, &#x432;&#x438; &#x440;&#x438;&#x437;&#x438;&#x43A;&#x443;&#x454;&#x442;&#x435; &#x43F;&#x43E;&#x442;&#x440;&#x430;&#x43F;&#x438;&#x442;&#x438; &#x432; &#x437;&#x430;&#x43F;&#x43B;&#x443;&#x442;&#x430;&#x43D;&#x443; &#x43C;&#x435;&#x440;&#x435;&#x436;&#x443; (&#x447;&#x438; &#x43C;&#x43E;&#x436;&#x435; &#x43D;&#x430;&#x432;&#x456;&#x442;&#x44C; <em>&#x43F;&#x430;&#x432;&#x443;&#x442;&#x438;&#x43D;&#x43D;&#x443;</em>?) &#x437;&#x430;&#x43C;&#x456;&#x441;&#x442;&#x44C; &#x442;&#x43E;&#x433;&#x43E;, &#x449;&#x43E;&#x431; &#x43C;&#x430;&#x442;&#x438; &#x447;&#x456;&#x442;&#x43A;&#x443;, &#x434;&#x43E;&#x431;&#x440;&#x435; &#x43E;&#x440;&#x433;&#x430;&#x43D;&#x456;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x443; &#x456;&#x454;&#x440;&#x430;&#x440;&#x445;&#x456;&#x44E;, &#x44F;&#x43A;&#x430; &#x432;&#x430;&#x43C; &#x456; &#x43F;&#x43E;&#x442;&#x440;&#x456;&#x431;&#x43D;&#x430;.</p>
+<p>&#x422;&#x438;&#x43C; &#x43D;&#x435; &#x43C;&#x435;&#x43D;&#x448;&#x435;, &#x447;&#x430;&#x441;&#x43E;&#x43C; &#x432;&#x438;&#x43D;&#x438;&#x43A;&#x430;&#x44E;&#x442;&#x44C; &#x441;&#x438;&#x442;&#x443;&#x430;&#x446;&#x456;&#x457;, &#x43A;&#x43E;&#x43B;&#x438; &#x43A;&#x43E;&#x440;&#x438;&#x441;&#x43D;&#x43E;, &#x449;&#x43E;&#x431; &#x43A;&#x43B;&#x430;&#x441; &#x43C;&#x456;&#x433; &#x456;&#x43C;&#x43F;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x443;&#x432;&#x430;&#x442;&#x438; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x43E;&#x43D;&#x430;&#x43B;&#x44C;&#x43D;&#x456;&#x441;&#x442;&#x44C;, &#x44F;&#x43A;&#x430; &#x454; &#x441;&#x43F;&#x456;&#x43B;&#x44C;&#x43D;&#x43E;&#x44E; &#x437; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435;, &#x43D;&#x456;&#x436; &#x43E;&#x434;&#x43D;&#x438;&#x43C; &#x43F;&#x43E;&#x43F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x44C;&#x43E; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x43C; &#x43A;&#x43B;&#x430;&#x441;&#x43E;&#x43C;.</p>
+<p>&#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, <code>Sword</code> (&#x43C;&#x435;&#x447;) &#x43C;&#x43E;&#x436;&#x435; &#x43D;&#x430;&#x43B;&#x435;&#x436;&#x430;&#x442;&#x438; &#x434;&#x43E; &#x442;&#x438;&#x43F;&#x443; <code>Weapon</code> (&#x437;&#x431;&#x440;&#x43E;&#x44F;), &#x430;&#x43B;&#x435; &#x43A;&#x440;&#x456;&#x43C; &#x442;&#x43E;&#x433;&#x43E; &#x43D;&#x430;&#x43B;&#x435;&#x436;&#x430;&#x442;&#x438; &#x439; &#x434;&#x43E; &#x442;&#x438;&#x43F;&#x443; <code>Treasure</code> (&#x437;&#x43D;&#x430;&#x445;&#x456;&#x434;&#x43A;&#x430;); <code>House</code> (&#x431;&#x443;&#x434;&#x438;&#x43D;&#x43E;&#x43A;) &#x43C;&#x43E;&#x436;&#x435; &#x43D;&#x430;&#x43B;&#x435;&#x436;&#x430;&#x442;&#x438; &#x43D;&#x435; &#x43B;&#x438;&#x448;&#x435; &#x434;&#x43E; &#x442;&#x438;&#x43F;&#x443; <code>Building</code> (&#x431;&#x443;&#x434;&#x456;&#x432;&#x43B;&#x44F;), &#x430;&#x43B;&#x435; &#x439; &#x434;&#x43E; <code>Investment</code> (&#x456;&#x43D;&#x432;&#x435;&#x441;&#x442;&#x438;&#x446;&#x456;&#x44F;) &#x456; &#x442;&#x430;&#x43A; &#x434;&#x430;&#x43B;&#x456;.</p>
+<h2 id="&#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C;-&#x2014;-&#x446;&#x435;-&#x44F;&#x43A;-&#x43A;&#x43B;&#x430;&#x441;">&#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x2014; &#x446;&#x435; &#x44F;&#x43A; &#x43A;&#x43B;&#x430;&#x441;&#x2026;</h2>
+<p>Ruby &#x432;&#x438;&#x440;&#x456;&#x448;&#x443;&#x454; &#x446;&#x44E; &#x43F;&#x440;&#x43E;&#x431;&#x43B;&#x435;&#x43C;&#x443;, &#x43D;&#x430;&#x434;&#x430;&#x44E;&#x447;&#x438; &#x43D;&#x430;&#x43C; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;. &#x41D;&#x430; &#x43F;&#x435;&#x440;&#x448;&#x438;&#x439; &#x43F;&#x43E;&#x433;&#x43B;&#x44F;&#x434;, &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x432;&#x438;&#x433;&#x43B;&#x44F;&#x434;&#x430;&#x454; &#x441;&#x445;&#x43E;&#x436;&#x438;&#x43C; &#x43D;&#x430; &#x43A;&#x43B;&#x430;&#x441;. &#x422;&#x430;&#x43A; &#x441;&#x430;&#x43C;&#x43E;, &#x44F;&#x43A; &#x456; &#x43A;&#x43B;&#x430;&#x441;, &#x432;&#x456;&#x43D; &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x438;, &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x442;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x438;.</p>
+<p>&#x41E;&#x441;&#x44C; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x438;&#x439; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C;:</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">MyModule</span></span>
+    GOODMOOD = <span class="hljs-string">&quot;&#x432;&#x435;&#x441;&#x435;&#x43B;&#x438;&#x439;&quot;</span>
+    BADMOOD = <span class="hljs-string">&quot;&#x441;&#x432;&#x430;&#x440;&#x43B;&#x438;&#x432;&#x438;&#x439;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span></span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x42F; <span class="hljs-subst">#{GOODMOOD}</span>. &#x410; &#x442;&#x438; &#x44F;&#x43A;?&quot;</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x42F;&#x43A; &#x431;&#x430;&#x447;&#x438;&#x442;&#x435;, &#x432;&#x456;&#x43D; &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x443; <code>GOODMOOD</code> &#x442;&#x430; <em>&#x43C;&#x435;&#x442;&#x43E;&#x434; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x443;</em> <code>greet</code>. &#x429;&#x43E;&#x431; &#x43F;&#x435;&#x440;&#x435;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x438; &#x446;&#x435;&#x439; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x43D;&#x430; &#x43A;&#x43B;&#x430;&#x441;, &#x432;&#x430;&#x43C; &#x43F;&#x43E;&#x442;&#x440;&#x456;&#x431;&#x43D;&#x43E; &#x43B;&#x438;&#x448;&#x435; &#x437;&#x430;&#x43C;&#x456;&#x43D;&#x438;&#x442;&#x438; &#x443; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x456; &#x441;&#x43B;&#x43E;&#x432;&#x43E; <code>module</code> &#x43D;&#x430; <code>class</code>.</p>
+<h2 id="&#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;-&#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432;">&#x41C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432;</h2>
+<p>&#x41D;&#x430; &#x434;&#x43E;&#x434;&#x430;&#x447;&#x443; &#x434;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x443; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x43C;&#x43E;&#x436;&#x435; &#x43C;&#x430;&#x442;&#x438; &#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F;, &#x432; &#x44F;&#x43A;&#x438;&#x445; &#x43F;&#x435;&#x440;&#x435;&#x434; &#x456;&#x43C;&#x435;&#x43D;&#x435;&#x43C; &#x441;&#x442;&#x43E;&#x457;&#x442;&#x44C; &#x43D;&#x430;&#x437;&#x432;&#x430; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F;:</p>
+<pre><code class="lang-ruby"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">MyModule</span>.<span class="hljs-title">greet</span></span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x42F; <span class="hljs-subst">#{BADMOOD}</span>. &#x410; &#x442;&#x438; &#x44F;&#x43A;?&quot;</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x41D;&#x435;&#x437;&#x432;&#x430;&#x436;&#x430;&#x44E;&#x447;&#x438; &#x43D;&#x430; &#x441;&#x445;&#x43E;&#x436;&#x456;&#x441;&#x442;&#x44C;, &#x43A;&#x43B;&#x430;&#x441;&#x438; &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x434;&#x432;&#x456; &#x441;&#x443;&#x442;&#x442;&#x454;&#x432;&#x456; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x430;&#x433;&#x438;, &#x44F;&#x43A;&#x438;&#x445; &#x43D;&#x435; &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;: <strong>&#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x438; (instances)</strong> &#x442;&#x430; <strong>&#x443;&#x441;&#x43F;&#x430;&#x434;&#x43A;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; (inheritance)</strong>. &#x41A;&#x43B;&#x430;&#x441;&#x438; &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x438; (&#x43E;&#x431;&#x2019;&#x454;&#x43A;&#x442;&#x438;), &#x431;&#x430;&#x442;&#x44C;&#x43A;&#x456;&#x432;&#x441;&#x44C;&#x43A;&#x456; &#x43A;&#x43B;&#x430;&#x441;&#x438; (&#x441;&#x443;&#x43F;&#x435;&#x440;&#x43A;&#x43B;&#x430;&#x441;&#x438;) &#x442;&#x430; &#x434;&#x43E;&#x447;&#x456;&#x440;&#x43D;&#x456; &#x43A;&#x43B;&#x430;&#x441;&#x438; (&#x441;&#x443;&#x431;&#x43A;&#x43B;&#x430;&#x441;&#x438;); &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x43D;&#x435; &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x43D;&#x456;&#x447;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x434;&#x456;&#x431;&#x43D;&#x43E;&#x433;&#x43E;.</p>
+<p>&#x426;&#x435; &#x437;&#x43C;&#x443;&#x448;&#x443;&#x454; &#x43D;&#x430;&#x441; &#x43F;&#x43E;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x438; &#x441;&#x43E;&#x431;&#x456; &#x437;&#x430;&#x43F;&#x438;&#x442;&#x430;&#x43D;&#x43D;&#x44F;:  &#x44F;&#x43A;&#x449;&#x43E; &#x43C;&#x438; &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x435;&#x43C;&#x43E; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x438; &#x43E;&#x431;&#x2019;&#x454;&#x43A;&#x442; &#x437; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F;, &#x434;&#x43B;&#x44F; &#x447;&#x43E;&#x433;&#x43E; &#x442;&#x43E;&#x434;&#x456; &#x432;&#x43E;&#x43D;&#x438;?</p>
+<p>&#x426;&#x435; &#x449;&#x435; &#x43E;&#x434;&#x43D;&#x435; &#x43F;&#x438;&#x442;&#x430;&#x43D;&#x43D;&#x44F;, &#x43D;&#x430; &#x44F;&#x43A;&#x435; &#x43C;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x43C;&#x43E; &#x432;&#x456;&#x434;&#x43F;&#x43E;&#x432;&#x456;&#x441;&#x442;&#x438; &#x434;&#x432;&#x43E;&#x43C;&#x430; &#x441;&#x43B;&#x43E;&#x432;&#x430;&#x43C;&#x438;: <strong>&#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x440;&#x438; (namespaces)</strong> &#x442;&#x430; <strong>&#x434;&#x43E;&#x43C;&#x456;&#x448;&#x43A;&#x438; (mixins)</strong>. <em>&#x414;&#x43E;&#x43C;&#x456;&#x448;&#x43A;&#x438;</em> &#x432; Ruby &#x434;&#x430;&#x44E;&#x442;&#x44C; &#x43D;&#x430;&#x43C; &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44C; &#x43F;&#x440;&#x430;&#x446;&#x44E;&#x432;&#x430;&#x442;&#x438; &#x437; &#x43C;&#x430;&#x43B;&#x435;&#x43D;&#x44C;&#x43A;&#x43E;&#x44E; &#x43F;&#x440;&#x43E;&#x431;&#x43B;&#x435;&#x43C;&#x43E;&#x44E; &#x43C;&#x43D;&#x43E;&#x436;&#x438;&#x43D;&#x43D;&#x43E;&#x433;&#x43E; &#x443;&#x441;&#x43F;&#x430;&#x434;&#x43A;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;, &#x43F;&#x440;&#x43E; &#x44F;&#x43A;&#x443; &#x44F; &#x437;&#x433;&#x430;&#x434;&#x443;&#x432;&#x430;&#x432; &#x440;&#x430;&#x43D;&#x456;&#x448;&#x435;. &#x41C;&#x438; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x43D;&#x435;&#x43C;&#x43E;&#x441;&#x44C; &#x434;&#x43E; &#x434;&#x43E;&#x43C;&#x456;&#x448;&#x43E;&#x43A; &#x437;&#x433;&#x43E;&#x434;&#x43E;&#x43C;, &#x430; &#x43F;&#x43E;&#x43A;&#x438; &#x449;&#x43E; &#x434;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x43F;&#x43E;&#x434;&#x438;&#x432;&#x438;&#x43C;&#x43E;&#x441;&#x44C; &#x43D;&#x430; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x440;&#x438; &#x456;&#x43C;&#x435;&#x43D;.</p>
+<h2 id="&#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;-&#x44F;&#x43A;-&#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x440;&#x438;-&#x456;&#x43C;&#x435;&#x43D;">&#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x44F;&#x43A; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E;&#x440;&#x438; &#x456;&#x43C;&#x435;&#x43D;</h2>
+<p>&#x412;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x434;&#x443;&#x43C;&#x430;&#x442;&#x438; &#x43F;&#x440;&#x43E; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C;, &#x44F;&#x43A; &#x43F;&#x440;&#x43E; &#x441;&#x432;&#x43E;&#x433;&#x43E; &#x440;&#x43E;&#x434;&#x443;, &#x456;&#x43C;&#x435;&#x43D;&#x43E;&#x432;&#x430;&#x43D;&#x443; <em>&#x43E;&#x431;&#x433;&#x43E;&#x440;&#x442;&#x43A;&#x443;</em> &#x434;&#x43E;&#x432;&#x43A;&#x43E;&#x43B;&#x430; &#x43C;&#x43D;&#x43E;&#x436;&#x438;&#x43D;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432;, &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442; &#x442;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432;. &#x420;&#x456;&#x437;&#x43D;&#x456; &#x447;&#x430;&#x441;&#x442;&#x438;&#x43D;&#x438; &#x43A;&#x43E;&#x434;&#x443; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; &#x43F;&#x43E;&#x434;&#x456;&#x43B;&#x44F;&#x44E;&#x442;&#x44C; &#x441;&#x43F;&#x456;&#x43B;&#x44C;&#x43D;&#x438;&#x439; <em>&#x43F;&#x440;&#x43E;&#x441;&#x442;&#x456;&#x440; &#x456;&#x43C;&#x435;&#x43D;</em> - &#x446;&#x435; &#x43E;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x454;, &#x449;&#x43E; &#x432;&#x43E;&#x43D;&#x438; &#x432;&#x441;&#x456; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x456; &#x434;&#x43B;&#x44F; &#x43E;&#x434;&#x438;&#x43D; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E;, &#x430;&#x43B;&#x435; &#x43D;&#x435;&#x432;&#x438;&#x434;&#x438;&#x43C;&#x456; &#x434;&#x43B;&#x44F; &#x43A;&#x43E;&#x434;&#x443;, &#x449;&#x43E; &#x43F;&#x43E;&#x437;&#x430; &#x446;&#x438;&#x43C; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x435;&#x43C;.</p>
+<p>&#x411;&#x456;&#x431;&#x43B;&#x456;&#x43E;&#x442;&#x435;&#x43A;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; Ruby &#x440;&#x44F;&#x434; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432;, &#x44F;&#x43A; &#x43E;&#x442; <code>Math</code> &#x442;&#x430; <code>Kernel</code>. &#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; <code>Math</code> &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x43C;&#x430;&#x442;&#x435;&#x43C;&#x430;&#x442;&#x438;&#x447;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;, &#x44F;&#x43A; &#x43E;&#x442; <code>sqrt</code>, &#x449;&#x43E;&#x431; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x442;&#x438; &#x43A;&#x432;&#x430;&#x434;&#x440;&#x430;&#x442;&#x43D;&#x438;&#x439; &#x43A;&#x43E;&#x440;&#x456;&#x43D;&#x44C; &#x430;&#x431;&#x43E; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x438;, &#x442;&#x430;&#x43A;&#x456; &#x44F;&#x43A; <code>PI</code>. &#x41C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; <code>Kernel</code> &#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x44C; &#x440;&#x456;&#x437;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;, &#x44F;&#x43A;&#x456; &#x43C;&#x438; &#x432;&#x436;&#x435; &#x440;&#x430;&#x43D;&#x456;&#x448;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x43B;&#x438;: <code>print</code>, <code>puts</code> &#x442;&#x430; <code>gets</code>.</p>
+<blockquote>
+<h3 id="&#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x438;">&#x41A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x438;</h3>
+<p>&#x41A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x438; &#x2014; &#x446;&#x435; &#x44F;&#x43A; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;, &#x437;&#x430; &#x432;&#x438;&#x43D;&#x44F;&#x442;&#x43A;&#x43E;&#x43C; &#x442;&#x43E;&#x433;&#x43E;, &#x449;&#x43E; &#x457;&#x445; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x43D;&#x430; (&#x456; &#x43D;&#x435; &#x441;&#x43B;&#x456;&#x434;!) &#x437;&#x43C;&#x456;&#x43D;&#x44E;&#x432;&#x430;&#x442;&#x438;. &#x424;&#x430;&#x43A;&#x442;&#x438;&#x447;&#x43D;&#x43E;, &#x437;&#x43C;&#x456;&#x43D;&#x438;&#x442;&#x438; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x438; &#x432; Ruby &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x43E; (&#x43D;&#x435;&#x437;&#x440;&#x43E;&#x437;&#x443;&#x43C;&#x456;&#x43B;&#x43E;!), &#x43F;&#x440;&#x43E;&#x442;&#x435; &#x446;&#x435; &#x442;&#x43E;&#x447;&#x43D;&#x43E; &#x43D;&#x435; &#x437;&#x430;&#x43E;&#x445;&#x43E;&#x447;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F;, &#x430; Ruby &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x44C; &#x432;&#x430;&#x43C; &#x43F;&#x43E;&#x43F;&#x435;&#x440;&#x435;&#x434;&#x436;&#x435;&#x43D;&#x43D;&#x44F;, &#x44F;&#x43A;&#x449;&#x43E; &#x432;&#x438; &#x441;&#x43F;&#x440;&#x43E;&#x431;&#x443;&#x454;&#x442;&#x435; &#x442;&#x430;&#x43A;&#x435; &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x438;. &#x417;&#x430;&#x443;&#x432;&#x430;&#x436;&#x442;&#x435;, &#x449;&#x43E; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x438; &#x43F;&#x43E;&#x447;&#x438;&#x43D;&#x430;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x437; &#x432;&#x435;&#x43B;&#x438;&#x43A;&#x43E;&#x457; &#x43B;&#x456;&#x442;&#x435;&#x440;&#x438;.</p>
+</blockquote>
+<p><strong><code>modules1.rb</code></strong>:</p>
+<p>&#x41F;&#x440;&#x438;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x43C;&#x43E; &#x43C;&#x438; &#x43C;&#x430;&#x454;&#x43C;&#x43E; &#x442;&#x430;&#x43A;&#x438;&#x439; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C;:</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">MyModule</span></span>
+    GOODMOOD = <span class="hljs-string">&quot;&#x432;&#x435;&#x441;&#x435;&#x43B;&#x438;&#x439;&quot;</span>
+    BADMOOD = <span class="hljs-string">&quot;&#x441;&#x432;&#x430;&#x440;&#x43B;&#x438;&#x432;&#x438;&#x439;&quot;</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">greet</span></span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x42F; <span class="hljs-subst">#{GOODMOOD}</span>. &#x410; &#x442;&#x438; &#x44F;&#x43A;?&quot;</span>
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">MyModule</span>.<span class="hljs-title">greet</span></span>
+        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x42F; <span class="hljs-subst">#{BADMOOD}</span>. &#x410; &#x442;&#x438; &#x44F;&#x43A;?&quot;</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x41C;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x43C;&#x43E; &#x437;&#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x438;&#x441;&#x44C; &#x434;&#x43E; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442;&#x438;, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; <code>::</code>, &#x43E;&#x441;&#x44C; &#x442;&#x430;&#x43A;:</p>
+<pre><code class="lang-ruby">puts(<span class="hljs-symbol">MyModule:</span><span class="hljs-symbol">:GOODMOOD</span>)
+</code></pre>
+<p>&#x421;&#x445;&#x43E;&#x436;&#x438;&#x43C; &#x447;&#x438;&#x43D;&#x43E;&#x43C; &#x43C;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x43C;&#x43E; &#x437;&#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x438;&#x441;&#x44C; &#x434;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; &#x437; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x43A;&#x440;&#x430;&#x43F;&#x43A;&#x43E;&#x432;&#x43E;&#x433;&#x43E; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x443; &#x2013; &#x446;&#x435; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43E; &#x456;&#x43C;&#x2019;&#x44F;&#x43C; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; &#x442;&#x430; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; &#x440;&#x43E;&#x437;&#x434;&#x456;&#x43B;&#x435;&#x43D;&#x438;&#x445; &#x43A;&#x440;&#x430;&#x43F;&#x43A;&#x43E;&#x44E;. &#x41D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x439; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; &#x432;&#x438;&#x432;&#x435;&#x434;&#x435;: <code>&#x42F; &#x441;&#x432;&#x430;&#x440;&#x43B;&#x438;&#x432;&#x438;&#x439;. &#x410; &#x442;&#x438; &#x44F;&#x43A;?</code>:</p>
+<pre><code class="lang-ruby">puts(MyModule.greet)
+</code></pre>
+<h2 id="&#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438;-&#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x443;-&#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F;"><em>&#x41C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x443;</em> &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F;</h2>
+<p>&#x426;&#x435; &#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x44C; &#x43D;&#x430;&#x441; &#x43F;&#x435;&#x440;&#x435;&#x434; &#x43F;&#x440;&#x43E;&#x431;&#x43B;&#x435;&#x43C;&#x43E;&#x44E;: &#x44F;&#x43A; &#x43E;&#x442;&#x440;&#x438;&#x43C;&#x430;&#x442;&#x438; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F; &#x434;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x443;, <code>greet</code>. &#x41E;&#x441;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x454; &#x437;&#x430;&#x43A;&#x440;&#x438;&#x442;&#x438;&#x439; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x456;&#x440; &#x456;&#x43C;&#x435;&#x43D;, &#x43A;&#x43E;&#x434; &#x43F;&#x43E;&#x437;&#x430; &#x446;&#x438;&#x43C; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x435;&#x43C;  &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x435; <em>&#x43F;&#x43E;&#x431;&#x430;&#x447;&#x438;&#x442;&#x438;</em> &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>greet</code>, &#x442;&#x43E;&#x43C;&#x443; &#x442;&#x430;&#x43A;&#x435; &#x43D;&#x435; &#x441;&#x43F;&#x440;&#x430;&#x446;&#x44E;&#x454;:</p>
+<pre><code class="lang-ruby">puts(greet)
+</code></pre>
+<p>&#x42F;&#x43A;&#x449;&#x43E; &#x431; &#x446;&#x435; &#x431;&#x443;&#x432; &#x43A;&#x43B;&#x430;&#x441;, &#x430; &#x43D;&#x435; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C;, &#x43C;&#x438; &#x431;, &#x43D;&#x430;&#x43F;&#x435;&#x432;&#x43D;&#x43E;, &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x43B;&#x438; &#x43E;&#x431;&#x2019;&#x454;&#x43A;&#x442;&#x438; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443; &#x437; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <code>new</code> &#x2013; &#x456; &#x43A;&#x43E;&#x436;&#x435;&#x43D; &#x43E;&#x43A;&#x440;&#x435;&#x43C;&#x438;&#x439; &#x43E;&#x431;&#x2019;&#x454;&#x43A;&#x442; (&#x43A;&#x43E;&#x436;&#x435;&#x43D; <em>&#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;</em> &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443;), &#x43C;&#x430;&#x432; &#x431;&#x438; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F; &#x434;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x443;. &#x41F;&#x440;&#x43E;&#x442;&#x435;, &#x44F;&#x43A; &#x44F; &#x432;&#x436;&#x435; &#x440;&#x430;&#x43D;&#x456;&#x448;&#x435; &#x43A;&#x430;&#x437;&#x430;&#x432;, &#x432;&#x438; &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x438; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432;. &#x422;&#x43E; &#x44F;&#x43A;&#x438;&#x43C; &#x436;&#x435; &#x431;&#x43E;&#x43A;&#x43E;&#x43C; &#x43C;&#x438; &#x43C;&#x430;&#x454;&#x43C;&#x43E; &#x434;&#x456;&#x441;&#x442;&#x430;&#x442;&#x438; &#x43D;&#x430;&#x448;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x443;? &#x41E;&#x441;&#x44C;, &#x434;&#x435; &#x442;&#x430;&#x454;&#x43C;&#x43D;&#x438;&#x447;&#x456; &#x434;&#x43E;&#x43C;&#x456;&#x448;&#x43A;&#x438; &#x437;&#x2019;&#x44F;&#x432;&#x43B;&#x44F;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x43F;&#x440;&#x438;&#x445;&#x43E;&#x434;&#x44F;&#x442;&#x44C; &#x43D;&#x430; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x443;&#x2026;</p>
+<h2 id="&#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x456;-&#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;-&#x442;&#x430;-&#x434;&#x43E;&#x43C;&#x456;&#x448;&#x43A;&#x438;">&#x412;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x456; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x442;&#x430; <em>&#x434;&#x43E;&#x43C;&#x456;&#x448;&#x43A;&#x438;</em></h2>
+<p><strong><code>modules2.rb</code></strong>:</p>
+<p>&#x41E;&#x431;&#x2019;&#x454;&#x43A;&#x442; &#x43C;&#x43E;&#x436;&#x435; &#x43C;&#x430;&#x442;&#x438; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F; &#x434;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x430; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F;, &#x44F;&#x43A;&#x449;&#x43E; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x438;&#x442;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x437; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <code>include</code>. &#x42F;&#x43A;&#x449;&#x43E; &#x432;&#x438; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x438;&#x442;&#x435; <code>MyModule</code> &#x443; &#x432;&#x430;&#x448;&#x443; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443;, &#x432;&#x441;&#x435; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; &#x43F;&#x43E;&#x447;&#x43D;&#x435; &#x456;&#x441;&#x43D;&#x443;&#x432;&#x430;&#x442;&#x438; &#x443; &#x43F;&#x43E;&#x442;&#x43E;&#x447;&#x43D;&#x456;&#x439; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x456; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x456;. &#x422;&#x430;&#x43A;&#x438;&#x43C; &#x447;&#x438;&#x43D;&#x43E;&#x43C; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>greet</code> &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; <code>MyModule</code> &#x442;&#x435;&#x43F;&#x435;&#x440; &#x441;&#x442;&#x430;&#x43D;&#x435; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x43C;:</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">include</span> MyModule
+puts(greet)
+</code></pre>
+<p>&#x41F;&#x440;&#x43E;&#x446;&#x435;&#x441; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432; &#x443; &#x43A;&#x43B;&#x430;&#x441; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x44E;&#x442;&#x44C; <em>&#x437;&#x43C;&#x456;&#x448;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; (mixing in)</em> &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; &#x2013; &#x446;&#x435; &#x43F;&#x43E;&#x44F;&#x441;&#x43D;&#x44E;&#x454;, &#x447;&#x43E;&#x43C;&#x443; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x456; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x447;&#x430;&#x441;&#x442;&#x43E; &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x44E;&#x442;&#x44C; <em>&#x434;&#x43E;&#x43C;&#x456;&#x448;&#x43A;&#x430;&#x43C;&#x438; (mixins)</em>.</p>
+<p>&#x41A;&#x43E;&#x43B;&#x438; &#x432;&#x438; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x430;&#x454;&#x442;&#x435; &#x43E;&#x431;&#x2019;&#x454;&#x43A;&#x442;&#x438; &#x432; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x43D;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x443;, &#x431;&#x443;&#x434;&#x44C;&#x2013;&#x44F;&#x43A;&#x438;&#x439; &#x43E;&#x431;&#x2019;&#x454;&#x43A;&#x442;, &#x44F;&#x43A;&#x438;&#x439; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x438;&#x439; &#x432;&#x456;&#x434; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443;, &#x43C;&#x430;&#x442;&#x438;&#x43C;&#x435; &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44C; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x435;&#x43A;&#x437;&#x435;&#x43C;&#x43F;&#x43B;&#x44F;&#x440;&#x443; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; &#x442;&#x430;&#x43A;, &#x43D;&#x456;&#x431;&#x438; &#x432;&#x43E;&#x43D;&#x438; &#x431;&#x443;&#x43B;&#x438; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x456; &#x432; &#x441;&#x430;&#x43C;&#x43E;&#x43C;&#x443; &#x43A;&#x43B;&#x430;&#x441;&#x456;.</p>
+<p><strong><code>modules3.rb</code></strong>:</p>
+<pre><code class="lang-ruby"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyClass</span></span>
+    <span class="hljs-keyword">include</span> MyModule
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sayHi</span></span>
+        puts(greet)
+    <span class="hljs-keyword">end</span>
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sayHiAgain</span></span>
+        puts(MyModule.greet)
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x41D;&#x435; &#x43B;&#x438;&#x448;&#x435; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443; &#x43C;&#x430;&#x44E;&#x442;&#x44C; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F; &#x434;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x430; <code>greet</code> &#x437; <code>MyModule</code>, &#x430;&#x43B;&#x435; &#x439; &#x443;&#x441;&#x456; &#x43E;&#x431;&#x2019;&#x454;&#x43A;&#x442;&#x438;, &#x44F;&#x43A;&#x456; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x456; &#x432;&#x456;&#x434; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43A;&#x43B;&#x430;&#x441;&#x443;, &#x43E;&#x441;&#x44C; &#x442;&#x430;&#x43A;:</p>
+<pre><code class="lang-ruby">ob = MyClass.new
+ob.sayHi
+ob.sayHiAgain
+puts(ob.greet)
+</code></pre>
+<p>&#x42F;&#x43A;&#x449;&#x43E; &#x43A;&#x43E;&#x440;&#x43E;&#x442;&#x43A;&#x43E;, &#x442;&#x43E; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x43C;&#x43E;&#x436;&#x443;&#x442;&#x44C; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44C; &#x434;&#x43B;&#x44F; &#x433;&#x440;&#x443;&#x43F;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x43F;&#x43E;&#x432;&#x2019;&#x44F;&#x437;&#x430;&#x43D;&#x438;&#x445; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432;, &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x430;&#x43D;&#x442; &#x442;&#x430; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; &#x43F;&#x456;&#x434; &#x456;&#x43C;&#x435;&#x43D;&#x43E;&#x432;&#x430;&#x43D;&#x43E;&#x44E; &#x43E;&#x431;&#x43B;&#x430;&#x441;&#x442;&#x44E; &#x432;&#x438;&#x434;&#x438;&#x43C;&#x43E;&#x441;&#x442;&#x456;. &#x423; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x440;&#x43E;&#x437;&#x443;&#x43C;&#x456;&#x43D;&#x43D;&#x44F;, &#x43F;&#x440;&#x43E; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x434;&#x443;&#x43C;&#x430;&#x442;&#x438;, &#x44F;&#x43A; &#x43F;&#x440;&#x43E; &#x437;&#x430;&#x43A;&#x440;&#x438;&#x442;&#x456; &#x43E;&#x434;&#x438;&#x43D;&#x438;&#x446;&#x456; &#x43A;&#x43E;&#x434;&#x443;, &#x44F;&#x43A;&#x456; &#x43C;&#x43E;&#x436;&#x443;&#x442;&#x44C; &#x441;&#x43F;&#x440;&#x43E;&#x441;&#x442;&#x438;&#x442;&#x438; &#x441;&#x442;&#x432;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F; &#x431;&#x456;&#x431;&#x43B;&#x456;&#x43E;&#x442;&#x435;&#x43A; &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F; &#x43A;&#x43E;&#x434;&#x443;.</p>
+<p><strong><code>modules4.rb</code></strong>:</p>
+<p>&#x417; &#x456;&#x43D;&#x448;&#x43E;&#x433;&#x43E; &#x431;&#x43E;&#x43A;&#x443;, &#x432;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x431;&#x443;&#x442;&#x438; &#x431;&#x456;&#x43B;&#x44C;&#x448; &#x437;&#x430;&#x446;&#x456;&#x43A;&#x430;&#x432;&#x43B;&#x435;&#x43D;&#x43D;&#x456; &#x443; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x456; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432; &#x432; &#x44F;&#x43A;&#x43E;&#x441;&#x442;&#x456; &#x430;&#x43B;&#x44C;&#x442;&#x435;&#x440;&#x43D;&#x430;&#x442;&#x438;&#x432;&#x438; &#x43C;&#x43D;&#x43E;&#x436;&#x438;&#x43D;&#x43D;&#x43E;&#x43C;&#x443; &#x443;&#x441;&#x43F;&#x430;&#x434;&#x43A;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44E;. &#x41F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x44E;&#x447;&#x438;&#x441;&#x44C; &#x434;&#x43E; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x443;, &#x43F;&#x440;&#x43E; &#x44F;&#x43A;&#x438;&#x439; &#x44F; &#x437;&#x433;&#x430;&#x434;&#x443;&#x432;&#x430;&#x432; &#x43D;&#x430; &#x43F;&#x43E;&#x447;&#x430;&#x442;&#x43A;&#x443; &#x446;&#x456;&#x454;&#x457; &#x433;&#x43B;&#x430;&#x432;&#x438;, &#x434;&#x430;&#x432;&#x430;&#x439;&#x442;&#x435; &#x43F;&#x440;&#x438;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x43C;&#x43E;, &#x449;&#x43E; &#x43A;&#x43B;&#x430;&#x441; <code>Sword</code>, &#x44F;&#x43A;&#x438;&#x439; &#x43C;&#x430;&#x454; &#x442;&#x438;&#x43F;, &#x44F;&#x43A; <code>Weapon</code>, &#x442;&#x430;&#x43A; &#x456; <code>Treasure</code>. &#x41C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x43E;, <code>Sword</code> &#x454; &#x43D;&#x430;&#x449;&#x430;&#x434;&#x43A;&#x43E;&#x43C; &#x43A;&#x43B;&#x430;&#x441;&#x443;<code>Weapon</code> (&#x442;&#x43E;&#x43C;&#x443; &#x443;&#x441;&#x43F;&#x430;&#x434;&#x43A;&#x43E;&#x432;&#x443;&#x454; &#x442;&#x430;&#x43A;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x44F;&#x43A; <code>deadliness</code> (&#x441;&#x43C;&#x435;&#x440;&#x442;&#x43E;&#x43D;&#x43E;&#x441;&#x43D;&#x456;&#x441;&#x442;&#x44C;) &#x442;&#x430; <code>power</code> (&#x441;&#x438;&#x43B;&#x430;)), &#x43F;&#x440;&#x43E;&#x442;&#x435; &#x432;&#x456;&#x43D; &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43F;&#x43E;&#x432;&#x438;&#x43D;&#x435;&#x43D; &#x43C;&#x430;&#x442;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x437; <code>Treasure</code> (&#x442;&#x430;&#x43A;&#x456;, &#x44F;&#x43A; <code>value</code> (&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;) &#x442;&#x430; <code>insurance_cost</code> (&#x432;&#x430;&#x440;&#x442;&#x456;&#x441;&#x442;&#x44C; &#x441;&#x442;&#x440;&#x430;&#x445;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;)). &#x42F;&#x43A;&#x449;&#x43E; &#x432;&#x438; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x442;&#x435; &#x446;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; <code>Treasure</code>, &#x437;&#x430;&#x43C;&#x456;&#x441;&#x442;&#x44C; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Treasure</code>, &#x43A;&#x43B;&#x430;&#x441; <code>Sword</code> &#x43C;&#x456;&#x433; &#x431;&#x438; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x430;&#x442;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; <code>Treasure</code> &#x434;&#x43B;&#x44F; &#x442;&#x43E;&#x433;&#x43E;, &#x449;&#x43E;&#x431; &#x434;&#x43E;&#x434;&#x430;&#x442;&#x438; (<em>&#x437;&#x43C;&#x456;&#x448;&#x430;&#x442;&#x438;</em>) &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; <code>Treasure</code> &#x442;&#x430; &#x432;&#x43B;&#x430;&#x441;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x43A;&#x43B;&#x430;&#x441;&#x443; <code>Sword</code>.</p>
+<p><strong><code>mod_vars.rb</code></strong>:</p>
+<p>&#x417;&#x430;&#x443;&#x432;&#x430;&#x436;&#x442;&#x435;, &#x43C;&#x456;&#x436; &#x456;&#x43D;&#x448;&#x438;&#x43C;, &#x449;&#x43E; &#x434;&#x43E; &#x431;&#x443;&#x434;&#x44C;&#x2013;&#x44F;&#x43A;&#x43E;&#x457; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457;, &#x44F;&#x43A;&#x430; &#x454; &#x43B;&#x43E;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x44E; &#x434;&#x43B;&#x44F; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F;, &#x43D;&#x435; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x437;&#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x438;&#x441;&#x44C; &#x437;&#x437;&#x43E;&#x432;&#x43D;&#x456;. &#x426;&#x435; &#x441;&#x43F;&#x440;&#x430;&#x432;&#x434;&#x436;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F;, &#x43D;&#x430;&#x432;&#x456;&#x442;&#x44C; &#x44F;&#x43A;&#x449;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44F; &#x43F;&#x440;&#x43E;&#x431;&#x443;&#x454; &#x437;&#x432;&#x435;&#x440;&#x43D;&#x443;&#x442;&#x438;&#x441;&#x44C; &#x434;&#x43E; &#x43B;&#x43E;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x457; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x457;, &#x456; &#x446;&#x435;&#x439; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43A;&#x43E;&#x434;&#x43E;&#x43C; &#x43F;&#x43E;&#x437;&#x430; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x435;&#x43C; &#x2013; &#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, &#x43A;&#x43E;&#x43B;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C; &#x434;&#x43E;&#x43C;&#x456;&#x448;&#x430;&#x43D;&#x438;&#x439; &#x447;&#x435;&#x440;&#x435;&#x437; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x43D;&#x44F;. &#x41F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x430; <strong><code>mod_vars.rb</code></strong> &#x456;&#x43B;&#x44E;&#x441;&#x442;&#x440;&#x443;&#x454; &#x446;&#x435;.</p>
+<h2 id="&#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x43D;&#x44F;-&#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432;-&#x437;-&#x444;&#x430;&#x439;&#x43B;&#x456;&#x432;">&#x412;&#x43A;&#x43B;&#x44E;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432; &#x437; &#x444;&#x430;&#x439;&#x43B;&#x456;&#x432;</h2>
+<p><strong><code>requiremodule.rb</code></strong>:</p>
+<p>&#x414;&#x43E; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43C;&#x438; &#x437;&#x43C;&#x456;&#x448;&#x443;&#x432;&#x430;&#x43B;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;, &#x44F;&#x43A;&#x456; &#x431;&#x443;&#x43B;&#x438; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x456; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x432;&#x438;&#x445;&#x456;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x444;&#x430;&#x439;&#x43B;&#x443;. &#x427;&#x430;&#x441;&#x442;&#x43E; &#x43A;&#x43E;&#x440;&#x438;&#x441;&#x43D;&#x456;&#x448;&#x435; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x443;&#x432;&#x430;&#x442;&#x438; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x443; &#x43E;&#x43A;&#x440;&#x435;&#x43C;&#x438;&#x445; &#x444;&#x430;&#x439;&#x43B;&#x430;&#x445; &#x442;&#x430; &#x432;&#x43A;&#x43B;&#x44E;&#x447;&#x430;&#x442;&#x438; &#x457;&#x445; &#x437;&#x430; &#x43F;&#x43E;&#x442;&#x440;&#x435;&#x431;&#x438;. &#x41D;&#x430;&#x439;&#x43F;&#x435;&#x440;&#x448;&#x435;, &#x449;&#x43E; &#x432;&#x438; &#x43C;&#x430;&#x454;&#x442;&#x435; &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x438;, &#x449;&#x43E;&#x431; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; &#x43A;&#x43E;&#x434; &#x437; &#x456;&#x43D;&#x448;&#x43E;&#x433;&#x43E; &#x444;&#x430;&#x439;&#x43B;&#x443; &#x2014; &#x437;&#x430;&#x432;&#x430;&#x43D;&#x442;&#x430;&#x436;&#x438;&#x442;&#x438; &#x446;&#x435;&#x439; &#x444;&#x430;&#x439;&#x43B; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>require</code>, &#x43E;&#x441;&#x44C; &#x442;&#x430;&#x43A;:</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">require</span>(<span class="hljs-string">&quot;testmod.rb&quot;</span>)
+</code></pre>
+<p>&#x417;&#x430;&#x432;&#x430;&#x43D;&#x442;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x439; &#x444;&#x430;&#x439;&#x43B; &#x43C;&#x430;&#x454; &#x440;&#x43E;&#x437;&#x442;&#x430;&#x448;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44F; &#x443; &#x43F;&#x43E;&#x442;&#x43E;&#x447;&#x43D;&#x456;&#x439; &#x434;&#x438;&#x440;&#x435;&#x43A;&#x442;&#x43E;&#x440;&#x456;&#x457;, &#x443; &#x43C;&#x456;&#x441;&#x446;&#x44F;&#x445; &#x434;&#x43B;&#x44F; &#x43F;&#x43E;&#x448;&#x443;&#x43A;&#x443; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;&#x432; &#x430;&#x431;&#x43E; &#x443; &#x43D;&#x430;&#x43F;&#x435;&#x440;&#x435;&#x434; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43E;&#x43C;&#x443; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x456; <code>$:</code>. &#x412;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x434;&#x43E;&#x434;&#x430;&#x442;&#x438; &#x43F;&#x430;&#x43F;&#x43A;&#x443; &#x434;&#x43E; &#x446;&#x44C;&#x43E;&#x433;&#x43E; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443; &#x437; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x437;&#x432;&#x438;&#x447;&#x43D;&#x43E;&#x433;&#x43E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; &#x434;&#x43B;&#x44F; &#x434;&#x43E;&#x434;&#x430;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x432; &#x43A;&#x456;&#x43D;&#x435;&#x446;&#x44C; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443; <code>&lt;&lt;</code>, &#x442;&#x430;&#x43A;&#x438;&#x43C; &#x447;&#x438;&#x43D;&#x43E;&#x43C;:</p>
+<pre><code class="lang-ruby">$: &lt;&lt; <span class="hljs-string">&quot;C:/mydir&quot;</span>
+</code></pre>
+<p>&#x41C;&#x435;&#x442;&#x43E;&#x434; <code>require</code> &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x454; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; <code>true</code>, &#x44F;&#x43A;&#x449;&#x43E; &#x432;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x438;&#x439; &#x444;&#x430;&#x439;&#x43B; &#x437;&#x430;&#x432;&#x430;&#x43D;&#x442;&#x430;&#x436;&#x435;&#x43D;&#x438;&#x439; &#x443;&#x441;&#x43F;&#x456;&#x448;&#x43D;&#x43E;, &#x456;&#x43D;&#x430;&#x43A;&#x448;&#x435; &#x432;&#x456;&#x43D; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x454; <code>false</code>. &#x42F;&#x43A;&#x449;&#x43E; &#x432;&#x438; &#x441;&#x443;&#x43C;&#x43D;&#x456;&#x432;&#x430;&#x454;&#x442;&#x435;&#x441;&#x44C;, &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x432;&#x438;&#x432;&#x435;&#x441;&#x442;&#x438; &#x440;&#x435;&#x437;&#x443;&#x43B;&#x44C;&#x442;&#x430;&#x442;:</p>
+<pre><code class="lang-ruby">puts(<span class="hljs-keyword">require</span>(<span class="hljs-string">&quot;testmod.rb&quot;</span>))
+</code></pre>
+<h2 id="&#x43D;&#x430;&#x43F;&#x435;&#x440;&#x435;&#x434;-&#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x456;-&#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;">&#x41D;&#x430;&#x43F;&#x435;&#x440;&#x435;&#x434; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x456; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456;</h2>
+<p>&#x41D;&#x430;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x456; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x456; &#x454; &#x432;&#x431;&#x443;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x43C;&#x438; &#x432; &#x456;&#x43D;&#x442;&#x435;&#x440;&#x43F;&#x440;&#x435;&#x442;&#x430;&#x442;&#x43E;&#x440; Ruby:</p>
+<pre><code>Comparable, Enumerable, FileTest, GC, Kernel, Math, ObjectSpace, Precision, Process, Signal
+</code></pre><p>&#x41D;&#x430;&#x439;&#x432;&#x430;&#x436;&#x43B;&#x438;&#x432;&#x456;&#x448;&#x438;&#x43C; &#x43F;&#x43E;&#x43F;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x44C;&#x43E; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x438;&#x43C; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x435;&#x43C; &#x454; <code>Kernel</code>, &#x44F;&#x43A;&#x438;&#x439;, &#x44F;&#x43A; &#x441;&#x43A;&#x430;&#x437;&#x430;&#x43D;&#x43E; &#x440;&#x430;&#x43D;&#x456;&#x448;&#x435;, &#x43D;&#x430;&#x434;&#x430;&#x454; &#x431;&#x430;&#x433;&#x430;&#x442;&#x43E; <em>&#x441;&#x442;&#x430;&#x43D;&#x434;&#x430;&#x440;&#x442;&#x43D;&#x438;&#x445;</em> &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x456;&#x432; Ruby, &#x442;&#x430;&#x43A;&#x438;&#x445; &#x44F;&#x43A; <code>gets</code>, <code>puts</code>, <code>print</code> &#x442;&#x430; <code>require</code>. &#x417;&#x430;&#x433;&#x430;&#x43B;&#x43E;&#x43C;, &#x44F;&#x43A; &#x456; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x456;&#x441;&#x442;&#x44C; &#x437; &#x431;&#x456;&#x431;&#x43B;&#x456;&#x43E;&#x442;&#x435;&#x43A;&#x438; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432; Ruby, <code>Kernel</code> &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x438;&#x439; &#x43C;&#x43E;&#x432;&#x43E;&#x44E; C. &#x422;&#x43E;&#x434;&#x456; &#x44F;&#x43A; <code>Kernel</code>, &#x444;&#x430;&#x43A;&#x442;&#x438;&#x447;&#x43D;&#x43E;, <em>&#x432;&#x431;&#x443;&#x434;&#x43E;&#x432;&#x430;&#x43D;&#x438;&#x439;</em> &#x432; &#x456;&#x43D;&#x442;&#x435;&#x440;&#x43F;&#x440;&#x435;&#x442;&#x430;&#x442;&#x43E;&#x440; Ruby, &#x43A;&#x43E;&#x43D;&#x446;&#x435;&#x43F;&#x442;&#x443;&#x430;&#x43B;&#x44C;&#x43D;&#x43E; &#x439;&#x43E;&#x433;&#x43E; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x440;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x434;&#x430;&#x442;&#x438; &#x44F;&#x43A; &#x437;&#x43C;&#x456;&#x448;&#x430;&#x43D;&#x438;&#x439; &#x43C;&#x43E;&#x434;&#x443;&#x43B;&#x44C;, &#x442;&#x430;&#x43A; &#x441;&#x430;&#x43C;&#x43E; &#x44F;&#x43A; &#x456; &#x437;&#x432;&#x438;&#x447;&#x430;&#x439;&#x43D;&#x430; &#x434;&#x43E;&#x43C;&#x456;&#x448;&#x43A;&#x430; &#x432; Ruby, &#x432;&#x456;&#x43D; &#x440;&#x43E;&#x431;&#x438;&#x442;&#x44C; &#x441;&#x432;&#x43E;&#x457; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x431;&#x435;&#x437;&#x43F;&#x43E;&#x441;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x44C;&#x43E; &#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x43C;&#x438; &#x434;&#x43B;&#x44F; &#x43A;&#x43B;&#x430;&#x441;&#x456;&#x432;, &#x44F;&#x43A;&#x456; &#x437;&#x430;&#x432;&#x430;&#x43D;&#x442;&#x430;&#x436;&#x443;&#x44E;&#x442;&#x44C; &#x439;&#x43E;&#x433;&#x43E;. &#x41E;&#x441;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x438; &#x432;&#x456;&#x43D; &#x454; &#x437;&#x43C;&#x456;&#x448;&#x430;&#x43D;&#x438;&#x43C; &#x437; &#x43A;&#x43B;&#x430;&#x441;&#x43E;&#x43C; Object, &#x432;&#x456;&#x434; &#x44F;&#x43A;&#x43E;&#x433;&#x43E; &#x43F;&#x43E;&#x445;&#x43E;&#x434;&#x44F;&#x442;&#x44C; &#x432;&#x441;&#x456; &#x43A;&#x43B;&#x430;&#x441;&#x438; &#x432; Ruby, &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x438; &#x437; <code>Kernel</code> &#x454; &#x437;&#x430;&#x433;&#x430;&#x43B;&#x44C;&#x43D;&#x43E;&#x434;&#x43E;&#x441;&#x442;&#x443;&#x43F;&#x43D;&#x438;&#x43C;&#x438;.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="08-Conditional-Statements.html#оператор-case" class="navigation navigation-prev " aria-label="Previous page: Оператор case">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="09-Modules-and-Mixins.html#модуль-—-це-як-клас" class="navigation navigation-next " aria-label="Next page: Модуль — це як клас…">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Глава 9: Модулі та домішки","level":"1.11","depth":1,"next":{"title":"Модуль — це як клас…","level":"1.11.1","depth":2,"anchor":"#модуль-—-це-як-клас","path":"chapters/09-Modules-and-Mixins.md","ref":"chapters/09-Modules-and-Mixins.md#модуль-—-це-як-клас","articles":[]},"previous":{"title":"Оператор case","level":"1.10.7","depth":2,"anchor":"#оператор-case","path":"chapters/08-Conditional-Statements.md","ref":"chapters/08-Conditional-Statements.md#оператор-case","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.x.x","theme":"default","variables":{},"plugins":["edit-link","github","ga","rss","github-buttons"],"pluginsConfig":{"github":{"url":"https://github.com/LambdaBooks/thelittlebookofruby"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["frontend","js","javascript","es6","es2015","ecmascript"],"title":"Маленька книга про Ruby","description":"Український переклад книги «The Little Book Of Ruby».","author":"Denys Dovhan","site_url":"http://lambdabooks.github.io/thelittlebookofruby","feed_url":"http://lambdabooks.github.io/thelittlebookofruby/rss.xml","managingEditor":"email@denysdovhan.com (Denys Dovhan)","webMaster":"email@denysdovhan.com (Denys Dovhan)"},"highlight":{},"github-buttons":{"repo":"LambdaBooks/thelittlebookofruby","types":["star"],"size":"small"},"ga":{"configuration":"auto","token":"UA-40496885-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Редагувати","base":"https://github.com/LambdaBooks/thelittlebookofruby/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapters/09-Modules-and-Mixins.md","mtime":"2017-08-30T09:32:25.669Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-30T09:33:41.904Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

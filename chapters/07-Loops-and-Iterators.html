@@ -1,0 +1,1409 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Глава 7: Цикли та ітератори · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="07-Loops-and-Iterators.html" />
+    
+    
+    <link rel="prev" href="06-Hashes.html" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"LambdaBooks/thelittlebookofruby","types":["star"],"size":"small"};
+    </script>
+
+    <link href="http://lambdabooks.github.io/thelittlebookofruby/rss.xml" title="Маленька книга про Ruby" rel="alternate" type="application/rss+xml" />
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Маленька книжка про Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html">
+            
+                    
+                    Вступ
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#ознайомтесь-з-ruby-за-десять-глав">
+            
+                    
+                    Ознайомтесь з Ruby за десять глав
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#що-таке-ruby">
+            
+                    
+                    Що таке Ruby?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#що-таке-rails">
+            
+                    
+                    Що таке Rails?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#встановлення-та-використання-ruby-разом-з-ruby-in-steel">
+            
+                    
+                    Встановлення та використання Ruby разом з Ruby In Steel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#встановлюємо-ruby-самостійно">
+            
+                    
+                    Встановлюємо Ruby самостійно
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#отримати-вихідний-код-програм–прикладів">
+            
+                    
+                    Отримати вихідний код програм–прикладів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#запуск-програм-на-ruby">
+            
+                    
+                    Запуск програм на Ruby
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#як-користуватись-цією-книгою">
+            
+                    
+                    Як користуватись цією книгою
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="00-Introduction.html">
+            
+                <a href="00-Introduction.html#умовні-позначення">
+            
+                    
+                    Умовні позначення
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html">
+            
+                    
+                    Глава 1: Рядки та методи
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#обєкти-і-методи">
+            
+                    
+                    Об'єкти і методи
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#рядки-та-інтерполяція">
+            
+                    
+                    Рядки та інтерполяція
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#коментарі">
+            
+                    
+                    Коментарі
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#методи">
+            
+                    
+                    Методи
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#числа">
+            
+                    
+                    Числа
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="01-Strings-and-Methods.html">
+            
+                <a href="01-Strings-and-Methods.html#перевірка-умови-if--then">
+            
+                    
+                    Перевірка умови: if ... then
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html">
+            
+                    
+                    Глава 2: Класи та об’єкти
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html#екземпляри-і-змінні-екземплярів-класів">
+            
+                    
+                    Екземпляри і змінні екземплярів класів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html#конструктор---new-і-initialize">
+            
+                    
+                    Конструктор - new і initialize
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="02-Classes-and-Objects.html">
+            
+                <a href="02-Classes-and-Objects.html#інспектування-обєктів">
+            
+                    
+                    Інспектування об'єктів
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="03-Class-Hierarchies.html">
+            
+                <a href="03-Class-Hierarchies.html">
+            
+                    
+                    Глава 3: Класова ієрархія
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="03-Class-Hierarchies.html">
+            
+                <a href="03-Class-Hierarchies.html#батьківські-супер–-та-дочірні-суб–-класи">
+            
+                    
+                    Батьківські (супер–) та дочірні (суб–) класи
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html">
+            
+                    
+                    Глава 4: Аксесори, атрибути, змінні класів
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#методи–аксесори">
+            
+                    
+                    Методи–аксесори
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#читачі-та-записувачі-атрибутів">
+            
+                    
+                    Читачі та записувачі атрибутів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#атрибути-створюють-змінні">
+            
+                    
+                    Атрибути створюють змінні
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#виклик-методів-батьківського-класу">
+            
+                    
+                    Виклик методів батьківського класу
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="04-Accessors-Attributes-Class-Variables.html">
+            
+                <a href="04-Accessors-Attributes-Class-Variables.html#змінні-класів">
+            
+                    
+                    Змінні класів
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html">
+            
+                    
+                    Глава 5: Масиви
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html#створення-масивів">
+            
+                    
+                    Створення масивів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html#багатовимірні-масиви">
+            
+                    
+                    Багатовимірні масиви
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html#перебір-масивів">
+            
+                    
+                    Перебір масивів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="05-Arrays.html">
+            
+                <a href="05-Arrays.html#індексація-всередині-масивів">
+            
+                    
+                    Індексація всередині масивів
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="06-Hashes.html">
+            
+                <a href="06-Hashes.html">
+            
+                    
+                    Глава 6: Хеші
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="06-Hashes.html">
+            
+                <a href="06-Hashes.html#створення-хешів">
+            
+                    
+                    Створення хешів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="06-Hashes.html">
+            
+                <a href="06-Hashes.html#індексування-в-хеші">
+            
+                    
+                    Індексування в хеші
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="06-Hashes.html">
+            
+                <a href="06-Hashes.html#операції-над-хешами">
+            
+                    
+                    Операції над хешами
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html">
+            
+                    
+                    Глава 7: Цикли та ітератори
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#цикл-for">
+            
+                    
+                    Цикл for
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#блоки">
+            
+                    
+                    Блоки
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#цикл-while">
+            
+                    
+                    Цикл while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#модифікатори-while">
+            
+                    
+                    Модифікатори while
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="07-Loops-and-Iterators.html">
+            
+                <a href="07-Loops-and-Iterators.html#цикл-until">
+            
+                    
+                    Цикл until
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html">
+            
+                    
+                    Глава 8: Умовні оператори
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#глава-восьма">
+            
+                    
+                    Глава восьма
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#ifthenelse">
+            
+                    
+                    if..then..else
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#and-or-not">
+            
+                    
+                    and, or, not
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#ifelsif">
+            
+                    
+                    if..elsif
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#unless">
+            
+                    
+                    unless
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#модифікатори-if-та-unless">
+            
+                    
+                    Модифікатори if та unless
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="08-Conditional-Statements.html">
+            
+                <a href="08-Conditional-Statements.html#оператор-case">
+            
+                    
+                    Оператор case
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html">
+            
+                    
+                    Глава 9: Модулі та домішки
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#модуль-—-це-як-клас">
+            
+                    
+                    Модуль — це як клас…
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#методи-модулів">
+            
+                    
+                    Методи модулів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#модулі-як-простори-імен">
+            
+                    
+                    Модулі як простори імен
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#методи-екземпляру-модуля">
+            
+                    
+                    Методи екземпляру модуля
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#включені-модулі-та-домішки">
+            
+                    
+                    Включені модулі та домішки
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#включення-модулів-з-файлів">
+            
+                    
+                    Включення модулів з файлів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#наперед-визначені-модулі">
+            
+                    
+                    Наперед визначені модулі
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="10-Saving-Files-Moving-On.html">
+            
+                <a href="10-Saving-Files-Moving-On.html">
+            
+                    
+                    Глава 10: Збереження файлів, продовження…
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#модуль-—-це-як-клас">
+            
+                    
+                    Модуль — це як клас…
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#методи-модулів">
+            
+                    
+                    Методи модулів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#модулі-як-простори-імен">
+            
+                    
+                    Модулі як простори імен
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#методи-екземпляру-модуля">
+            
+                    
+                    Методи екземпляру модуля
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#включені-модулі-та-домішки">
+            
+                    
+                    Включені модулі та домішки
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#включення-модулів-з-файлів">
+            
+                    
+                    Включення модулів з файлів
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="09-Modules-and-Mixins.html">
+            
+                <a href="09-Modules-and-Mixins.html#наперед-визначені-модулі">
+            
+                    
+                    Наперед визначені модулі
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Глава 7: Цикли та ітератори</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x433;&#x43B;&#x430;&#x432;&#x430;-&#x441;&#x44C;&#x43E;&#x43C;&#x430;">&#x413;&#x43B;&#x430;&#x432;&#x430; &#x441;&#x44C;&#x43E;&#x43C;&#x430;</h1>
+<blockquote>
+<p>&#x426;&#x438;&#x43A;&#x43B;&#x438; &#x442;&#x430; &#x456;&#x442;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x438;&#x2026;</p>
+</blockquote>
+<p>&#x411;&#x430;&#x433;&#x430;&#x442;&#x43E; &#x447;&#x43E;&#x433;&#x43E; &#x443; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x456; &#x43F;&#x43E;&#x432;&#x2019;&#x44F;&#x437;&#x430;&#x43D;&#x435; &#x437; &#x434;&#x456;&#x44F;&#x43C;&#x438;, &#x44F;&#x43A;&#x456; &#x43F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x44E;&#x44E;&#x442;&#x44C;&#x441;&#x44F;. &#x41C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x43E;, &#x432;&#x430;&#x43C; &#x437;&#x43D;&#x430;&#x434;&#x43E;&#x431;&#x438;&#x442;&#x44C;&#x441;&#x44F; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x430;, &#x44F;&#x43A;&#x430; &#x43F;&#x43E;&#x434;&#x430;&#x432;&#x430;&#x442;&#x438;&#x43C;&#x435; &#x437;&#x432;&#x443;&#x43A;&#x43E;&#x432;&#x438;&#x439; &#x441;&#x438;&#x433;&#x43D;&#x430;&#x43B; 10 &#x440;&#x430;&#x437;&#x456;&#x432;, &#x447;&#x438;&#x442;&#x430;&#x442;&#x438;&#x43C;&#x435; &#x440;&#x44F;&#x434;&#x43A;&#x438; &#x437; &#x444;&#x430;&#x439;&#x43B;&#x443;, &#x43F;&#x43E;&#x43A;&#x438; &#x443; &#x43D;&#x44C;&#x43E;&#x43C;&#x443; &#x454; &#x449;&#x43E; &#x447;&#x438;&#x442;&#x430;&#x442;&#x438;, &#x430;&#x431;&#x43E; &#x43F;&#x43E;&#x43A;&#x430;&#x437;&#x443;&#x432;&#x430;&#x442;&#x438;&#x43C;&#x435; &#x43F;&#x43E;&#x432;&#x456;&#x434;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x43D;&#x44F;, &#x43F;&#x43E;&#x43A;&#x438; &#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x443;&#x432;&#x430;&#x447; &#x43D;&#x435; &#x43D;&#x430;&#x442;&#x438;&#x441;&#x43D;&#x435; &#x43A;&#x43B;&#x430;&#x432;&#x456;&#x448;&#x443;. Ruby &#x43D;&#x430;&#x434;&#x430;&#x454; &#x432;&#x430;&#x43C; &#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x430; &#x441;&#x43F;&#x43E;&#x441;&#x43E;&#x431;&#x456;&#x432; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x442;&#x438; &#x442;&#x430;&#x43A;&#x456; &#x43F;&#x43E;&#x432;&#x442;&#x43E;&#x440;&#x435;&#x43D;&#x43D;&#x44F;.</p>
+<h2 id="&#x446;&#x438;&#x43A;&#x43B;-for">&#x426;&#x438;&#x43A;&#x43B; <code>for</code></h2>
+<p>&#x423; &#x431;&#x430;&#x433;&#x430;&#x442;&#x44C;&#x43E;&#x445; &#x43C;&#x43E;&#x432;&#x430;&#x445; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;, &#x43A;&#x43E;&#x43B;&#x438; &#x432;&#x438; &#x445;&#x43E;&#x447;&#x435;&#x442;&#x435; &#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x438; &#x43A;&#x43E;&#x434; &#x43F;&#x435;&#x432;&#x43D;&#x443; &#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x456;&#x441;&#x442;&#x44C; &#x440;&#x430;&#x437;&#x456;&#x432;, &#x432;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x43E; &#x432;&#x441;&#x442;&#x430;&#x432;&#x438;&#x442;&#x438; &#x446;&#x435;&#x439; &#x43A;&#x43E;&#x434; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x443; &#x446;&#x438;&#x43A;&#x43B;&#x443; <code>for</code>. &#x423; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x43E;&#x441;&#x442;&#x456; &#x43C;&#x43E;&#x432; &#x432;&#x438; &#x43C;&#x430;&#x454;&#x442;&#x435; &#x434;&#x430;&#x442;&#x438; &#x446;&#x438;&#x43A;&#x43B;&#x443; <code>for</code> &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x443; &#x456;&#x43D;&#x456;&#x446;&#x456;&#x430;&#x43B;&#x456;&#x437;&#x43E;&#x432;&#x430;&#x43D;&#x443; &#x437; &#x43F;&#x43E;&#x447;&#x430;&#x442;&#x43A;&#x43E;&#x432;&#x438;&#x43C; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;&#x43C;, &#x44F;&#x43A;&#x430; &#x431;&#x443;&#x434;&#x435; &#x437;&#x431;&#x456;&#x43B;&#x44C;&#x448;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44C; &#x43D;&#x430; 1 &#x43D;&#x430; &#x43A;&#x43E;&#x436;&#x43D;&#x456;&#x439; &#x456;&#x442;&#x435;&#x440;&#x430;&#x446;&#x456;&#x457;, &#x43F;&#x43E;&#x43A;&#x438; &#x432;&#x43E;&#x43D;&#x430; &#x43D;&#x435; &#x434;&#x43E;&#x441;&#x44F;&#x433;&#x43D;&#x435; &#x43F;&#x435;&#x432;&#x43D;&#x43E;&#x433;&#x43E; &#x43A;&#x456;&#x43D;&#x446;&#x435;&#x432;&#x43E;&#x433;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;. &#x41A;&#x43E;&#x43B;&#x438; &#x43A;&#x456;&#x43D;&#x446;&#x435;&#x432;&#x435; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x434;&#x43E;&#x441;&#x44F;&#x433;&#x43D;&#x443;&#x442;&#x43E;, &#x446;&#x438;&#x43A;&#x43B; <code>for</code> &#x43F;&#x440;&#x438;&#x43F;&#x438;&#x43D;&#x44F;&#x454; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x43D;&#x43D;&#x44F;. &#x41E;&#x441;&#x44C; &#x442;&#x440;&#x430;&#x434;&#x438;&#x446;&#x456;&#x439;&#x43D;&#x430; &#x432;&#x435;&#x440;&#x441;&#x456;&#x44F; &#x446;&#x438;&#x43A;&#x43B;&#x443; <code>for</code> &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x430; &#x43C;&#x43E;&#x432;&#x43E;&#x44E; Pascal:</p>
+<pre><code class="lang-pascal"><span class="hljs-comment">(* &#x426;&#x435; &#x43A;&#x43E;&#x434; &#x43D;&#x430; Pascal, &#x430; &#x43D;&#x435; &#x43D;&#x430; Ruby! *)</span>
+<span class="hljs-keyword">for</span> i := <span class="hljs-number">1</span> <span class="hljs-keyword">to</span> <span class="hljs-number">3</span> <span class="hljs-keyword">do</span>
+  writeln(i);
+</code></pre>
+<p><strong><code>for_loop.rb</code></strong>:</p>
+<p>&#x417; &#x413;&#x43B;&#x430;&#x432;&#x438; 5 (&#x43F;&#x440;&#x43E; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x438;) &#x432;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43F;&#x430;&#x43C;&#x2019;&#x44F;&#x442;&#x430;&#x442;&#x438;, &#x449;&#x43E; &#x446;&#x438;&#x43A;&#x43B; <code>for</code> &#x443; Ruby &#x43F;&#x440;&#x430;&#x446;&#x44E;&#x454; &#x437;&#x43E;&#x432;&#x441;&#x456;&#x43C; &#x456;&#x43D;&#x448;&#x438;&#x43C; &#x447;&#x438;&#x43D;&#x43E;&#x43C;! &#x417;&#x430;&#x43C;&#x456;&#x441;&#x442;&#x44C; &#x442;&#x43E;&#x433;&#x43E;, &#x449;&#x43E;&#x431; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x432;&#x430;&#x442;&#x438; &#x43F;&#x43E;&#x447;&#x430;&#x442;&#x43A;&#x43E;&#x432;&#x435; &#x442;&#x430; &#x43A;&#x456;&#x43D;&#x446;&#x435;&#x432;&#x435; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;, &#x43C;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x454;&#x43C;&#x43E; &#x446;&#x438;&#x43A;&#x43B;&#x443; <code>for</code> &#x441;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x435;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x456;&#x432;, &#x456; &#x432;&#x456;&#x43D; &#x456;&#x442;&#x435;&#x440;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43F;&#x43E; &#x43D;&#x44C;&#x43E;&#x43C;&#x443; &#x432;&#x456;&#x434; &#x43E;&#x434;&#x43D;&#x43E;&#x433;&#x43E; &#x434;&#x43E; &#x456;&#x43D;&#x448;&#x43E;&#x433;&#x43E;, &#x43F;&#x440;&#x438;&#x441;&#x432;&#x43E;&#x44E;&#x44E;&#x447;&#x438; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43D;&#x430; &#x43A;&#x43E;&#x436;&#x43D;&#x456;&#x439; &#x456;&#x442;&#x435;&#x440;&#x430;&#x446;&#x456;&#x457; &#x43F;&#x435;&#x432;&#x43D;&#x456; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;&#x439; &#x446;&#x438;&#x43A;&#x43B;&#x443;. &#x426;&#x435; &#x442;&#x440;&#x438;&#x432;&#x430;&#x454; &#x430;&#x436; &#x43F;&#x43E;&#x43A;&#x438; &#x432;&#x456;&#x43D; &#x43D;&#x435; &#x434;&#x43E;&#x441;&#x44F;&#x433;&#x43D;&#x435; &#x43A;&#x456;&#x43D;&#x446;&#x44F; &#x441;&#x43F;&#x438;&#x441;&#x43A;&#x443;.</p>
+<p>&#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, &#x43E;&#x441;&#x44C; &#x446;&#x438;&#x43A;&#x43B; <code>for</code>, &#x449;&#x43E; &#x456;&#x442;&#x435;&#x440;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43F;&#x43E; &#x435;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x445; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443;, &#x432;&#x438;&#x432;&#x43E;&#x434;&#x44F;&#x447;&#x438; &#x457;&#x445; &#x43D;&#x430; &#x435;&#x43A;&#x440;&#x430;&#x43D;:</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># &#x410; &#x43E;&#x441;&#x44C; &#x446;&#x435; &#x432;&#x436;&#x435; &#x43A;&#x43E;&#x434; &#x43D;&#x430; Ruby&#x2026;</span>
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>] <span class="hljs-keyword">do</span>
+  puts(i)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x426;&#x438;&#x43A;&#x43B; <code>for</code> &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435; &#x441;&#x445;&#x43E;&#x436;&#x438;&#x439; &#x43D;&#x430; &#x456;&#x442;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440; <code>for each</code>, &#x44F;&#x43A;&#x438;&#x439; &#x43F;&#x440;&#x43E;&#x43F;&#x43E;&#x43D;&#x443;&#x44E;&#x442;&#x44C; &#x434;&#x435;&#x44F;&#x43A;&#x456; &#x456;&#x43D;&#x448;&#x456; &#x43C;&#x43E;&#x432;&#x438; &#x43F;&#x440;&#x43E;&#x433;&#x440;&#x430;&#x43C;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F;. &#x422;&#x430;&#x43A; &#x456; &#x454;, &#x430;&#x432;&#x442;&#x43E;&#x440; Ruby &#x43E;&#x43F;&#x438;&#x441;&#x443;&#x454; <code>for</code> &#x44F;&#x43A; <em>&#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x447;&#x43D;&#x438;&#x439; &#x446;&#x443;&#x43A;&#x43E;&#x440;</em> &#x434;&#x43B;&#x44F; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <code>each</code>, &#x44F;&#x43A;&#x438;&#x439; &#x456;&#x43C;&#x43F;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x443;&#x44E;&#x442;&#x44C; &#x442;&#x438;&#x43F;&#x438; &#x43A;&#x43E;&#x43B;&#x435;&#x43A;&#x446;&#x456;&#x439; &#x443; Ruby, &#x442;&#x430;&#x43A;&#x456; &#x44F;&#x43A; <code>Array</code> (&#x43C;&#x430;&#x441;&#x438;&#x432;&#x438;), <code>Set</code> (&#x43C;&#x43D;&#x43E;&#x436;&#x438;&#x43D;&#x438;), <code>Hash</code> (&#x445;&#x435;&#x448;&#x456;) &#x442;&#x430; <code>String</code> (&#x440;&#x44F;&#x434;&#x43A;&#x438;) (&#x441;&#x430;&#x43C;&#x456; &#x440;&#x44F;&#x434;&#x43A;&#x438; &#x454; &#x43A;&#x43E;&#x43B;&#x435;&#x43A;&#x446;&#x456;&#x44F;&#x43C;&#x438; &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B;&#x456;&#x432;).</p>
+<p>&#x414;&#x43B;&#x44F; &#x43F;&#x43E;&#x440;&#x456;&#x432;&#x43D;&#x44F;&#x43D;&#x43D;&#x44F;, &#x43E;&#x441;&#x44C; &#x44F;&#x43A; &#x432;&#x438;&#x433;&#x43B;&#x44F;&#x434;&#x430;&#x442;&#x438;&#x43C;&#x435; &#x446;&#x438;&#x43A;&#x43B; <code>for</code> &#x437; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x443; &#x432;&#x438;&#x449;&#x435;, &#x44F;&#x43A;&#x449;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x438; &#x439;&#x43E;&#x433;&#x43E; &#x437; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <code>each</code>:</p>
+<p><strong><code>each_loop.rb</code></strong>:</p>
+<pre><code class="lang-ruby">[<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>].each <span class="hljs-keyword">do</span> |i|
+  puts(i)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x42F;&#x43A; &#x431;&#x430;&#x447;&#x438;&#x442;&#x435;, &#x43C;&#x456;&#x436; &#x43D;&#x438;&#x43C;&#x438; &#x441;&#x43F;&#x440;&#x430;&#x432;&#x434;&#x456; &#x43D;&#x435;&#x43C;&#x430;&#x454; &#x441;&#x443;&#x442;&#x442;&#x454;&#x432;&#x43E;&#x457; &#x432;&#x456;&#x434;&#x43C;&#x456;&#x43D;&#x43D;&#x43E;&#x441;&#x442;&#x456;.</p>
+<p>&#x429;&#x43E;&#x431; &#x43F;&#x435;&#x440;&#x435;&#x442;&#x432;&#x43E;&#x440;&#x438;&#x442;&#x438; &#x446;&#x438;&#x43A;&#x43B; <code>for</code> &#x43D;&#x430; &#x456;&#x442;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440; <code>each</code>, &#x432;&#x441;&#x435; &#x449;&#x43E; &#x43C;&#x435;&#x43D;&#x456; &#x43F;&#x43E;&#x442;&#x440;&#x456;&#x431;&#x43D;&#x43E; &#x437;&#x440;&#x43E;&#x431;&#x438;&#x442;&#x438; &#x2014; &#x446;&#x435; &#x432;&#x438;&#x434;&#x430;&#x43B;&#x438;&#x442;&#x438; <code>for</code> &#x442;&#x430; &#x434;&#x43E;&#x434;&#x430;&#x442;&#x438; &#x43F;&#x456;&#x441;&#x43B;&#x44F; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443; <code>.each</code>. &#x41F;&#x43E;&#x442;&#x456;&#x43C; &#x44F; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x44E; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x443; &#x456;&#x442;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430; <code>i</code>, &#x44F;&#x43A;&#x430; &#x441;&#x442;&#x43E;&#x457;&#x442;&#x44C; &#x43C;&#x456;&#x436; &#x434;&#x432;&#x43E;&#x43C;&#x430; &#x441;&#x438;&#x43C;&#x432;&#x43E;&#x43B;&#x430;&#x43C;&#x438; &#x432;&#x435;&#x440;&#x442;&#x438;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x445; &#x440;&#x438;&#x441;&#x43E;&#x43A;.</p>
+<p>&#x41F;&#x43E;&#x440;&#x456;&#x432;&#x43D;&#x44F;&#x439;&#x442;&#x435; &#x446;&#x456; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x438;, &#x449;&#x43E;&#x431; &#x43F;&#x43E;&#x431;&#x430;&#x447;&#x438;&#x442;&#x438;, &#x43D;&#x430;&#x441;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x438; &#x446;&#x438;&#x43A;&#x43B; <code>for</code> &#x442;&#x430; &#x456;&#x442;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440; <code>each</code> &#x441;&#x445;&#x43E;&#x436;&#x456; &#x43C;&#x456;&#x436; &#x441;&#x43E;&#x431;&#x43E;&#x44E;:</p>
+<p><strong><code>for_each.rb</code></strong>:</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># --- &#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; 1 ---</span>
+
+<span class="hljs-comment"># i) for</span>
+<span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> [<span class="hljs-string">&apos;&#x43E;&#x434;&#x438;&#x43D;&apos;</span>, <span class="hljs-string">&apos;&#x434;&#x432;&#x430;&apos;</span>, <span class="hljs-string">&apos;&#x442;&#x440;&#x438;&apos;</span>] <span class="hljs-keyword">do</span>
+  puts(s)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># ii) each</span>
+[<span class="hljs-string">&apos;&#x43E;&#x434;&#x438;&#x43D;&apos;</span>, <span class="hljs-string">&apos;&#x434;&#x432;&#x430;&apos;</span>, <span class="hljs-string">&apos;&#x442;&#x440;&#x438;&apos;</span>].each <span class="hljs-keyword">do</span> |s|
+  puts(s)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># --- &#x41F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; 2 ---</span>
+
+<span class="hljs-comment"># i) for</span>
+<span class="hljs-keyword">for</span> x <span class="hljs-keyword">in</span> [<span class="hljs-number">1</span>, <span class="hljs-string">&quot;&#x434;&#x432;&#x430;&quot;</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]] <span class="hljs-keyword">do</span> puts(x) <span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># ii) each</span>
+[<span class="hljs-number">1</span>, <span class="hljs-string">&quot;&#x434;&#x432;&#x430;&quot;</span>, [<span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>]].each <span class="hljs-keyword">do</span> |x| puts(x) <span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x417;&#x432;&#x435;&#x440;&#x43D;&#x456;&#x442;&#x44C; &#x443;&#x432;&#x430;&#x433;&#x443;, &#x449;&#x43E; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; <code>do</code> &#x454; &#x43D;&#x435;&#x43E;&#x431;&#x43E;&#x432;&#x2019;&#x44F;&#x437;&#x43A;&#x43E;&#x432;&#x438;&#x43C; &#x434;&#x43B;&#x44F; &#x446;&#x438;&#x43A;&#x43B;&#x443; <code>for</code>, &#x44F;&#x43A;&#x438;&#x439; &#x437;&#x430;&#x439;&#x43C;&#x430;&#x454; &#x434;&#x435;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x430; &#x440;&#x44F;&#x434;&#x43A;&#x456;&#x432;, &#x43F;&#x440;&#x43E;&#x442;&#x435; &#x432;&#x43E;&#x43D;&#x43E; &#x43D;&#x435;&#x43E;&#x431;&#x445;&#x456;&#x434;&#x43D;&#x435;, &#x43A;&#x43E;&#x43B;&#x438; &#x446;&#x438;&#x43A;&#x43B; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x438;&#x439; &#x443; &#x43E;&#x434;&#x43D;&#x43E;&#x43C;&#x443; &#x440;&#x44F;&#x434;&#x43A;&#x443;:</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># &#x422;&#x443;&#x442; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; &quot;do&quot; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x443;&#x43F;&#x443;&#x441;&#x442;&#x438;&#x442;&#x438;</span>
+<span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> [<span class="hljs-string">&apos;&#x43E;&#x434;&#x438;&#x43D;&apos;</span>, <span class="hljs-string">&apos;&#x434;&#x432;&#x430;&apos;</span>, <span class="hljs-string">&apos;&#x442;&#x440;&#x438;&apos;</span>]
+  puts(s)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># &#x41F;&#x440;&#x43E;&#x442;&#x435; &#x442;&#x443;&#x442; &#x432;&#x43E;&#x43D;&#x43E; &#x454; &#x43E;&#x431;&#x43E;&#x432;&#x2019;&#x44F;&#x437;&#x43A;&#x43E;&#x432;&#x438;&#x43C;</span>
+<span class="hljs-keyword">for</span> s <span class="hljs-keyword">in</span> [<span class="hljs-string">&apos;&#x43E;&#x434;&#x438;&#x43D;&apos;</span>, <span class="hljs-string">&apos;&#x434;&#x432;&#x430;&apos;</span>, <span class="hljs-string">&apos;&#x442;&#x440;&#x438;&apos;</span>] <span class="hljs-keyword">do</span> puts(s) <span class="hljs-keyword">end</span>
+</code></pre>
+<p><strong><code>for_to.rb</code></strong>:</p>
+<blockquote>
+<h3 id="&#x44F;&#x43A;-&#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x438;-&#x437;&#x432;&#x438;&#x447;&#x430;&#x439;&#x43D;&#x438;&#x439;-&#x446;&#x438;&#x43A;&#x43B;-for">&#x42F;&#x43A; &#x43D;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x442;&#x438; <em>&#x437;&#x432;&#x438;&#x447;&#x430;&#x439;&#x43D;&#x438;&#x439;</em> &#x446;&#x438;&#x43A;&#x43B; <code>for</code>&#x2026;</h3>
+<p>&#x42F;&#x43A;&#x449;&#x43E; &#x432;&#x430;&#x43C; &#x437;&#x43D;&#x430;&#x434;&#x43E;&#x431;&#x438;&#x442;&#x44C;&#x441;&#x44F; &#x431;&#x456;&#x43B;&#x44C;&#x448; &#x442;&#x440;&#x430;&#x434;&#x438;&#x446;&#x456;&#x439;&#x43D;&#x438;&#x439; &#x446;&#x438;&#x43A;&#x43B; <code>for</code>, &#x432;&#x438; &#x437;&#x430;&#x432;&#x436;&#x434;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; <em>&#x437;&#x456;&#x43C;&#x456;&#x442;&#x443;&#x432;&#x430;&#x442;&#x438;</em> &#x439;&#x43E;&#x433;&#x43E; &#x432; Ruby, &#x44F;&#x43A;&#x449;&#x43E; &#x446;&#x438;&#x43A;&#x43B; <code>for</code> &#x456;&#x442;&#x435;&#x440;&#x443;&#x432;&#x430;&#x442;&#x438;&#x43C;&#x435; &#x43F;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;&#x445; &#x43F;&#x440;&#x43E;&#x43C;&#x456;&#x436;&#x43A;&#x443;. &#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, &#x43E;&#x441;&#x44C; &#x44F;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x442;&#x438; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x443; &#x446;&#x438;&#x43A;&#x43B;&#x443; <code>for</code>, &#x449;&#x43E;&#x431; &#x43F;&#x43E;&#x440;&#x430;&#x445;&#x443;&#x432;&#x430;&#x442;&#x438; &#x432;&#x456;&#x434; 1 &#x434;&#x43E; 10, &#x432;&#x438;&#x432;&#x43E;&#x434;&#x44F;&#x447;&#x438; &#x457;&#x457; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x43D;&#x430; &#x43A;&#x43E;&#x436;&#x43D;&#x456;&#x439; &#x456;&#x442;&#x435;&#x440;&#x430;&#x446;&#x456;&#x457; &#x446;&#x438;&#x43A;&#x43B;&#x443;:</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> (<span class="hljs-number">1</span>..<span class="hljs-number">10</span>) <span class="hljs-keyword">do</span>
+  puts(i)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x426;&#x435; &#x43C;&#x43E;&#x436;&#x435; &#x431;&#x443;&#x442;&#x438; &#x43F;&#x435;&#x440;&#x435;&#x437;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x43E; &#x437; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44F;&#x43C; <code>each</code>:</p>
+<pre><code class="lang-ruby">(<span class="hljs-number">1</span>..<span class="hljs-number">10</span>).each <span class="hljs-keyword">do</span> |i|
+  puts(i)
+<span class="hljs-keyword">end</span>
+</code></pre>
+</blockquote>
+<p>&#x422;&#x438;&#x43C; &#x43D;&#x435; &#x43C;&#x435;&#x43D;&#x448;&#x435;, &#x437;&#x432;&#x435;&#x440;&#x43D;&#x456;&#x442;&#x44C; &#x443;&#x432;&#x430;&#x433;&#x443; &#x43D;&#x430; &#x442;&#x435;, &#x449;&#x43E; &#x432;&#x438;&#x440;&#x430;&#x437; &#x43F;&#x440;&#x43E;&#x43C;&#x456;&#x436;&#x43A;&#x443;, &#x44F;&#x43A; &#x43E;&#x442; <code>1..3</code>, &#x43F;&#x43E;&#x432;&#x438;&#x43D;&#x435;&#x43D; &#x431;&#x443;&#x442;&#x438; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x430;&#x43D;&#x438;&#x439; &#x43C;&#x456;&#x436; &#x434;&#x432;&#x43E;&#x43C;&#x430; &#x43A;&#x440;&#x443;&#x433;&#x43B;&#x438;&#x43C;&#x438; &#x434;&#x443;&#x436;&#x43A;&#x430;&#x43C;&#x438;, &#x43F;&#x440;&#x438; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <code>each</code>, &#x432; &#x456;&#x43D;&#x448;&#x43E;&#x43C;&#x443; &#x432;&#x438;&#x43F;&#x430;&#x434;&#x43A;&#x443; Ruby &#x43F;&#x43E;&#x434;&#x443;&#x43C;&#x430;&#x454;, &#x449;&#x43E; &#x432;&#x438; &#x43D;&#x430;&#x43C;&#x430;&#x433;&#x430;&#x454;&#x442;&#x435;&#x441;&#x44C; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x430;&#x442;&#x438; <code>each</code>, &#x44F;&#x43A; &#x43C;&#x435;&#x442;&#x43E;&#x434; &#x43E;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x437; &#x447;&#x438;&#x441;&#x435;&#x43B; (<code>FixNum</code>), &#x437;&#x430;&#x43C;&#x456;&#x441;&#x442;&#x44C; &#x446;&#x456;&#x43B;&#x43E;&#x433;&#x43E; &#x432;&#x438;&#x440;&#x430;&#x437;&#x443; (<code>Range</code>). &#x41F;&#x440;&#x43E;&#x442;&#x435; &#x434;&#x443;&#x436;&#x43A;&#x438; &#x454; &#x43D;&#x435;&#x43E;&#x431;&#x43E;&#x432;&#x2019;&#x44F;&#x437;&#x43A;&#x43E;&#x432;&#x438;&#x43C;&#x438;, &#x44F;&#x43A;&#x449;&#x43E; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; &#x43F;&#x440;&#x43E;&#x43C;&#x456;&#x436;&#x43E;&#x43A; &#x437; &#x446;&#x438;&#x43A;&#x43B;&#x43E;&#x43C; <code>for</code>.</p>
+<p>&#x41F;&#x440;&#x438; &#x456;&#x442;&#x435;&#x440;&#x430;&#x446;&#x456;&#x457; &#x43F;&#x43E; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x437; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x433;&#x43E;&#x44E; <code>each</code>, &#x431;&#x43B;&#x43E;&#x43A; &#x43A;&#x43E;&#x434;&#x443; &#x43C;&#x456;&#x436; <code>do</code> &#x442;&#x430; <code>end</code> &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; (&#x43E;&#x447;&#x435;&#x432;&#x438;&#x434;&#x43D;&#x43E;, &#x447;&#x438; &#x43D;&#x435; &#x442;&#x430;&#x43A;?) <em>&#x431;&#x43B;&#x43E;&#x43A;&#x43E;&#x43C; &#x456;&#x442;&#x435;&#x440;&#x430;&#x442;&#x43E;&#x440;&#x430;</em>.</p>
+<blockquote>
+<p><strong>&#x41F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x431;&#x43B;&#x43E;&#x43A;&#x443;.</strong> &#x423; Ruby &#x431;&#x443;&#x434;&#x44C;&#x2013;&#x44F;&#x43A;&#x456; &#x437;&#x43C;&#x456;&#x43D;&#x43D;&#x456;, &#x44F;&#x43A;&#x456; &#x43E;&#x433;&#x43E;&#x43B;&#x43E;&#x448;&#x435;&#x43D;&#x456; &#x43C;&#x456;&#x436; &#x432;&#x435;&#x440;&#x442;&#x438;&#x43A;&#x430;&#x43B;&#x44C;&#x43D;&#x438;&#x43C;&#x438; &#x440;&#x438;&#x441;&#x43A;&#x430;&#x43C;&#x438; &#x43D;&#x430; &#x43F;&#x43E;&#x447;&#x430;&#x442;&#x43A;&#x443; &#x431;&#x43B;&#x43E;&#x43A;&#x443;, &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x44E;&#x442;&#x44C;&#x441;&#x44F; <em>&#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x430;&#x43C;&#x438; &#x431;&#x43B;&#x43E;&#x43A;&#x443;</em>. &#x41A;&#x440;&#x456;&#x43C; &#x446;&#x44C;&#x43E;&#x433;&#x43E;, &#x431;&#x43B;&#x43E;&#x43A; &#x43F;&#x440;&#x430;&#x446;&#x44E;&#x454; &#x44F;&#x43A; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x44F;, &#x430; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x431;&#x43B;&#x43E;&#x43A;&#x443; &#x2014; &#x44F;&#x43A; &#x441;&#x43F;&#x438;&#x441;&#x43E;&#x43A; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x456;&#x432; &#x444;&#x443;&#x43D;&#x43A;&#x446;&#x456;&#x457;. &#x41C;&#x435;&#x442;&#x43E;&#x434; <code>each</code> &#x437;&#x430;&#x43F;&#x443;&#x441;&#x43A;&#x430;&#x454; &#x43A;&#x43E;&#x434; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x431;&#x43B;&#x43E;&#x43A;&#x443; &#x456; &#x43F;&#x435;&#x440;&#x435;&#x434;&#x430;&#x454; &#x432; &#x43D;&#x44C;&#x43E;&#x433;&#x43E; &#x430;&#x440;&#x433;&#x443;&#x43C;&#x435;&#x43D;&#x442;&#x438;, &#x44F;&#x43A;&#x456; &#x43E;&#x442;&#x440;&#x438;&#x43C;&#x443;&#x44E;&#x442;&#x44C;&#x441;&#x44F; &#x437; &#x43A;&#x43E;&#x43B;&#x435;&#x43A;&#x446;&#x456;&#x457; (&#x43D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, &#x437; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443;).</p>
+</blockquote>
+<h2 id="&#x431;&#x43B;&#x43E;&#x43A;&#x438;">&#x411;&#x43B;&#x43E;&#x43A;&#x438;</h2>
+<p>Ruby &#x43C;&#x430;&#x454; &#x430;&#x43B;&#x44C;&#x442;&#x435;&#x440;&#x43D;&#x430;&#x442;&#x438;&#x432;&#x43D;&#x438;&#x439; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x434;&#x43B;&#x44F; &#x432;&#x438;&#x43E;&#x43A;&#x440;&#x435;&#x43C;&#x43B;&#x435;&#x43D;&#x43D;&#x44F; &#x431;&#x43B;&#x43E;&#x43A;&#x456;&#x432;. &#x412;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; <code>do..end</code> &#x442;&#x430;&#x43A;&#x2026;</p>
+<p><strong><code>block_syntax.rb</code></strong>:</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># do..end</span>
+[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]].each <span class="hljs-keyword">do</span> |a,b,c|
+  puts(<span class="hljs-string">&quot;<span class="hljs-subst">#{a}</span>, <span class="hljs-subst">#{b}</span>, <span class="hljs-subst">#{c}</span>&quot;</span>)
+<span class="hljs-keyword">end</span>
+</code></pre>
+<p>&#x410;&#x431;&#x43E; &#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44C; &#x444;&#x456;&#x433;&#x443;&#x440;&#x43D;&#x438;&#x43C;&#x438; &#x434;&#x443;&#x436;&#x43A;&#x430;&#x43C;&#x438; <code>{..}</code> &#x43E;&#x441;&#x44C; &#x442;&#x430;&#x43A;:</p>
+<pre><code class="lang-ruby"><span class="hljs-comment"># curly braces {..}</span>
+[[<span class="hljs-number">1</span>,<span class="hljs-number">2</span>,<span class="hljs-number">3</span>],[<span class="hljs-number">3</span>,<span class="hljs-number">4</span>,<span class="hljs-number">5</span>],[<span class="hljs-number">6</span>,<span class="hljs-number">7</span>,<span class="hljs-number">8</span>]].each { |a,b,c|
+  puts(<span class="hljs-string">&quot;<span class="hljs-subst">#{a}</span>, <span class="hljs-subst">#{b}</span>, <span class="hljs-subst">#{c}</span>&quot;</span>)
+}
+</code></pre>
+<p>&#x41D;&#x435; &#x432;&#x430;&#x436;&#x43B;&#x438;&#x432;&#x43E;, &#x44F;&#x43A;&#x456; &#x43F;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F; &#x432;&#x438; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x454;&#x442;&#x435;, &#x432;&#x438; &#x43C;&#x430;&#x454;&#x442;&#x435; &#x431;&#x443;&#x442;&#x438; &#x43F;&#x435;&#x432;&#x43D;&#x456; &#x43B;&#x438;&#x448;&#x435; &#x432; &#x442;&#x43E;&#x43C;&#x443;, &#x449;&#x43E; &#x432;&#x456;&#x434;&#x43A;&#x440;&#x438;&#x432;&#x430;&#x44E;&#x447;&#x435; &#x43F;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;, <code>{</code> &#x430;&#x431;&#x43E; <code>do</code>, &#x440;&#x43E;&#x437;&#x43C;&#x456;&#x449;&#x435;&#x43D;&#x435; &#x43D;&#x430; &#x442;&#x43E;&#x43C;&#x443; &#x436; &#x440;&#x44F;&#x434;&#x43A;&#x443;, &#x449;&#x43E; &#x456; &#x43C;&#x435;&#x442;&#x43E;&#x434; <code>each</code>. &#x41F;&#x435;&#x440;&#x435;&#x43D;&#x435;&#x441;&#x435;&#x43D;&#x43D;&#x44F; &#x43D;&#x430; &#x43D;&#x43E;&#x432;&#x438;&#x439; &#x440;&#x44F;&#x434;&#x43E;&#x43A; &#x43C;&#x456;&#x436; <code>each</code> &#x442;&#x430; &#x432;&#x456;&#x434;&#x43A;&#x440;&#x438;&#x432;&#x430;&#x44E;&#x447;&#x438;&#x43C; &#x43F;&#x43E;&#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;&#x43C; &#x441;&#x43F;&#x440;&#x438;&#x447;&#x438;&#x43D;&#x438;&#x442;&#x44C; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x447;&#x43D;&#x443; &#x43F;&#x43E;&#x43C;&#x438;&#x43B;&#x43A;&#x443;.</p>
+<h2 id="&#x446;&#x438;&#x43A;&#x43B;-while">&#x426;&#x438;&#x43A;&#x43B; <code>while</code></h2>
+<p>Ruby &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43C;&#x430;&#x454; &#x434;&#x435;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x430; &#x456;&#x43D;&#x448;&#x438;&#x445; &#x43A;&#x43E;&#x43D;&#x441;&#x442;&#x440;&#x443;&#x43A;&#x446;&#x456;&#x439; &#x434;&#x43B;&#x44F; &#x446;&#x438;&#x43A;&#x43B;&#x456;&#x432;. &#x41E;&#x441;&#x44C; &#x44F;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x43F;&#x440;&#x430;&#x446;&#x44E;&#x432;&#x430;&#x442;&#x438; &#x437; &#x446;&#x438;&#x43A;&#x43B;&#x43E;&#x43C; <code>while</code> (&#x43F;&#x43E;&#x43A;&#x438;):</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">while</span> tired     <span class="hljs-comment"># &#x43F;&#x43E;&#x43A;&#x438; &#x432;&#x442;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x439;</span>
+  sleep         <span class="hljs-comment">#   &#x441;&#x43F;&#x430;&#x442;&#x438;</span>
+<span class="hljs-keyword">end</span>             <span class="hljs-comment">#</span>
+</code></pre>
+<p>&#x410;&#x431;&#x43E;, &#x437;&#x430;&#x43F;&#x438;&#x441;&#x443;&#x44E;&#x447;&#x438; &#x43F;&#x43E; &#x456;&#x43D;&#x448;&#x43E;&#x43C;&#x443;:</p>
+<pre><code class="lang-ruby">sleep <span class="hljs-keyword">while</span> tired   <span class="hljs-comment"># &#x441;&#x43F;&#x430;&#x442;&#x438; &#x43F;&#x43E;&#x43A;&#x438; &#x432;&#x442;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x439;</span>
+</code></pre>
+<p>&#x426;&#x456; &#x434;&#x432;&#x430; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x438; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x44E;&#x442;&#x44C; &#x43E;&#x434;&#x43D;&#x456; &#x456; &#x442;&#x456; &#x436; &#x434;&#x456;&#x457;, &#x43D;&#x435; &#x434;&#x438;&#x432;&#x43B;&#x44F;&#x447;&#x438;&#x441;&#x44C; &#x43D;&#x430; &#x442;&#x435;, &#x449;&#x43E; &#x457;&#x445; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x432;&#x456;&#x434;&#x440;&#x456;&#x437;&#x43D;&#x44F;&#x454;&#x442;&#x44C;&#x441;&#x44F;. &#x423; &#x43F;&#x435;&#x440;&#x448;&#x43E;&#x43C;&#x443; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x456;, &#x43A;&#x43E;&#x434; &#x43C;&#x456;&#x436; <code>while</code> &#x442;&#x430; <code>end</code> (&#x442;&#x443;&#x442; &#x446;&#x435; &#x432;&#x438;&#x43A;&#x43B;&#x438;&#x43A; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x443; <code>sleep</code>) &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F;, &#x43F;&#x43E;&#x43A;&#x438; &#x442;&#x435;&#x441;&#x442;&#x43E;&#x432;&#x430; &#x431;&#x443;&#x43B;&#x435;&#x432;&#x430; &#x443;&#x43C;&#x43E;&#x432;&#x430; (&#x44F;&#x43A;&#x430;, &#x443; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x432;&#x438;&#x43F;&#x430;&#x434;&#x43A;&#x443;, &#x454; &#x437;&#x43D;&#x430;&#x447;&#x435;&#x43D;&#x43D;&#x44F;&#x43C;, &#x44F;&#x43A;&#x435; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43C;&#x435;&#x442;&#x43E;&#x434;&#x43E;&#x43C; <code>tired</code>) &#x437;&#x430;&#x43B;&#x438;&#x448;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x456;&#x441;&#x442;&#x438;&#x43D;&#x43D;&#x43E;&#x44E;.</p>
+<p>&#x42F;&#x43A; &#x456; &#x432; &#x446;&#x438;&#x43A;&#x43B;&#x430;&#x445; <code>for</code>, &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; <code>do</code> &#x43C;&#x456;&#x436; &#x442;&#x435;&#x441;&#x442;&#x43E;&#x432;&#x43E;&#x44E; &#x443;&#x43C;&#x43E;&#x432;&#x43E;&#x44E; &#x442;&#x430; &#x43A;&#x43E;&#x434;&#x43E;&#x43C;, &#x44F;&#x43A;&#x438;&#x439; &#x43C;&#x430;&#x454; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44C;, &#x44F;&#x43A;&#x449;&#x43E; &#x432;&#x43E;&#x43D;&#x438; &#x43D;&#x435; &#x441;&#x442;&#x43E;&#x44F;&#x442;&#x44C; &#x43D;&#x430; &#x43E;&#x434;&#x43D;&#x43E;&#x43C;&#x443; &#x440;&#x44F;&#x434;&#x43A;&#x443;, &#x454; &#x43D;&#x435;&#x43E;&#x431;&#x43E;&#x432;&#x2019;&#x44F;&#x437;&#x43A;&#x43E;&#x432;&#x438;&#x43C;; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; <code>do</code>, &#x432;&#x456;&#x434;&#x43F;&#x43E;&#x432;&#x456;&#x434;&#x43D;&#x43E;, &#x43E;&#x431;&#x43E;&#x432;&#x2019;&#x44F;&#x437;&#x43A;&#x43E;&#x432;&#x435;, &#x44F;&#x43A;&#x449;&#x43E; &#x442;&#x435;&#x441;&#x442;&#x43E;&#x432;&#x430; &#x443;&#x43C;&#x43E;&#x432;&#x430; &#x456; &#x43A;&#x43E;&#x434; &#x437;&#x43D;&#x430;&#x445;&#x43E;&#x434;&#x44F;&#x442;&#x44C;&#x441;&#x44F; &#x43D;&#x430; &#x43E;&#x434;&#x43D;&#x43E;&#x43C;&#x443; &#x440;&#x44F;&#x434;&#x43A;&#x443;.</p>
+<h2 id="&#x43C;&#x43E;&#x434;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x438;-while">&#x41C;&#x43E;&#x434;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x438; <code>while</code></h2>
+<p>&#x423; &#x456;&#x43D;&#x448;&#x456;&#x439; &#x432;&#x435;&#x440;&#x441;&#x456;&#x457; &#x446;&#x438;&#x43A;&#x43B;&#x443; (<code>sleep while tired</code>), &#x43A;&#x43E;&#x434;, &#x44F;&#x43A;&#x438;&#x439; &#x43C;&#x430;&#x454; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44C; (<code>sleep</code>), &#x441;&#x442;&#x43E;&#x457;&#x442;&#x44C; &#x43F;&#x435;&#x440;&#x435;&#x434; &#x442;&#x435;&#x441;&#x442;&#x43E;&#x432;&#x43E;&#x44E; &#x443;&#x43C;&#x43E;&#x432;&#x43E;&#x44E; (<code>while tired</code>). &#x422;&#x430;&#x43A;&#x438;&#x439; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x43D;&#x430;&#x437;&#x438;&#x432;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; <em>&#x43C;&#x43E;&#x434;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440;&#x43E;&#x43C; while</em>. &#x42F;&#x43A;&#x449;&#x43E; &#x432;&#x438; &#x445;&#x43E;&#x447;&#x435;&#x442;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x442;&#x438; &#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x430; &#x432;&#x438;&#x440;&#x430;&#x437;&#x456;&#x432;, &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x44E;&#x447;&#x438; &#x442;&#x430;&#x43A;&#x438;&#x439; &#x437;&#x430;&#x43F;&#x438;&#x441;, &#x432;&#x438; &#x43C;&#x43E;&#x436;&#x435;&#x442;&#x435; &#x43E;&#x433;&#x43E;&#x440;&#x43D;&#x443;&#x442;&#x438; &#x457;&#x445; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x438;&#x43C;&#x438; &#x441;&#x43B;&#x43E;&#x432;&#x430;&#x43C;&#x438; <code>begin</code> &#x442;&#x430; <code>end</code>:</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">begin</span>               <span class="hljs-comment">#</span>
+    sleep           <span class="hljs-comment">#   &#x441;&#x43F;&#x430;&#x442;&#x438;</span>
+    snore           <span class="hljs-comment">#   &#x445;&#x440;&#x43E;&#x43F;&#x456;&#x442;&#x438;</span>
+<span class="hljs-keyword">end</span> <span class="hljs-keyword">while</span> tired     <span class="hljs-comment"># &#x43F;&#x43E;&#x43A;&#x438; &#x432;&#x442;&#x43E;&#x43C;&#x43B;&#x435;&#x43D;&#x438;&#x439;</span>
+</code></pre>
+<p>&#x41E;&#x441;&#x44C; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, &#x44F;&#x43A;&#x438;&#x439; &#x43F;&#x43E;&#x43A;&#x430;&#x437;&#x443;&#x454; &#x440;&#x456;&#x437;&#x43D;&#x456; &#x430;&#x43B;&#x44C;&#x442;&#x435;&#x440;&#x43D;&#x430;&#x442;&#x438;&#x432;&#x43D;&#x456; &#x437;&#x430;&#x43F;&#x438;&#x441;&#x438;:</p>
+<p><strong><code>while.rb</code></strong>:</p>
+<pre><code class="lang-ruby">$hours_asleep = <span class="hljs-number">0</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">tired</span></span>
+    <span class="hljs-keyword">if</span> $hours_asleep &gt;= <span class="hljs-number">8</span> <span class="hljs-keyword">then</span>
+        $hours_asleep = <span class="hljs-number">0</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>
+    <span class="hljs-keyword">else</span>
+        $hours_asleep += <span class="hljs-number">1</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>
+    <span class="hljs-keyword">end</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">snore</span></span>
+    puts(<span class="hljs-string">&apos;&#x445;&#x440;&#x430;&#x43F;....&apos;</span>)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">sleep</span></span>
+    puts(<span class="hljs-string">&quot;z&quot;</span> * $hours_asleep)
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">while</span> tired <span class="hljs-keyword">do</span> sleep <span class="hljs-keyword">end</span>    <span class="hljs-comment"># &#x43E;&#x434;&#x43D;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x43E;&#x432;&#x438;&#x439; &#x446;&#x438;&#x43A;&#x43B; while</span>
+
+<span class="hljs-keyword">while</span> tired                 <span class="hljs-comment"># &#x431;&#x430;&#x433;&#x430;&#x442;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x43E;&#x432;&#x438;&#x439; &#x446;&#x438;&#x43A;&#x43B; while</span>
+    sleep
+<span class="hljs-keyword">end</span>
+
+sleep <span class="hljs-keyword">while</span> tired           <span class="hljs-comment"># &#x43E;&#x434;&#x43D;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x43E;&#x432;&#x438;&#x439; &#x43C;&#x43E;&#x434;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440; while</span>
+
+<span class="hljs-keyword">begin</span>                       <span class="hljs-comment"># &#x431;&#x430;&#x433;&#x430;&#x442;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x43E;&#x432;&#x438;&#x439; &#x43C;&#x43E;&#x434;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440; while</span>
+    sleep
+    snore
+<span class="hljs-keyword">end</span> <span class="hljs-keyword">while</span> tired
+</code></pre>
+<p>&#x41E;&#x441;&#x442;&#x430;&#x43D;&#x43D;&#x456;&#x439; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434; (&#x431;&#x430;&#x433;&#x430;&#x442;&#x43E;&#x440;&#x44F;&#x434;&#x43A;&#x43E;&#x432;&#x438;&#x439; &#x43C;&#x43E;&#x434;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440; <code>while</code> modifier) &#x43F;&#x43E;&#x442;&#x440;&#x435;&#x431;&#x443;&#x454; &#x434;&#x435;&#x442;&#x430;&#x43B;&#x44C;&#x43D;&#x456;&#x448;&#x43E;&#x433;&#x43E; &#x440;&#x43E;&#x437;&#x433;&#x43B;&#x44F;&#x434;&#x443;, &#x43E;&#x441;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x438; &#x432;&#x456;&#x43D; &#x432;&#x456;&#x434;&#x43A;&#x440;&#x438;&#x432;&#x430;&#x454; &#x434;&#x43B;&#x44F; &#x43D;&#x430;&#x441; &#x43D;&#x43E;&#x432;&#x443; &#x432;&#x430;&#x436;&#x43B;&#x438;&#x432;&#x443; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x456;&#x43D;&#x43A;&#x443;. &#x42F;&#x43A;&#x449;&#x43E; &#x431;&#x43B;&#x43E;&#x43A; &#x43A;&#x43E;&#x434;&#x443;, &#x449;&#x43E; &#x432;&#x438;&#x437;&#x43D;&#x430;&#x447;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x447;&#x435;&#x440;&#x435;&#x437; <code>begin</code> &#x442;&#x430; <code>end</code>, &#x43F;&#x435;&#x440;&#x435;&#x434;&#x443;&#x454; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x446;&#x456; <code>while</code>, &#x446;&#x435;&#x439; &#x43A;&#x43E;&#x434; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43F;&#x440;&#x438;&#x43D;&#x430;&#x439;&#x43C;&#x43D;&#x456; &#x43E;&#x434;&#x438;&#x43D; &#x440;&#x430;&#x437;. &#x423; &#x456;&#x43D;&#x448;&#x438;&#x445; &#x446;&#x438;&#x43A;&#x43B;&#x430;&#x445; <code>while</code>, &#x43A;&#x43E;&#x434; &#x43D;&#x456;&#x43A;&#x43E;&#x43B;&#x438; &#x43D;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F;, &#x44F;&#x43A;&#x449;&#x43E; &#x431;&#x443;&#x43B;&#x435;&#x432;&#x430; &#x443;&#x43C;&#x43E;&#x432;&#x430; &#x432;&#x456;&#x434;&#x440;&#x430;&#x437;&#x443; &#x454; &#x456;&#x441;&#x442;&#x438;&#x43D;&#x43D;&#x43E;&#x44E;.</p>
+<p><strong><code>while2.rb</code></strong>:</p>
+<blockquote>
+<h3 id="&#x43A;&#x43E;&#x43B;&#x438;-&#x446;&#x438;&#x43A;&#x43B;-&#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F;-&#x43F;&#x440;&#x438;&#x43D;&#x430;&#x439;&#x43C;&#x43D;&#x456;-&#x43E;&#x434;&#x438;&#x43D;-&#x440;&#x430;&#x437;">&#x41A;&#x43E;&#x43B;&#x438; &#x446;&#x438;&#x43A;&#x43B; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43F;&#x440;&#x438;&#x43D;&#x430;&#x439;&#x43C;&#x43D;&#x456; &#x43E;&#x434;&#x438;&#x43D; &#x440;&#x430;&#x437;</h3>
+<p>&#x417;&#x430;&#x437;&#x432;&#x438;&#x447;&#x430;&#x439;, &#x446;&#x438;&#x43A;&#x43B; <code>while</code> &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; 0 &#x430;&#x431;&#x43E; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435; &#x440;&#x430;&#x437;&#x456;&#x432;, &#x43E;&#x441;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x438; &#x431;&#x443;&#x43B;&#x435;&#x432;&#x430; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x43A;&#x430; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; <em>&#x434;&#x43E;</em> &#x442;&#x43E;&#x433;&#x43E;, &#x44F;&#x43A; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x441;&#x430;&#x43C; &#x446;&#x438;&#x43A;&#x43B;; &#x44F;&#x43A;&#x449;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x43A;&#x430; &#x43F;&#x43E;&#x432;&#x435;&#x440;&#x442;&#x430;&#x454; <code>false</code>, &#x43A;&#x43E;&#x434; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x446;&#x438;&#x43A;&#x43B;&#x443; &#x43D;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43D;&#x456;&#x43A;&#x43E;&#x43B;&#x438;.</p>
+<p>&#x41E;&#x434;&#x43D;&#x430;&#x43A;, &#x44F;&#x43A;&#x449;&#x43E; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x43A;&#x430; <code>while</code> &#x441;&#x43B;&#x456;&#x434;&#x443;&#x454; &#x43F;&#x456;&#x441;&#x43B;&#x44F; &#x43A;&#x43E;&#x434;&#x443;, &#x44F;&#x43A;&#x438;&#x439; &#x43E;&#x433;&#x43E;&#x440;&#x43D;&#x443;&#x442;&#x438;&#x439; &#x432; <code>begin</code> &#x442;&#x430; <code>end</code>, &#x446;&#x438;&#x43A;&#x43B; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; 1 &#x430;&#x431;&#x43E; &#x431;&#x456;&#x43B;&#x44C;&#x448;&#x435; &#x440;&#x430;&#x437;&#x456;&#x432;, &#x442;&#x43E;&#x43C;&#x443; &#x449;&#x43E; &#x431;&#x443;&#x43B;&#x435;&#x432;&#x438;&#x439; &#x432;&#x438;&#x440;&#x430;&#x437; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x443;&#x454;&#x442;&#x44C;&#x441;&#x44F; <em>after</em> &#x43A;&#x43E;&#x434;&#x443; &#x432;&#x441;&#x435;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x456; &#x446;&#x438;&#x43A;&#x43B;&#x443;.</p>
+<p>&#x429;&#x43E;&#x431; &#x432;&#x456;&#x434;&#x447;&#x443;&#x442;&#x438; &#x440;&#x456;&#x437;&#x43D;&#x438;&#x446;&#x44E; &#x43C;&#x456;&#x436; &#x43F;&#x43E;&#x432;&#x435;&#x434;&#x456;&#x43D;&#x43A;&#x43E;&#x44E; &#x446;&#x438;&#x445; &#x434;&#x432;&#x43E;&#x445; &#x442;&#x438;&#x43F;&#x456;&#x432; &#x446;&#x438;&#x43A;&#x43B;&#x443; <code>while</code>, &#x437;&#x430;&#x43F;&#x443;&#x441;&#x442;&#x456;&#x442;&#x44C; <strong><code>while2.rb</code></strong>. &#x426;&#x456; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x438; &#x434;&#x43E;&#x43F;&#x43E;&#x43C;&#x43E;&#x436;&#x443;&#x442;&#x44C; &#x437;&#x440;&#x43E;&#x437;&#x443;&#x43C;&#x456;&#x442;&#x438; &#x43A;&#x440;&#x430;&#x449;&#x435;:</p>
+<pre><code class="lang-ruby">x = <span class="hljs-number">100</span>
+
+<span class="hljs-comment"># &#x41A;&#x43E;&#x434; &#x443; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x446;&#x438;&#x43A;&#x43B;&#x456; &#x43D;&#x456;&#x43A;&#x43E;&#x43B;&#x438; &#x43D;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F;</span>
+<span class="hljs-keyword">while</span> (x &lt; <span class="hljs-number">100</span>) <span class="hljs-keyword">do</span> puts(<span class="hljs-string">&apos;x &lt; 100&apos;</span>) <span class="hljs-keyword">end</span>
+
+<span class="hljs-comment"># &#x41A;&#x43E;&#x434; &#x443; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x446;&#x438;&#x43A;&#x43B;&#x456; &#x43D;&#x456;&#x43A;&#x43E;&#x43B;&#x438; &#x43D;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F;</span>
+puts(<span class="hljs-string">&apos;x &lt; 100&apos;</span>) <span class="hljs-keyword">while</span> (x &lt; <span class="hljs-number">100</span>)
+
+<span class="hljs-comment"># &#x41A;&#x43E;&#x434; &#x443; &#x446;&#x44C;&#x43E;&#x43C;&#x443; &#x446;&#x438;&#x43A;&#x43B;&#x456; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43E;&#x434;&#x438;&#x43D; &#x440;&#x430;&#x437;</span>
+<span class="hljs-keyword">begin</span> puts(<span class="hljs-string">&apos;x &lt; 100&apos;</span>) <span class="hljs-keyword">end</span> <span class="hljs-keyword">while</span> (x &lt; <span class="hljs-number">100</span>)
+</code></pre>
+</blockquote>
+<h2 id="&#x446;&#x438;&#x43A;&#x43B;-until">&#x426;&#x438;&#x43A;&#x43B; <code>until</code></h2>
+<p>Ruby &#x442;&#x430;&#x43A;&#x43E;&#x436; &#x43C;&#x430;&#x454; &#x446;&#x438;&#x43A;&#x43B; <code>until</code>, &#x44F;&#x43A;&#x438;&#x439; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x442;&#x440;&#x430;&#x43A;&#x442;&#x443;&#x432;&#x430;&#x442;&#x438; &#x44F;&#x43A; &#x446;&#x438;&#x43A;&#x43B; <em>&#x43F;&#x43E;&#x43A;&#x438; &#x43D;&#x435;</em>. &#x419;&#x43E;&#x433;&#x43E; &#x441;&#x438;&#x43D;&#x442;&#x430;&#x43A;&#x441;&#x438;&#x441; &#x442;&#x430; &#x43F;&#x430;&#x440;&#x430;&#x43C;&#x435;&#x442;&#x440;&#x438; &#x442;&#x430;&#x43A;&#x456; &#x436;, &#x44F;&#x43A; &#x456; &#x443; <code>while</code> &#x2013; &#x442;&#x43E;&#x431;&#x442;&#x43E; &#x442;&#x435;&#x441;&#x442;&#x43E;&#x432;&#x430; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x43A;&#x430; &#x442;&#x430; &#x43A;&#x43E;&#x434; &#x43C;&#x43E;&#x436;&#x443;&#x442;&#x44C; &#x440;&#x43E;&#x437;&#x442;&#x430;&#x448;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44C; &#x43D;&#x430; &#x43E;&#x434;&#x43D;&#x43E;&#x43C;&#x443; &#x440;&#x44F;&#x434;&#x43A;&#x443; (&#x437;&#x432;&#x456;&#x441;&#x43D;&#x43E;, &#x44F;&#x43A;&#x449;&#x43E; &#x43C;&#x456;&#x436; &#x43D;&#x438;&#x43C;&#x438; &#x454; &#x43A;&#x43B;&#x44E;&#x447;&#x43E;&#x432;&#x435; &#x441;&#x43B;&#x43E;&#x432;&#x43E; <code>do</code>) &#x430;&#x431;&#x43E; &#x43D;&#x430; &#x434;&#x435;&#x43A;&#x456;&#x43B;&#x44C;&#x43A;&#x43E;&#x445; &#x440;&#x44F;&#x434;&#x43A;&#x430;&#x445; (&#x442;&#x43E;&#x434;&#x456; <code>do</code> &#x43D;&#x435;&#x43E;&#x431;&#x43E;&#x432;&#x2019;&#x44F;&#x437;&#x43A;&#x43E;&#x432;&#x435;). &#x422;&#x430;&#x43A;&#x43E;&#x436;, &#x454; &#x43C;&#x43E;&#x434;&#x438;&#x444;&#x456;&#x43A;&#x430;&#x442;&#x43E;&#x440; <code>until</code>, &#x44F;&#x43A;&#x438;&#x439; &#x434;&#x430;&#x454; &#x432;&#x430;&#x43C; &#x43C;&#x43E;&#x436;&#x43B;&#x438;&#x432;&#x456;&#x441;&#x442;&#x44C; &#x440;&#x43E;&#x437;&#x43C;&#x456;&#x441;&#x442;&#x438;&#x442;&#x438; &#x43A;&#x43E;&#x434; &#x434;&#x43E; &#x442;&#x435;&#x441;&#x442;&#x43E;&#x432;&#x43E;&#x457; &#x43F;&#x435;&#x440;&#x435;&#x432;&#x456;&#x440;&#x43A;&#x438;. &#x42F;&#x43A;&#x449;&#x43E; &#x436; &#x432;&#x438; &#x43E;&#x433;&#x43E;&#x440;&#x442;&#x430;&#x454;&#x442;&#x435; &#x43A;&#x43E;&#x434; &#x43C;&#x456;&#x436; <code>begin</code> &#x442;&#x430; <code>end</code>, &#x43F;&#x430;&#x43C;&#x2019;&#x44F;&#x442;&#x430;&#x439;&#x442;&#x435;, &#x449;&#x43E; &#x432;&#x456;&#x43D; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x449;&#x43E;&#x43D;&#x430;&#x439;&#x43C;&#x435;&#x43D;&#x448;&#x435; &#x43E;&#x434;&#x438;&#x43D; &#x440;&#x430;&#x437;.</p>
+<p><strong><code>until.rb</code></strong>:</p>
+<p>&#x41E;&#x441;&#x44C; &#x43F;&#x440;&#x43E;&#x441;&#x442;&#x456; &#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;&#x438; &#x437; &#x446;&#x438;&#x43A;&#x43B;&#x43E;&#x43C; <code>until</code>:</p>
+<pre><code class="lang-ruby">i = <span class="hljs-number">10</span>
+
+<span class="hljs-keyword">until</span> i == <span class="hljs-number">10</span> <span class="hljs-keyword">do</span> puts(i) <span class="hljs-keyword">end</span>    <span class="hljs-comment"># &#x43D;&#x456;&#x43A;&#x43E;&#x43B;&#x438; &#x43D;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F;</span>
+
+<span class="hljs-keyword">until</span> i == <span class="hljs-number">10</span>                   <span class="hljs-comment"># &#x43D;&#x456;&#x43A;&#x43E;&#x43B;&#x438; &#x43D;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F;</span>
+    puts(i)
+    i += <span class="hljs-number">1</span>
+<span class="hljs-keyword">end</span>
+
+puts(i) <span class="hljs-keyword">until</span> i == <span class="hljs-number">10</span>           <span class="hljs-comment"># &#x43D;&#x456;&#x43A;&#x43E;&#x43B;&#x438; &#x43D;&#x435; &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F;</span>
+
+<span class="hljs-keyword">begin</span>                           <span class="hljs-comment"># &#x432;&#x438;&#x43A;&#x43E;&#x43D;&#x430;&#x454;&#x442;&#x44C;&#x441;&#x44F; &#x43E;&#x434;&#x438;&#x43D; &#x440;&#x430;&#x437;</span>
+    puts(i)
+<span class="hljs-keyword">end</span> <span class="hljs-keyword">until</span> i == <span class="hljs-number">10</span>
+</code></pre>
+<p>&#x41E;&#x431;&#x438;&#x434;&#x432;&#x430; &#x446;&#x438;&#x43A;&#x43B;&#x438; <code>while</code> &#x442;&#x430; <code>until</code>, &#x442;&#x430;&#x43A; &#x441;&#x430;&#x43C;&#x43E; &#x44F;&#x43A; &#x456; &#x446;&#x438;&#x43A;&#x43B; <code>for</code>, &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x432;&#x438;&#x43A;&#x43E;&#x440;&#x438;&#x441;&#x442;&#x43E;&#x432;&#x443;&#x432;&#x430;&#x442;&#x438; &#x434;&#x43B;&#x44F; &#x456;&#x442;&#x435;&#x440;&#x443;&#x432;&#x430;&#x43D;&#x43D;&#x44F; &#x43F;&#x43E; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x430;&#x445; &#x442;&#x430; &#x456;&#x43D;&#x448;&#x438;&#x445; &#x43A;&#x43E;&#x43B;&#x435;&#x43A;&#x446;&#x456;&#x44F;&#x445;. &#x41D;&#x430;&#x43F;&#x440;&#x438;&#x43A;&#x43B;&#x430;&#x434;, &#x43E;&#x441;&#x44C; &#x44F;&#x43A; &#x43C;&#x43E;&#x436;&#x43D;&#x430; &#x456;&#x442;&#x435;&#x440;&#x443;&#x432;&#x430;&#x442;&#x438;&#x441;&#x44C; &#x43F;&#x43E; &#x432;&#x441;&#x456;&#x445; &#x435;&#x43B;&#x435;&#x43C;&#x435;&#x43D;&#x442;&#x430;&#x445; &#x43C;&#x430;&#x441;&#x438;&#x432;&#x443;:</p>
+<pre><code class="lang-ruby"><span class="hljs-keyword">while</span> i &lt; arr.length
+    puts(arr[i])
+    i += <span class="hljs-number">1</span>
+<span class="hljs-keyword">end</span>
+
+<span class="hljs-keyword">until</span> i == arr.length
+    puts(arr[i])
+    i +=<span class="hljs-number">1</span>
+<span class="hljs-keyword">end</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06-Hashes.html#операції-над-хешами" class="navigation navigation-prev " aria-label="Previous page: Операції над хешами">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="07-Loops-and-Iterators.html#цикл-for" class="navigation navigation-next " aria-label="Next page: Цикл for">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Глава 7: Цикли та ітератори","level":"1.9","depth":1,"next":{"title":"Цикл for","level":"1.9.1","depth":2,"anchor":"#цикл-for","path":"chapters/07-Loops-and-Iterators.md","ref":"chapters/07-Loops-and-Iterators.md#цикл-for","articles":[]},"previous":{"title":"Операції над хешами","level":"1.8.3","depth":2,"anchor":"#операції-над-хешами","path":"chapters/06-Hashes.md","ref":"chapters/06-Hashes.md#операції-над-хешами","articles":[]},"dir":"ltr"},"config":{"gitbook":"3.x.x","theme":"default","variables":{},"plugins":["edit-link","github","ga","rss","github-buttons"],"pluginsConfig":{"github":{"url":"https://github.com/LambdaBooks/thelittlebookofruby"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"rss":{"categories":["frontend","js","javascript","es6","es2015","ecmascript"],"title":"Маленька книга про Ruby","description":"Український переклад книги «The Little Book Of Ruby».","author":"Denys Dovhan","site_url":"http://lambdabooks.github.io/thelittlebookofruby","feed_url":"http://lambdabooks.github.io/thelittlebookofruby/rss.xml","managingEditor":"email@denysdovhan.com (Denys Dovhan)","webMaster":"email@denysdovhan.com (Denys Dovhan)"},"highlight":{},"github-buttons":{"repo":"LambdaBooks/thelittlebookofruby","types":["star"],"size":"small"},"ga":{"configuration":"auto","token":"UA-40496885-8"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Редагувати","base":"https://github.com/LambdaBooks/thelittlebookofruby/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"chapters/07-Loops-and-Iterators.md","mtime":"2017-08-30T09:32:25.669Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2017-08-30T09:33:41.904Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-edit-link/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-rss/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
