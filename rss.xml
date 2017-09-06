@@ -4,7 +4,7 @@
         <description><![CDATA[Український переклад книги «The Little Book Of Ruby».]]></description>
         <link>http://lambdabooks.github.io/thelittlebookofruby</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 06 Sep 2017 12:08:47 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 06 Sep 2017 12:09:05 GMT</lastBuildDate>
         <atom:link href="http://lambdabooks.github.io/thelittlebookofruby/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
         <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
