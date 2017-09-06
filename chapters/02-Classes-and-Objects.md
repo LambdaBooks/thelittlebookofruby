@@ -18,7 +18,7 @@ object = MyClass.new
 
 Я небагато можу зробити з нашим об'єктом хоча б тому, що нічого не запрограмував в класі **MyClass**, з якого він був створений.
 
-**`object_class.rb`**:
+[**`object_class.rb`**](https://github.com/LambdaBooks/thelittlebookofruby/blob/master/examples/2/object_class.rb):
 
 > Насправді, якщо ви створите порожній клас як от `MyClass`, об'єкти створені від нього — не будуть зовсім безкорисними. Усі класи в  Ruby автоматично успадковують функціональність від класу `Object`. Тож, наш об'єкт `ob` може використовувати методи класу `Object`, наприклад такі, як `.class`  (виводить назву класу, якому належить наш клас):
 >
@@ -31,12 +31,12 @@ object = MyClass.new
 ```ruby
 class MyClass
   def saysomething
-    puts("Hello")
+    puts("Привіт")
   end
 end
 ```
 
-Тепер, якщо я створю об'єкт класу `MyClass`, я зможу викликати метод  `saysomething` цього об'єкта і вивести слово `"Hello"`:
+Тепер, якщо я створю об'єкт класу `MyClass`, я зможу викликати метод `saysomething` цього об'єкта і вивести слово `"Привіт"`:
 
 ```ruby
 ob = MyClass.new
@@ -69,8 +69,8 @@ yourdog = Dog.new
 Зараз ці дві собаки не мають імен. Тож наступне, що я повинен зробити, щоб задати їм імена — це викликати метод `set_name`:
 
 ```ruby
-mydog.set_name('Fido')
-yourdog.set_name('Bonzo')
+mydog.set_name('Фідо')
+yourdog.set_name('Бензо')
 ```
 
 Задавши імена собакам, мені потрібно мати спосіб дізнати їх пізніше. У кожної собаки повинно бути власне ім'я, тому давайте створимо метод `get_name`:
@@ -86,7 +86,7 @@ end
 **`dogs_and_cats.rb`**:
 
 ```ruby
-class Dog   
+class Dog
   def set_name(aName)
     @myname = aName
   end
@@ -105,7 +105,7 @@ end
 
 ```ruby
 mydog = Dog.new
-mydog.set_name('Fido')
+mydog.set_name('Фідо')
 puts mydog.get_name
 puts mydog.talk
 ```
@@ -116,15 +116,15 @@ puts mydog.talk
 
 ## Конструктор - new і initialize
 
-**`treasure.rb`**:
+[**`treasure.rb`**](https://github.com/LambdaBooks/thelittlebookofruby/blob/master/examples/2/object_class.rb):
 
-Зараз розглянемо ще один приклад класу. Відкрийте файл **`treasure.rb`**. Ми створимо пригодницьку гру з двома класами: `Thing` і `Treasure`. Клас `Thing` дуже схожий на клас `Dog` з нашої попередньої програми (крім того, що він не вміє гавкати).
+Зараз розглянемо ще один приклад класу. Відкрийте файл **`treasure.rb`**. Ми створимо пригодницьку гру з двома класами: `Thing` (Річ) і `Treasure` (Скарб). Клас `Thing` дуже схожий на клас `Dog` з нашої попередньої програми (крім того, що він не вміє гавкати).
 
 Однак, у класу `Treasure` є кілька цікавих особливостей. По-перше, в нього немає таких методів як `get_name` і `set_name`. Замість цього, у ньому визначений метод `initiaize`, який приймає два аргументи, а їх значення присвоюються змінним екземпляра `@name` і `@description`:
 
 ```ruby
 def initialize(aName, aDescription)
-  @name = aName
+  @name        = aName
   @description = aDescription
 end
 ```
@@ -146,7 +146,7 @@ t1.inspect
 Метод `inspect` визначений для всіх об'єктів Ruby. Він повертає рядок, що містить зручний для читання опис об'єкта. В даному випадку, він показує щось на зразок цього:
 
 ```ruby
-#<Treasure:0x28962f8 @description="an Elvish weapon forged of gold", @name="Sword">
+#<Treasure:0x28962f8 @description="ельфійська зброя, викована золотом", @name="Меч">
 ```
 
 Перше в цьому рядку це клас, якому належить об'єкт класу `Treasure`. За ним йде число, яке у вас може відрізнятися від написаного вище - це внутрішній ідентифікатор в Ruby для даного конкретного об'єкта. Останніми показані змінні нашого екземпляра та їх значення.
@@ -156,24 +156,22 @@ t1.inspect
 ```ruby
 class Treasure
   def initialize(aName, aDescription)
-    @name = aName
+    @name        = aName
     @description = aDescription
   end
 
-  def to_s # Перевизначення стандартного методу to_s
-    "The #{@name} Treasure is #{@description}\n"
+  def to_s # перезаписує метод to_s за замовчуванням
+    "Скарб #{@name} — це #{@description}\n"
   end
 end
 
-
-a = "hello"
+a = "привіт"
 b = 123
-c = Treasure.new("ring", "a glittery gold thing")
+c = Treasure.new("кільце", "блискуча золота річ")
 
 p(a)
 p(b)
 p(c)
-
 ```
 
 Ruby надає метод `p` для перевірки і відображення об'єктів.
@@ -196,8 +194,7 @@ class Treasure
   # тому об'єкти цього класу використовуватимуть стандартний метод `to_s`
 end
 
-
-t = Treasure.new("Sword", "A lovely Elvish weapon")
+t = Treasure.new("Меч", "чудова ельфійська зброя")
 print("Class.to_s: ")
 puts(Class.to_s)
 print("Object.to_s: ")
@@ -218,7 +215,7 @@ puts(t.inspect)
 
 Ви побачите, що, під час виклику методу `to_s` на таких класах, як `Class`, `Object`, `String` і `Treasure`, метод просто поверне їхні імена. А якщо ми його викличемо на об'єкті, як наприклад `t` екземпляр класу `Treasure` то він поверне той же ідентифікатор, що повертає метод `inspect`.
 
-**`treasure.rb`**:
+[**`treasure.rb`**](https://github.com/LambdaBooks/thelittlebookofruby/blob/master/examples/2/treasure.rb):
 
 ```ruby
 class Thing
@@ -233,25 +230,25 @@ end
 
 class Treasure
   def initialize(aName, aDescription)
-    @name = aName
+    @name        = aName
     @description = aDescription
   end
 
-  def to_s # Перевизначення стандартного методу to_s
-    "The #{@name} Treasure is #{@description}\n"
+  def to_s # перезаписує метод to_s за замовчуванням
+    "Скарб #{@name} — це #{@description}\n"
   end
 end
 
 thing1 = Thing.new
-thing1.set_name("A lovely Thing")
+thing1.set_name("Прекрасна річ")
 puts thing1.get_name
 
-t1 = Treasure.new("Sword", "an Elvish weapon forged of gold")
-t2 = Treasure.new("Ring", "a magic ring of great power")
+t1 = Treasure.new("Меч", "ельфійська зброя, викована золотом")
+t2 = Treasure.new("Кільце", "магічне кільце великої влади")
 puts t1.to_s
 puts t2.to_s
-# Метод `inspect` дозволяє заглянути в середину об'єкта
-puts "Inspecting 1st treasure: #{t1.inspect}"
+# Метод inspect дозволяє вам заглянути всередину об’єкта
+puts "Інспектуємо 1й скарб: #{t1.inspect}"
 ```
 
-Дивлячись на цей код, можна побачити, що місцями він повторюється. Зрештою, чому маючи клас `Thing`, який містить змінну `@name` і клас `Treasure`, який також містить цю саму змінну, кожна з них ініціалізуються окремо один від одного? Це здається логічним, якщо розглядати клас **Treasure** як тип **Thing**. Якби я хотів розвинути цю програму до справжньої пригодницької гри, інші об'єкти, такі як “кімнати” і “зброя” були б іншим типом класу `Think`. Думаю, пора почати роботу над правильною побудовою ієрархії класів. Спробуємо це зробити у наступній главі.
+Дивлячись на цей код, можна побачити, що місцями він повторюється. Зрештою, чому маючи клас `Thing`, який містить змінну `@name` і клас `Treasure`, який також містить цю саму змінну, кожна з них ініціалізуються окремо один від одного? Це здається логічним, якщо розглядати клас **Treasure** (Скарб) як тип **Thing** (Річ). Якби я хотів розвинути цю програму до справжньої пригодницької гри, інші об'єкти, такі як “кімнати” і “зброя” були б іншим типом класу `Think`. Думаю, пора почати роботу над правильною побудовою ієрархії класів. Спробуємо це зробити у наступній главі.
