@@ -116,7 +116,7 @@ puts mydog.talk
 
 ## Конструктор - new і initialize
 
-[**`treasure.rb`**](https://github.com/LambdaBooks/thelittlebookofruby/blob/master/examples/2/object_class.rb):
+[**`treasure.rb`**](https://github.com/LambdaBooks/thelittlebookofruby/blob/master/examples/2/treasure.rb):
 
 Зараз розглянемо ще один приклад класу. Відкрийте файл **`treasure.rb`**. Ми створимо пригодницьку гру з двома класами: `Thing` (Річ) і `Treasure` (Скарб). Клас `Thing` дуже схожий на клас `Dog` з нашої попередньої програми (крім того, що він не вміє гавкати).
 
