@@ -47,5 +47,5 @@ puts "Це treasure1: #{t1.inspect}"
 puts "Це treasure2: #{t2.inspect}"
 puts "t1 name=#{t1.get_name}, description=#{t1.get_description}, value=#{t1.get_value}"
 t1.set_value(100)
-t1.set_description(" (now somewhat tarnished)")
+t1.set_description(" (зараз трохи брудний)")
 puts "t1 (NOW) name=#{t1.get_name}, description=#{t1.get_description}, value=#{t1.get_value}"
