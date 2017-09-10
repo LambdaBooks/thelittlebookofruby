@@ -47,7 +47,6 @@
 Ви також можете надіслати кошти в підтримку проекту на картки:
 
 * **4149 4378 5069 5501** — Lambda Books
-* **5168 7554 0691 4446** — Сергій Гіба
 
 ### Перекласти розділ
 
@@ -59,7 +58,6 @@
 
 Цей переклад результат наполегливої та злагодженої роботи нашої команди:
 
-* [_Сергій Гіба_](https://twitter.com/sergogovich) — автор перекладу.
 * Допомога з перекладом — [_@wrdsld_](https://twitter.com/wrdsld)
 * [_Маріанна Чуприна_](https://twitter.com/marianna_ch_a) — коректор.
 * [_Олександр Закритий_](https://twitter.com/nevusnews) — коректор.
@@ -68,7 +66,7 @@
 
 **Переклад:**
 
-[CC BY-NC-ND 4.0][cc-by-nc-nd-4.0] © [Serhiy Giba](https://sergogovich.github.io) and LambdaBooks
+[CC BY-NC-ND 4.0][cc-by-nc-nd-4.0] © LambdaBooks
 
 **Оригінальний текст:**
 
