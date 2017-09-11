@@ -1,0 +1,20 @@
+--- 
+- !ruby/object:CD 
+  artist: Dolly Parton
+  name: Greatest Hits
+  numtracks: 20
+- !ruby/object:PopCD 
+  artist: Status Quo
+  genre: rock
+  name: Even Greater Hits
+  numtracks: 25
+- !ruby/object:ClassicalCD 
+  artist: Bjorling
+  composer: Verdi
+  conductor: Karajan
+  name: Aida
+  numtracks: 30
+- !ruby/object:CD 
+  artist: The Groovettes
+  name: Fab Grooves
+  numtracks: 12
