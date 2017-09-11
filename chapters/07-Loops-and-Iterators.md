@@ -156,10 +156,10 @@ sleep while tired   # спати поки втомлений
 У іншій версії циклу (`sleep while tired`), код, який має виконуватись (`sleep`), стоїть перед тестовою умовою (`while tired`). Такий синтаксис називається _модифікатором while_. Якщо ви хочете виконати кілька виразів, використовуючи такий запис, ви можете огорнути їх ключовими словами `begin` та `end`:
 
 ```ruby
-begin               #
-    sleep           #   спати
-    snore           #   хропіти
-end while tired     # поки втомлений
+begin            #
+  sleep          #   спати
+  snore          #   хропіти
+end while tired  # поки втомлений
 ```
 
 Ось приклад, який показує різні альтернативні записи:
@@ -170,34 +170,34 @@ end while tired     # поки втомлений
 $hours_asleep = 0
 
 def tired
-    if $hours_asleep >= 8 then
-        $hours_asleep = 0
-        return false
-    else
-        $hours_asleep += 1
-        return true
-    end
+  if $hours_asleep >= 8 then
+    $hours_asleep = 0
+    return false
+  else
+    $hours_asleep += 1
+    return true
+  end
 end
 
 def snore
-    puts('храп....')
+  puts('храп....')
 end
 
 def sleep
-    puts("z" * $hours_asleep)
+  puts("z" * $hours_asleep)
 end
 
-while tired do sleep end    # однорядковий цикл while
+while tired do sleep end  # однорядковий цикл while
 
-while tired                 # багаторядковий цикл while
-    sleep
+while tired               # багаторядковий цикл while
+  sleep
 end
 
-sleep while tired           # однорядковий модифікатор while
+sleep while tired         # однорядковий модифікатор while
 
-begin                       # багаторядковий модифікатор while
-    sleep
-    snore
+begin                     # багаторядковий модифікатор while
+  sleep
+  snore
 end while tired
 ```
 
@@ -237,17 +237,17 @@ Ruby також має цикл `until`, який можна трактуват�
 ```ruby
 i = 10
 
-until i == 10 do puts(i) end    # ніколи не виконається
+until i == 10 do puts(i) end  # ніколи не виконається
 
-until i == 10                   # ніколи не виконається
-    puts(i)
-    i += 1
+until i == 10                 # ніколи не виконається
+  puts(i)
+  i += 1
 end
 
-puts(i) until i == 10           # ніколи не виконається
+puts(i) until i == 10         # ніколи не виконається
 
-begin                           # виконається один раз
-    puts(i)
+begin                         # виконається один раз
+  puts(i)
 end until i == 10
 ```
 
@@ -255,12 +255,12 @@ end until i == 10
 
 ```ruby
 while i < arr.length
-    puts(arr[i])
-    i += 1
+  puts(arr[i])
+  i += 1
 end
 
 until i == arr.length
-    puts(arr[i])
-    i +=1
+  puts(arr[i])
+  i +=1
 end
 ```

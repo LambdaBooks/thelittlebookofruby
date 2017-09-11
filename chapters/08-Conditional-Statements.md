@@ -192,19 +192,19 @@ sleep while tired    # спати поки втомлений
 [**`if_unless_mod.rb`**](https://github.com/LambdaBooks/thelittlebookofruby/blob/master/examples/8/if_unless_mod.rb):
 
 ```ruby
-sleep if tired   # спати якщо втомлений
+sleep if tired  # спати якщо втомлений
 
-begin            #
-  sleep          #   спати
-  snore          #   хропіти
-end if tired     # якщо втомлений
+begin           #
+  sleep         #   спати
+  snore         #   хропіти
+end if tired    # якщо втомлений
 
-sleep unless not tired    # не спати якщо не втомлений
+sleep unless not tired  # не спати якщо не втомлений
 
-begin                     #
-  sleep                   #   спати
-  snore                   #   хропіти
-end unless not tired      # якщо не не втомлений
+begin                 #
+  sleep               #   спати
+  snore               #   хропіти
+end unless not tired  # якщо не не втомлений
 ```
 
 Стислість такого запису корисна, коли, приміром, вам потрібно швидко виконати добре визначену дію, якщо умова є істинною.

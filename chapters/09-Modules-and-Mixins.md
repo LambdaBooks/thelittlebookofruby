@@ -20,12 +20,12 @@ Ruby вирішує цю проблему, надаючи нам модулі. �
 
 ```ruby
 module MyModule
-    GOODMOOD = "веселий"
-    BADMOOD = "сварливий"
+  GOODMOOD = "веселий"
+  BADMOOD = "сварливий"
 
-    def greet
-        return "Я #{GOODMOOD}. А ти як?"
-    end
+  def greet
+    return "Я #{GOODMOOD}. А ти як?"
+  end
 end
 ```
 
@@ -37,7 +37,7 @@ end
 
 ```ruby
 def MyModule.greet
-    return "Я #{BADMOOD}. А ти як?"
+  return "Я #{BADMOOD}. А ти як?"
 end
 ```
 

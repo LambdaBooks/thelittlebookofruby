@@ -21,9 +21,9 @@ http://www.sapphiresteel.com
 ```ruby
 # збереження даних на диск у форматі YAML
 def saveDB
-    File.open($fn, 'w') { |f|
-        f.write($cd_arr.to_yaml)
-    }
+  File.open($fn, 'w') { |f|
+    f.write($cd_arr.to_yaml)
+  }
 end
 ```
 
@@ -33,8 +33,8 @@ YAML описує формат збереження даних у вигляді
 
 ```ruby
 def loadDB
-    input_data = File.read($fn)
-    $cd_arr = YAML::load(input_data)
+  input_data = File.read($fn)
+  $cd_arr = YAML::load(input_data)
 end
 ```
 
