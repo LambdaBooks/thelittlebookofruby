@@ -2,13 +2,13 @@
     <channel>
         <title><![CDATA[Маленька книга про Ruby]]></title>
         <description><![CDATA[Український переклад книги «The Little Book Of Ruby».]]></description>
-        <link>http://lambdabooks.github.io/thelittlebookofruby</link>
+        <link>http://lambdabooks.com/thelittlebookofruby</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 30 Sep 2017 08:49:21 GMT</lastBuildDate>
-        <atom:link href="http://lambdabooks.github.io/thelittlebookofruby/rss.xml" rel="self" type="application/rss+xml"/>
+        <lastBuildDate>Sat, 30 Sep 2017 08:55:24 GMT</lastBuildDate>
+        <atom:link href="http://lambdabooks.com/thelittlebookofruby/rss.xml" rel="self" type="application/rss+xml"/>
         <author><![CDATA[Denys Dovhan]]></author>
-        <managingEditor><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></managingEditor>
-        <webMaster><![CDATA[email@denysdovhan.com (Denys Dovhan)]]></webMaster>
+        <managingEditor><![CDATA[denysdovhan@gmail.com (Denys Dovhan)]]></managingEditor>
+        <webMaster><![CDATA[denysdovhan@gmail.com (Denys Dovhan)]]></webMaster>
         <category><![CDATA[frontend]]></category>
         <category><![CDATA[js]]></category>
         <category><![CDATA[javascript]]></category>
@@ -24,85 +24,85 @@ Build Status
 Twitter
 RSS
 Stars]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofruby</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofruby</guid>
+            <link>http://lambdabooks.com/thelittlebookofruby</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofruby</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Ласкаво просимо у «Маленьку книгу про Ruby»]]></title>
             <description><![CDATA[Ruby — це крос–платформна інтерпретована мова, яка має багато спільного з іншими “скриптовими” мовами, як от Perl чи Python. Однак, її версія об’єктної орієнтованості є більш ретельною і, у багатьох відношення, має багато спільного з великим прародичем “чистих” ООП мов, зокрема, мовою Smalltalk. Ruby була створена Юкіхіро Мацумото (Yukihiro Matsumoto) (відомого під псевдонімом Метц (Matz)) і вперше опублікована у 1995–у.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/00-Introduction.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/00-Introduction.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/00-Introduction.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/00-Introduction.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава перша]]></title>
             <description><![CDATA[Якщо ви читаєте цю книгу, то, мабуть, маєте бажання програмувати мовою Ruby, і якщо ви схожі на мене — вам вже хочеться прочитати її. Що ж, не будемо витрачати час дарма. Я припускаю, що у вас вже є встановлена мова Ruby, якщо ж ні - встановіть її і поверніться сюди.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/01-Strings-and-Methods.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/01-Strings-and-Methods.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/01-Strings-and-Methods.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/01-Strings-and-Methods.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава друга]]></title>
             <description><![CDATA[Досі ми використовували “стандартні” об'єкти Ruby, такі як цифри і рядки. Тепер розглянемо створення власних нових типів об'єктів. Як і в більшості об’єктно орієнтованих мов програмування, в Ruby об'єкт визначається класом. Клас подібний до креслення, з якого все будується. Це приклад дуже простого класу:]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/02-Classes-and-Objects.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/02-Classes-and-Objects.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/02-Classes-and-Objects.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/02-Classes-and-Objects.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава третя]]></title>
             <description><![CDATA[Ми закінчили попередній урок на тому, що створили два нових класи: Thing та Treasure. Якщо не брати до уваги те, що обидва класи мають схожий функціонал (обидва мають властивість name), між ними немає ніякого зв’язку. Наразі ці два класи досить прості, тому таке незначне повторення не грає великої ролі. Проте, коли ви почнете писати реальні програми більшої складності, ваші класи міститимуть численні змінні та методи, вам точно набридне перезаписувати одні й ті ж речі знову і знову.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/03-Class-Hierarchies.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/03-Class-Hierarchies.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/03-Class-Hierarchies.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/03-Class-Hierarchies.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава четверта]]></title>
             <description><![CDATA[Тепер, повертаючись до роботи над маленькою пригодницькою грою, яку я програмував раніше… Мені досі не подобається той факт, що в класах повно повторюваного коду для get та set аксесорів. Дайте мені подивитись, що я можу зробити, щоб виправити це.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/04-Accessors-Attributes-Class-Variables.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/04-Accessors-Attributes-Class-Variables.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/04-Accessors-Attributes-Class-Variables.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/04-Accessors-Attributes-Class-Variables.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава п’ята]]></title>
             <description><![CDATA[До цього часу, ми, в цілому, використовували об'єкти поодинці. В цій главі ми дізнаємось, як створити список об'єктів. Розпочнемо із розгляду найбільш поширеного типу структури списку - масиву.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/05-Arrays.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/05-Arrays.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/05-Arrays.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/05-Arrays.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава шоста]]></title>
             <description><![CDATA[Масиви надають хороший спосіб індексації елементів колекції за числом, однак можуть бути випадки, коли набагато зручніше індексувати їх по–іншому. Якщо, наприклад, ви створювали колекцію рецептів, було б набагато зрозуміліше індексувати рецепти за їхніми назвами, як от “Великий шоколадний торт” та “Coq au Vin”, а не 23, 87 і так далі.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/06-Hashes.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/06-Hashes.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/06-Hashes.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/06-Hashes.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава сьома]]></title>
             <description><![CDATA[Багато чого у програмуванні пов’язане з діями, які повторюються. Можливо, вам знадобиться програма, яка подаватиме звуковий сигнал 10 разів, читатиме рядки з файлу, поки у ньому є що читати, або показуватиме повідомлення, поки користувач не натисне клавішу. Ruby надає вам кілька способів виконати такі повторення.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/07-Loops-and-Iterators.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/07-Loops-and-Iterators.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/07-Loops-and-Iterators.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/07-Loops-and-Iterators.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[No title]]></title>
             <description><![CDATA[Комп’ютерні програми, як і саме життя, сповнені складних рішень, які потрібно приймати. Такі речі, як: якщо я лежатиму більше у ліжку, я довше спатиму, інакше мені потрібно буде йти на роботу; якщо я піду на роботу, я зароблю гроші, інакше я втрачу свою роботу - і так далі…]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/08-Conditional-Statements.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/08-Conditional-Statements.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/08-Conditional-Statements.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/08-Conditional-Statements.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава дев’ята]]></title>
             <description><![CDATA[Як згадано у попередніх главах, кожен клас у Ruby має одного найближчого батька, хоча кожен батько може мати багато дітей.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/09-Modules-and-Mixins.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/09-Modules-and-Mixins.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/09-Modules-and-Mixins.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/09-Modules-and-Mixins.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
         <item>
             <title><![CDATA[Глава десята]]></title>
             <description><![CDATA[Ми розглянули багато основ протягом попередніх десяти глав, проте ми лише почали відкривати всі можливості програмування на Ruby.]]></description>
-            <link>http://lambdabooks.github.io/thelittlebookofrubychapters/10-Saving-Files-Moving-On.html</link>
-            <guid isPermaLink="true">http://lambdabooks.github.io/thelittlebookofrubychapters/10-Saving-Files-Moving-On.html</guid>
+            <link>http://lambdabooks.com/thelittlebookofrubychapters/10-Saving-Files-Moving-On.html</link>
+            <guid isPermaLink="true">http://lambdabooks.com/thelittlebookofrubychapters/10-Saving-Files-Moving-On.html</guid>
             <dc:creator><![CDATA[Denys Dovhan]]></dc:creator>
         </item>
     </channel>
