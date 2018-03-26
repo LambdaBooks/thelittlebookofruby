@@ -5,6 +5,7 @@
 [![Mobi][mobi-image]][mobi-url]
 [![Build Status][travis-image]][travis-url]
 [![Twitter][twitter-image]][twitter-url]
+[![Facebook][facebook-image]][facebook-url]
 [![RSS][rss-image]][rss-url]
 [![Stars][github-image]][github-url]
 
@@ -100,3 +101,6 @@ Copyright © 2008 Dark Neon Ltd. All rights reserved.
 
 [github-url]: https://github.com/LambdaBooks/thelittlebookofruby
 [github-image]: https://img.shields.io/github/stars/LambdaBooks/thelittlebookofruby.svg?style=social&label=Star
+
+[facebook-url]: https://facebook.com/lambdabooks
+[facebook-image]: https://img.shields.io/badge/facebook-%40LambdaBooks-4267b2.svg?style=flat-square
