@@ -6,6 +6,7 @@
 [![Build Status][travis-image]][travis-url]
 [![Twitter][twitter-image]][twitter-url]
 [![Facebook][facebook-image]][facebook-url]
+[![Slack][slack-image]][slack-url]
 [![RSS][rss-image]][rss-url]
 [![Stars][github-image]][github-url]
 
@@ -96,11 +97,14 @@ Copyright © 2008 Dark Neon Ltd. All rights reserved.
 [twitter-url]: https://twitter.com/LambdaBooks
 [twitter-image]: https://img.shields.io/badge/twitter-%40LambdaBooks-00ACEE.svg?style=flat-square
 
+[facebook-url]: https://facebook.com/lambdabooks
+[facebook-image]: https://img.shields.io/badge/facebook-%40LambdaBooks-4267b2.svg?style=flat-square
+
+[slack-url]:  http://slack.lambdabooks.com
+[slack-image]: https://img.shields.io/badge/slack-LambdaBooks-red.svg?style=flat-square
+
 [rss-url]: http://thelittlebookofruby.lambdabooks.github.io/rss.xml
 [rss-image]: https://img.shields.io/badge/rss-subscribe-F4B83F.svg?style=flat-square
 
 [github-url]: https://github.com/LambdaBooks/thelittlebookofruby
 [github-image]: https://img.shields.io/github/stars/LambdaBooks/thelittlebookofruby.svg?style=social&label=Star
-
-[facebook-url]: https://facebook.com/lambdabooks
-[facebook-image]: https://img.shields.io/badge/facebook-%40LambdaBooks-4267b2.svg?style=flat-square
