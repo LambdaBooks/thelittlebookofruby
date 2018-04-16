@@ -68,7 +68,7 @@
 
 **Переклад:**
 
-[CC BY-NC-ND 4.0][cc-by-nc-nd-4.0] © LambdaBooks
+[CC BY-NC-SA 4.0][cc-by-nc-sa-4.0] © LambdaBooks
 
 **Оригінальний текст:**
 
@@ -89,7 +89,7 @@ Copyright © 2008 Dark Neon Ltd. All rights reserved.
 
 <!-- References -->
 
-[cc-by-nc-nd-4.0]: https://creativecommons.org/licenses/by-nc-nd/4.0/
+[cc-by-nc-sa-4.0]: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 [travis-url]: https://travis-ci.org/LambdaBooks/thelittlebookofruby
 [travis-image]: https://img.shields.io/travis/LambdaBooks/thelittlebookofruby.svg?style=flat-square
